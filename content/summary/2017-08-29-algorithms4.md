@@ -8,7 +8,7 @@ series: Algorithms
 summary: Greedy Algorithms and Dynamic Programming
 ---
 
-## Greedy Algorithms
+## Chapter 5: Greedy Algorithms
 
 ***!Thinking Ahead.***
 
@@ -146,7 +146,7 @@ The ratio between the greedy algorithm's solution and the optimal solution varie
 
 We call this maximum ratio the *approximation factor* of the greedy algorithm.  
 
-## Dynamic Programming   
+## Chapter 6: Dynamic Programming   
 The *sledgehammers* of the algorithms class: Dynamic Programming and Linear Programming   
 
 ### Shortest paths in dags, revisited   

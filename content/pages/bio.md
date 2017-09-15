@@ -32,7 +32,7 @@ So, I decided to pursue my interests with self learning, with a vision of someho
 
 Lets see how far we can get.!!!! 
 
-For a more `professional` looking resume, click [here](/bio/resume).
+For a more `professional` looking resume, click [here](https://docs.google.com/document/d/1gZZNorGiUCAi5SfRdYX08XWsGOeb-aYWtRdUggrPmAk/edit?usp=sharing).
 
 
 
