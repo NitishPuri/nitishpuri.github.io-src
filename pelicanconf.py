@@ -72,6 +72,9 @@ GOOGLE_CUSTOM_SEARCH = '011138406956770016801:3ffzupagszg'
 HIDE_CATEGORIES_FROM_MENU = True
 SHARETHIS_PUB_KEY = '59baff2dc1263e001291a4b3'
 
+
+MENUITEMS = [('Archives', '/archives.html'), ('About', '/pages/bio.html')]
+
 MARKDOWN = {
    'EXTENSIONS' : (['toc'])
 }
