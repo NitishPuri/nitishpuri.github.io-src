@@ -77,7 +77,11 @@ MARKDOWN = {
 }
 
 TOC = {
-    'TOC_HEADERS' : '^h[1-3]',
+    'TOC_HEADERS' : '^h[1-4]',
     'TOC_RUN' : 'true',
     'TOC_INCLUDE_TITLE' : 'false'
+}
+
+MATH_JAX = {
+    'align' : 'left'
 }

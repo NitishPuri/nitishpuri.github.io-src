@@ -1,18 +1,12 @@
 ---
-layout: post
-published: true
 title: Research Notes - Machine Learning
 author: Nitish
 use_math: true
-tags: notes deep-learning
+tags: notes, deep-learning
 category: Summary
+summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
+series: Research Notes
 ---
-
-1. TOC
-{:toc}
-
-----
-
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.
 
@@ -20,10 +14,14 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 
 ### Image Segmentation
 
-#### [Image segmentation review](http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review)
+#### Image segmentation review   
+[*Source*](http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review)   
+
 * A review of segmentation at qure.ai
 
-#### [A Review of Deep Learning Techniques Applied to Semantic Segmentation](https://arxiv.org/pdf/1704.06857) : *Apr 2017*   
+#### A Review of Deep Learning Techniques Applied to Semantic Segmentation : *Apr 2017*   
+[*Source*](https://arxiv.org/pdf/1704.06857)   
+
 * *Semantic Segmentation, Deep Learning, Scene Labeling, Object Segmentation*   
 * This paper provides a review on deep learning methods for semantic segmentation applied to various  application areas. This also describes the terminology used as well as some background concepts, then some existing models are reviewed(2017). At last a set of promising future works are discussed.
 * These techniques are not very mature as of yet, mainly because of a lack of unifying picture.
