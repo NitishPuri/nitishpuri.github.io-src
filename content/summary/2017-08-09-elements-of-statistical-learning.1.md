@@ -5,6 +5,7 @@ author: Trevor Hastie, Robert Tibshirani, Jerome Friedman
 category: Summary
 tags: data-science, notes
 series: Elements Of Statistical Learning
+summary: Chapter 1-6 of Elements Of Statistical Learning
 ---
 
 ## Chapter 1: Introduction
@@ -36,8 +37,8 @@ $\hat Y = \hat \beta_0 + \sum_{j=1}^pX_j\hat\beta_j$
         - *regularization*
     - Kernel Methods and Local Regression
     - Basis Functions and Dictionary Methods
-- Model Selection and the Bias–Variance Tradeoff  
-![Bias-Var](images/esl/bias-var.png)   
+- Model Selection and the Bias–Variance Tradeoff   
+![Bias-Var](/images/esl/bias-var.png)   
 
 ## Chapter 3: Linear Methods Of Regression
 - Introduction

@@ -1,12 +1,11 @@
 ---
-layout: post
-published: true
 title: Introduction To Philosophy
 category: Summary
-tags: notes philosophy
+tags: notes, philosophy
+summary: Course notes from Introduction to Philosophy on Coursera
 ---
 
-These are just some bullet notes from the Coursera course [Introduction to philosophy](https://www.coursera.org/learn/philosophy)
+These are just some bullet notes from the *Coursera* course [Introduction to philosophy](https://www.coursera.org/learn/philosophy)
 
 - **What Is Philosophy**
 - Working out the best way to thinking about things.
@@ -42,7 +41,7 @@ These are just some bullet notes from the Coursera course [Introduction to philo
         - A Sheep Behind a Sheep Shaped Object.
 - Formula For Creating Gettier Cases - is easy!!
 - Additional Conditions !! @@
-    - 'NO FALSE LEMMAS' : Farley complicated and boring
+    - `NO FALSE LEMMAS` : Farley complicated and boring
 - *Do We have any knowledge?*
 - Radical Skepticism, we don't know nearly as much as we think we do.
     - We have as much knowledge as we take ourselves to have.
@@ -139,5 +138,5 @@ These are just some bullet notes from the Coursera course [Introduction to philo
     - Is your beliefs are based merely on testimony, they will not amount to knowledge.
 - *Are Scientific Theories true*
 - *Time Travel and Philosophy*
-- https://d396qusza40orc.cloudfront.net/flex-introphil%2FWeek%207%20-%20Time%20Travel%20and%20Philosophy%2FWeek%207%20handout%20%27Time%20Travel%20and%20Philosophy%27.pdf
+- [Reading](https://d396qusza40orc.cloudfront.net/flex-introphil%2FWeek%207%20-%20Time%20Travel%20and%20Philosophy%2FWeek%207%20handout%20%27Time%20Travel%20and%20Philosophy%27.pdf)
 

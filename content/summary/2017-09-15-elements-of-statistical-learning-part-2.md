@@ -4,6 +4,7 @@ author: Trevor Hastie, Robert Tibshirani, Jerome Friedman
 category: Summary
 tags: data-science, notes
 series: Elements Of Statistical Learning
+summary: Chapter 7-11 of Elements Of Statistical Learning
 ---
 
 ## Chapter 7: Model Assessment and Selection
@@ -28,3 +29,4 @@ series: Elements Of Statistical Learning
 - Bootstrap Methods
 - Conditional or Expected Test Error? ☠ 
 
+## Chapter 8: Model Inference and Averaging

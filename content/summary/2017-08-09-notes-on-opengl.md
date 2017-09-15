@@ -1,14 +1,12 @@
 ---
-layout: post
-published: true
 title: Notes On Opengl
 category: Summary
-tags: graphics opengl notes
+tags: graphics, opengl, notes
 use_math: true
 ---
 
 ## Transformations
-*Translation* :  (x, y, z) =
+*Translation* :  (x, y, z)   
 $$
 \begin{bmatrix}   
  1 & 0 & 0 & x \\   
@@ -18,7 +16,7 @@ $$
 \end{bmatrix}
 $$
 
-*Scale* : (x, y, z) = 
+*Scale* : (x, y, z)
 $$
 \begin{bmatrix}   
  x & 0 & 0 & 0 \\   
@@ -63,22 +61,22 @@ Specify vertex data.
 
 - Create buffer Data: const float vertexPositions[] = {...}
 - Initialize vertex Buffer:
-    - glGenBuffers(1, &posiionBufferObject)
-    - glbindbuffer(GL_ARRAY_BUFFER, positionbufferObject)
-    - glbufferData(GL_ARRAY_BUFFER, sizeof(vertexpositions), vertexpositions, BufferobjectUsageHint)
+    - `glGenBuffers(1, &posiionBufferObject)`
+    - `glbindbuffer(GL_ARRAY_BUFFER, positionbufferObject)`
+    - `glbufferData(GL_ARRAY_BUFFER, sizeof(vertexpositions), vertexpositions, BufferobjectUsageHint)`
         - BufferobjectUsagehint:
-            - GL__STATIC_DRAW: Static data, only intend to set it once
-            - GL_STREAM_DRAW: Dynamic data, intend to update it constantly, generally once per frame
-    - glbindbuffer(0)
+            - `GL__STATIC_DRAW`: Static data, only intend to set it once
+            - `GL_STREAM_DRAW`: Dynamic data, intend to update it constantly, generally once per frame
+    - `glbindbuffer(0)`
 - Specify vertex data:
-    - glbindbuffer(GL_ARRAY_BUFFER, positionbufferobject)
-    - glenablevertexattribarray(0)
-    - glvertexattribarray(0, 4, GL_FLOAT, GL_FALSE, 0, 0)
+    - `glbindbuffer(GL_ARRAY_BUFFER, positionbufferobject)`
+    - `glenablevertexattribarray(0)`
+    - `glvertexattribarray(0, 4, GL_FLOAT, GL_FALSE, 0, 0)`
 - Display:
-    - gldrawarrays(GL_TRIANGLES, 0, 3)
-- glbufferSubData(): Change buffer data value
+    - `gldrawarrays(GL_TRIANGLES, 0, 3)`
+- `glbufferSubData()`: Change buffer data value
 
-Vertex Array Objects: OpenGL Objects that store all of the state needed to make one or more draw calls. This includes attribute array setup information from glVertexAttribArray , buffer objects used for attribute arrays, and GL_ELEMENT_ARRAY_BUFFER   binding, which is a buffer object that stores the index arrays, if needed
+Vertex Array Objects: OpenGL Objects that store all of the state needed to make one or more draw calls. This includes attribute array setup information from `glVertexAttribArray` , buffer objects used for attribute arrays, and `GL_ELEMENT_ARRAY_BUFFER` binding, which is a buffer object that stores the index arrays, if needed
 
 ## Pipeline
 - Vertex Specification
