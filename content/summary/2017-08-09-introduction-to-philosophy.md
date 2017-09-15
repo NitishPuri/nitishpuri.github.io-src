@@ -1,11 +1,10 @@
-Title: Example post 3
-Date: 2015-8-08 13:10
-Category: Blogging
-Tags: blogging, markup
-Slug: Blogging with Pelican 2
-Author: yourname
-Summary: Collection of notes related to programming and scripting.
-Latex:
+---
+layout: post
+published: true
+title: Introduction To Philosophy
+category: Summary
+tags: notes philosophy
+---
 
 These are just some bullet notes from the Coursera course [Introduction to philosophy](https://www.coursera.org/learn/philosophy)
 
@@ -140,5 +139,5 @@ These are just some bullet notes from the Coursera course [Introduction to philo
     - Is your beliefs are based merely on testimony, they will not amount to knowledge.
 - *Are Scientific Theories true*
 - *Time Travel and Philosophy*
-- [Readings](https://d396qusza40orc.cloudfront.net/flex-introphil%2FWeek%207%20-%20Time%20Travel%20and%20Philosophy%2FWeek%207%20handout%20%27Time%20Travel%20and%20Philosophy%27.pdf)
+- https://d396qusza40orc.cloudfront.net/flex-introphil%2FWeek%207%20-%20Time%20Travel%20and%20Philosophy%2FWeek%207%20handout%20%27Time%20Travel%20and%20Philosophy%27.pdf
 

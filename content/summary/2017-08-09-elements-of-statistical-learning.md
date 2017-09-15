@@ -1,18 +1,16 @@
-Title: Example post 2
-Date: 2015-8-08 13:10
-Category: Blogging
-Tags: blogging, markup
-Slug: Blogging with Pelican 3
-Author: yourname
-Summary: Collection of notes related to programming and scripting.
-Latex:
-
-1. TOC
-{:toc}
+---
+published: true
+title: Elements Of Statistical Learning
+author: Trevor Hastie, Robert Tibshirani, Jerome Friedman 
+category: Summary
+tags: data-science, notes
+---
 
 ----
 
 *Note : Work in Progress.*
+
+hello  
 
 ## Introduction
  * Motivation towards statistical learning and belief in data.
@@ -24,7 +22,7 @@ Latex:
     - Regression and Classification
 * Simple approaches : Least Squares and Nearest Neighbors
     * Linear Models and Least Squares   
-$$\hat Y = \hat \beta_0 + \sum_{j=1}^pX_j\hat\beta_j$$   
+$\hat Y = \hat \beta_0 + \sum_{j=1}^pX_j\hat\beta_j$   
         * Least squares by solving *normal* equations.
     * Nearest Neighbor Methods
         * *Voronoi tessellation*
@@ -39,12 +37,12 @@ $$\hat Y = \hat \beta_0 + \sum_{j=1}^pX_j\hat\beta_j$$
 - Structured Regression Models
     - Difficulty of the Problem
 - Classes of Restricted Estimators
-    - Roughness Penalty and Bayesian Methods
+    - Roughness Penalty and Bayesian Methods  
         - *regularization*
     - Kernel Methods and Local Regression
     - Basis Functions and Dictionary Methods
-- Model Selection and the Bias–Variance Tradeoff
-![Bias-Var](/images/esl/bias-var.png)   
+- Model Selection and the Bias–Variance Tradeoff  
+![Bias-Var](images/esl/bias-var.png)   
 
 ## Linear Methods Of Regression
 - Introduction

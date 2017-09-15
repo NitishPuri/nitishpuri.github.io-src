@@ -17,10 +17,10 @@ DEPLOY_PATH = env.deploy_path
 production = 'root@localhost:22'
 dest_path = '/var/www'
 
-# Rackspace Cloud Files configuration settings
-env.cloudfiles_username = 'my_rackspace_username'
-env.cloudfiles_api_key = 'my_rackspace_api_key'
-env.cloudfiles_container = 'my_cloudfiles_container'
+# # Rackspace Cloud Files configuration settings
+# env.cloudfiles_username = 'my_rackspace_username'
+# env.cloudfiles_api_key = 'my_rackspace_api_key'
+# env.cloudfiles_container = 'my_cloudfiles_container'
 
 # Github Pages configuration
 env.github_pages_branch = "master"
@@ -67,14 +67,14 @@ def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
 
-def cf_upload():
-    """Publish to Rackspace Cloud Files"""
-    rebuild()
-    with lcd(DEPLOY_PATH):
-        local('swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
-              '-U {cloudfiles_username} '
-              '-K {cloudfiles_api_key} '
-              'upload -c {cloudfiles_container} .'.format(**env))
+# def cf_upload():
+#     """Publish to Rackspace Cloud Files"""
+#     rebuild()
+#     with lcd(DEPLOY_PATH):
+#         local('swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
+#               '-U {cloudfiles_username} '
+#               '-K {cloudfiles_api_key} '
+#               'upload -c {cloudfiles_container} .'.format(**env))
 
 
 TEMPLATE = """
@@ -119,7 +119,29 @@ def publish():
         extra_opts='-c',
     )
 
-def gh_pages():
-    """Publish to GitHub Pages"""
+# def gh_pages():
+#     """Publish to GitHub Pages"""
+#     rebuild()
+#     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+
+def testTask(testVar="nothing"):
+    print("You passed {} as argument.".format(testVar))
+
+def gh_push(commitMsg = "Update"):
+    """Push to Github Pages"""
     rebuild()
-    local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+
+    # Push the blog 
+    local("cd output")
+    local("git add .")
+    local("git commit -m '{}'".format(commitMsg))
+    local("git push -u origin master")
+
+    # Push source
+    local("cd ..")
+    local("git add .")
+    local("git commit -m '{}'".format(commitMsg))
+    local("git push -u origin master")
+
+def clone_output():
+    local("git clone https://github.com/nitishpuri/nitishpuri.github.io.git output")
