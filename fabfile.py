@@ -138,7 +138,7 @@ def gh_push(commitMsg = "Update"):
 
     # Push the blog 
     local("cd output")
-    local("git add .")
+    local("git add --all")
     local("git commit -m '{}'".format(commitMsg))
     local("git push -u origin master")
 
