@@ -1,17 +1,12 @@
 ---
-layout: post
-published: true
 title: Research Notes - Robotics
 author: Nitish
 use_math: true
-tags: notes robotics
+tags: notes, robotics
 category: Summary
+summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
+series: Research Notes
 ---
-
-1. TOC
-{:toc}
-
-----
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.
 
@@ -20,7 +15,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 ### Robot Grasping
 
 #### Robotic Grasping and Contact: A Review   
-[*Original Paper*](https://pdfs.semanticscholar.org/54f8/8557554d9a4e517f301cb170bd50cbe4cfc9.pdf)   
+[*Source*](https://pdfs.semanticscholar.org/54f8/8557554d9a4e517f301cb170bd50cbe4cfc9.pdf)   
+
 * Survey of work done in last two decades.
 * Functions of Human hand 
     * Explore : *haptics*
@@ -38,7 +34,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 
 ### Mobile Robots
 #### Modular and Reconfigurable Mobile Robots   
-[*Original Paper*](http://128.173.188.245/publications/J13_Modular_Robots_JRAS.pdf)
+[*Source*](http://128.173.188.245/publications/J13_Modular_Robots_JRAS.pdf)   
+
 * Classification
     * ![alt](/images/papers/modularBots1.png)
 * Modular robots with mobile configuration change(MCC)
@@ -85,8 +82,9 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 
 ### Bio Robots
 
-#### OpenRatSLAM : on open source brain-based SLAM system : *Feb 2013*  
-[*Original Paper*] (http://static.springer.com/sgw/documents/1388513/application/pdf/10-3.pdf) 
+#### OpenRatSLAM : on open source brain-based SLAM system : *Feb 2013*   
+[*Source*](http://static.springer.com/sgw/documents/1388513/application/pdf/10-3.pdf)    
+
 * *RatSLAM, OpenRatSLAM, SLAM, Navigation, Mapping, Brain-based, Appearance-based, ROS, Open-source, Hippocampus*
 * RatSLAM is a navigation system based on the neural processes underlying navigation in the rodent brain, capable of operating with low resolution monocular image data. This paper describes OpenRatSLAM, an open source version of RatSLAM with bindings to ROS   
 * SLAM(Simultaneous Localization and Mapping) , at the core based on SIFT or SURF features.
@@ -110,7 +108,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * [Watch In Action](https://www.youtube.com/watch?v=-0XSUi69Yvs)
     
 #### Biologically Inspired App*roaches* to Robotics : *March 1997*   
-[*Original Paper*](http://pdfs.semanticscholar.org/501b/9eb3c085a66abe4bdd56043fc802c21d0526.pdf) 
+[*Source*](http://pdfs.semanticscholar.org/501b/9eb3c085a66abe4bdd56043fc802c21d0526.pdf)   
+
 * Big gap between fantasy and reality in terms of Autonomous Robots.
 * Inspirations from *insects* : agility, adaptability, simplicity
 * Focuses on *walking* like an insect.
@@ -126,12 +125,14 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Rough Terrain Locomotion
 
 #### The First Takeoff of a Biologically Inspired At-Scale Robotic Insect : *April 2008*   
-[*Original Paper*](http://www.micro.seas.harvard.edu/papers/TRO08_Wood.pdf) 
-* *Actuators, aerial robotics, biologically inspred robotics, microrobotics*
+[*Source*](http://www.micro.seas.harvard.edu/papers/TRO08_Wood.pdf)    
+
+* *Actuators, aerial robotics, biologically inspired robotics, microrobotics*
 * Goal is to create an insect-sized, *truly micro* air vehicle.
-    * Harvard Mincrorobotic Fly
+    * Harvard Microrobotic Fly
     * ![alt](/images/papers/insect1.png)
-    * Fig. (a) Conceptual drawing highlighting the four primary mechanical and aero-mechanical components. (b) First insect-scale flying robot able to takeoff.
+    * Fig. (a) Conceptual drawing highlighting the four primary mechanical and aero-mechanical components.   
+    * Fig. (b) First insect-scale flying robot able to takeoff.
 * INSECT-FLIGHT
     * Dipteran thoracic mechanics is discussed.
 * Creation of a Robotic Insect
@@ -142,7 +143,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * [Watch In Action](https://www.youtube.com/watch?v=olqaMw8bIb8)
 
 #### Towards Dynamic Trot Gait Locomotion—Design, Control, and Experiments with Cheetah-cub, a Compliant Quadruped Robot : *July 2013*   
-[*Original Paper*](https://infoscience.epfl.ch/record/184991/files/Draft1sprowitz2013.pdf) 
+[*Source*](https://infoscience.epfl.ch/record/184991/files/Draft1sprowitz2013.pdf)    
+
 * [Watch In Action](https://www.youtube.com/watch?v=_luhn7TLfWU)
 * 
 

@@ -1,13 +1,11 @@
 ---
-layout: post
 title: Blogging like a hacker
 comments: true 
 category: Meta
-tags:
-    - jekyll
-    - blogging
+tags: jekyll, blogging
 ---
 
+*Edit: After the blog post I have moved to **Pelican**, mostly because of my affinity for python.* ❤️ 
 
 So, finally I was able to settle up for a blog after months of procrastination with multiple frameworks and platforms.   
 I had earlier tried to use [Tumblr](http://nitishpuri.tumblr.com/). But, I wanted to be able to explore different areas, like sharing my views on technology that I am currently interested in, music that I am currently digging in, some random art that I create and so on. Tumblr turned out to be a great platform for sharing my art, but for the same reasons did not look like a place where I could write about deep neural networks, natural language and computer vision. Though there are some blogs there that do just [that](http://lewisandquark.tumblr.com/).    

@@ -3,6 +3,7 @@ title: Notes On Opengl
 category: Summary
 tags: graphics, opengl, notes
 use_math: true
+summary: Startter notes on OpenGL/Transformations
 ---
 
 ## Transformations

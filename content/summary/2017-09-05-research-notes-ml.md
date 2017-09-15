@@ -33,28 +33,34 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * RGB-D Data and 3D Data
 * Video Sequences   
 
-#### [DeepLab : Semantic Image Segmentation with Deep Convolution Nets, Atrous Convolution, and Fully Connected CRFs](https://arxiv.org/abs/1606.00915) : *May 2017*   
+#### DeepLab : Semantic Image Segmentation with Deep Convolution Nets, Atrous Convolution, and Fully Connected CRFs : *May 2017*   
+[*Source*](https://arxiv.org/abs/1606.00915)   
+
 * *Semantic Segmentation, Atrous Convolution, Conditional Random Fields*
 * Introduces upsampled filters(Altrous Convolution) as a tool in dense prediction tasks. Allows us to control the resolution at which feature responses are computed and also allows us to effectively enlarge the field of view of filters to incorporate larger context without increasing the number of parameters or the amount of computation.
 * ???? // *Read this again..*
 
-#### [U-Net: Convolution Networks for Biomedical Image Segmentation] : *May 2015*
+#### U-Net: Convolution Networks for Biomedical Image Segmentation : *May 2015*   
+[*Source*](https://arxiv.org/abs/1505.04597)   
+
 * Focuses on end-to-end training for segmentation tasks, relying heavily on data augmentation.
     
-#### [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038) : *Mar 2015*
+#### Fully Convolutional Networks for Semantic Segmentation : *Mar 2015*   
+[*Source*](https://arxiv.org/abs/1411.4038)   
+
 * One of the first works to use Fully Connected layers to create pixel heatmap as output.
 * Introducing Upsampling or Convolution Transpose.
 
-#### [From Image-level to Pixel-level Labeling with Convolutional Networks](https://arxiv.org/abs/1411.6228) : *Apr 2015*   
+#### From Image-level to Pixel-level Labeling with Convolutional Networks : *Apr 2015*   
+[*Source*]((https://arxiv.org/abs/1411.6228))   
+
 * Weakly supervised segmentation.
 * Put more weights to pixels with known class labels.
 * Uses part of model trained on ImageNet and trains for segmentation on PascalVOC.
     
 
-#### https://arxiv.org/abs/1508.06576
 
-#### https://arxiv.org/abs/1311.2901
-
-#### https://arxiv.org/pdf/1602.03616.pdf
-
-#### 
+#### To Read   
+* https://arxiv.org/abs/1508.06576
+* https://arxiv.org/abs/1311.2901
+* https://arxiv.org/pdf/1602.03616.pdf
