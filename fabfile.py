@@ -63,6 +63,11 @@ def reserve():
     build()
     serve()
 
+def livereload():
+    """ build and then serve using livereload server"""
+    build()
+    local("python pelican-livereload.py")
+
 def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')

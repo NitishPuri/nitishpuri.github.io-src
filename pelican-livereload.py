@@ -21,6 +21,7 @@ server = Server()
 server.watch(p.settings['PATH'], compile)
 server.watch(p.settings['THEME'], compile)
 server.watch('./pelicanconf.py', compile)
+server.watch('content/', compile)
 
 host_port = p.settings.get('SITEURL') or 'http://localhost:5500'
 details = urlparse(host_port)

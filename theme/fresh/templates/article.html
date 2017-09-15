@@ -28,10 +28,24 @@
         </div>
         {% endif %}
 
+        {% if article.series %}
+        <p>This post is part {{ article.series.index }} of the "{{ article.series.name }}" series:</p>
+        <ol class="parts">
+            {% for part_article in article.series.all %}
+                <li {% if part_article == article %}class="active"{% endif %}>
+                    <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                </li>
+            {% endfor %}
+        </ol>
+        <hr>
+        {% endif %}
+
         {% if article.toc %}
+        <p>Contents:</p>
         <nav class="toc">
           {{ article.toc }}
         </nav>
+        <hr>
         {% endif %}
     
         {{ article.content }}

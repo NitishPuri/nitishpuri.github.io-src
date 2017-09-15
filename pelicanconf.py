@@ -28,6 +28,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 DELETE_OUTPUT_DIRECTORY = False
+OUTPUT_RETENTION = [".git"]
+
+ARTICLE_URL='{category}/{slug}.html'
+ARTICLE_SAVE_AS='{category}/{slug}.html'
 
 # Blogroll
 LINKS = (('Facebook', 'https://www.facebook.com/npuri1903'),
@@ -52,7 +56,7 @@ USE_FOLDER_AS_CATEGORY = True
 THEME = 'theme/fresh'
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = [ "render_math", "md_metayaml" , "pelican-toc"]
+PLUGINS = [ "render_math", "md_metayaml" , "pelican-toc", "series"]
 # '' , 'render_math'
 from functools import partial
 JINJA_FILTERS = {
