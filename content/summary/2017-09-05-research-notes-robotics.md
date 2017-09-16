@@ -37,48 +37,48 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 [*Source*](http://128.173.188.245/publications/J13_Modular_Robots_JRAS.pdf)   
 
 * Classification
-    * ![alt](/images/papers/modularBots1.png)
+    * ![alt](/images/papers/modularBots1.jpg)
 * Modular robots with mobile configuration change(MCC)
     * S-bots
-        * ![alt](/images/papers/modularBots2.png)
+        * ![alt](/images/papers/modularBots2.jpg)
     * Uni-Rovers
-        * ![alt](/images/papers/modularBots3.png)
+        * ![alt](/images/papers/modularBots3.jpg)
     * JL-I and JL-II
-        * ![alt](/images/papers/modularBots4.png)
+        * ![alt](/images/papers/modularBots4.jpg)
     * Millibots
-        * ![alt](/images/papers/modularBots5.png)
+        * ![alt](/images/papers/modularBots5.jpg)
     * AMOEBA
-        * ![alt](/images/papers/modularBots6.png)
+        * ![alt](/images/papers/modularBots6.jpg)
 * Modular robots with whole body locomotion(WBL)
     * Whole body locomotion in chain architecture
         * CONRO/PolyBot
-            * ![alt](/images/papers/modularBots7.png)
+            * ![alt](/images/papers/modularBots7.jpg)
         * GZ-I
         * CKBot
-            * ![alt](/images/papers/modularBots8.png)
+            * ![alt](/images/papers/modularBots8.jpg)
     * Whole body locomotion in a lattice architecture
         * Macro robots in a lattice architecture
             * *Crystalline*
-                * ![alt](/images/papers/modularBots9.png)
+                * ![alt](/images/papers/modularBots9.jpg)
             * *Odin*      
-                * ![alt](/images/papers/modularBots10.png)
+                * ![alt](/images/papers/modularBots10.jpg)
             * *I-Cubes*
-                * ![alt](/images/papers/modularBots11.png)
+                * ![alt](/images/papers/modularBots11.jpg)
             * *Catoms*
-                * ![alt](/images/papers/modularBots12.png)
+                * ![alt](/images/papers/modularBots12.jpg)
         * Mini robots in a lattice archtecture
-            * ![alt](/images/papers/modularBots13.png)
+            * ![alt](/images/papers/modularBots13.jpg)
         * Reconfigurable mechanisms in a lattice architecture
-            * ![alt](/images/papers/modularBots14.png)
+            * ![alt](/images/papers/modularBots14.jpg)
         * Whole body locomotion in a hybrid architecture
             * M-TRAN/iMobot
-                * ![alt](/images/papers/modularBots15.png)
+                * ![alt](/images/papers/modularBots15.jpg)
             * Molecubes
             * ATRON
-                * ![alt](/images/papers/modularBots16.png)
+                * ![alt](/images/papers/modularBots16.jpg)
             * YaMOR
             * SuperBot
-                * ![alt](/images/papers/modularBots17.png)
+                * ![alt](/images/papers/modularBots17.jpg)
 
 ### Bio Robots
 
@@ -91,16 +91,16 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * This implementation is based on RatSLAM, leveraging tools like OpenCV and ROS. 
 * Modular, detailed, integrated with ROS and *rviz*, works online and offline.
 * RatSLAM
-    * ![alt](/images/papers/ratSlam1.png)
+    * ![alt](/images/papers/ratSlam1.jpg)
     * *Pose Cells, Local View Cells and Experience Map*
 * OpenRatSLAM, [code](https://code.google.com/archive/p/ratslam)
-    * ![alt](/images/papers/ratSlam2.png)
+    * ![alt](/images/papers/ratSlam2.jpg)
     * Pose Cell Network : represents pose in response to odometric and local view connections. This also makes decisions about the experience map node and link creation.
     * Local View Cells : determines whether a scene is novel or familiar by image comparison techniques. Mostly based on template matching.
     * Experience map : manages graph building, graph relaxation and path planning.
     * Visual Odometry : For image only datasets, provides an odometric estimate based on changes in the visual scene. 
 * OpenRatSLAM parameters and tuning
-    * ![alt](/images/papers/ratSlam3.png) ![alt](/images/papers/ratSlam4.png)
+    * ![alt](/images/papers/ratSlam3.jpg) ![alt](/images/papers/ratSlam4.jpg)
     * Iterative tuning by minimizing loss.
 * Using OpenRatSLAM
     * Examples of datasets this is used with, and some results.
@@ -117,9 +117,9 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
     * Studies done at various levels of integration and inspiration.
 * Distributed Gait Control
 * A Distributed Neural Network Controller
-    * ![alt](/images/papers/bioRobots1.png)
+    * ![alt](/images/papers/bioRobots1.jpg)
 * A Stick Insect Controller
-    * ![alt](/images/papers/bioRobots2.png)
+    * ![alt](/images/papers/bioRobots2.jpg)
 * Evolved Locomotion Controllers
     * Use genetic algorithms to evolve the neural networks for controlling the locomotion.
 * Rough Terrain Locomotion
@@ -130,7 +130,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * *Actuators, aerial robotics, biologically inspired robotics, microrobotics*
 * Goal is to create an insect-sized, *truly micro* air vehicle.
     * Harvard Microrobotic Fly
-    * ![alt](/images/papers/insect1.png)
+    * ![alt](/images/papers/insect1.jpg)
     * Fig. (a) Conceptual drawing highlighting the four primary mechanical and aero-mechanical components.   
     * Fig. (b) First insect-scale flying robot able to takeoff.
 * INSECT-FLIGHT

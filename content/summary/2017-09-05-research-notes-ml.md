@@ -25,7 +25,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * *Semantic Segmentation, Deep Learning, Scene Labeling, Object Segmentation*   
 * This paper provides a review on deep learning methods for semantic segmentation applied to various  application areas. This also describes the terminology used as well as some background concepts, then some existing models are reviewed(2017). At last a set of promising future works are discussed.
 * These techniques are not very mature as of yet, mainly because of a lack of unifying picture.
-* ![Evolution of object recognition](images/papers/deepSegment1.png)
+* ![Evolution of object recognition](images/papers/deepSegment1.jpg)
 * CNN Architectures : AlexNet, VGG, GoogleNet, ResNet, etc..
 * 2D and 3D Datasets : [PascalVOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/),  [Microsoft COCO](6. http://mscoco.org/), and more,...   
 * Decoder Variants, Integrating Context Knowledge
