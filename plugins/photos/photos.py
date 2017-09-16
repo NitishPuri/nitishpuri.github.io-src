@@ -349,7 +349,7 @@ def detect_content(content):
                         m.group('src'),
                         '=',
                         m.group('quote'),
-                        os.path.join(settings['SITEURL'], 'photos', photo_article),
+                        os.path.join(settings['SITEURL'], '/photos', photo_article),
                         m.group('quote'),
                         m.group('attrs_after'),
                     ))
@@ -472,10 +472,13 @@ def process_gallery(generator, content, location):
             dir_gallery = os.path.join(base_path, gallery['location'])
             rel_gallery = os.path.join(content.relative_dir, gallery['location'])
 
+
         if os.path.isdir(dir_gallery):
             logger.info('photos: Gallery detected: {}'.format(rel_gallery))
+
             dir_photo = os.path.join('photos', rel_gallery.lower())
             dir_thumb = os.path.join('photos', rel_gallery.lower())
+            
             exifs = read_notes(os.path.join(dir_gallery, 'exif.txt'),
                                msg='photos: No EXIF for gallery')
             captions = read_notes(os.path.join(dir_gallery, 'captions.txt'), msg='photos: No captions for gallery')
