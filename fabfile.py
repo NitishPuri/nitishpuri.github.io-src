@@ -8,6 +8,7 @@ import SocketServer
 from datetime import datetime
 
 from pelican.server import ComplexHTTPRequestHandler
+from pelican.settings import read_settings
 
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
@@ -30,9 +31,17 @@ PORT = 8000
 
 def clean():
     """Remove generated files"""
+    import glob
     if os.path.isdir(DEPLOY_PATH):
-        shutil.rmtree(DEPLOY_PATH)
-        os.makedirs(DEPLOY_PATH)
+        for folder in glob.iglob(DEPLOY_PATH + '/*'):
+            print(folder)
+            if(os.path.isdir(folder)):
+                shutil.rmtree(folder)
+            else:
+                os.remove(folder)
+
+        # shutil.rmtree(DEPLOY_PATH)
+        # os.makedirs(DEPLOY_PATH)
 
 def build():
     """Build local version of site"""
@@ -150,3 +159,100 @@ def gh_push(commitMsg = "Update"):
 
 def clone_output():
     local("git clone https://github.com/nitishpuri/nitishpuri.github.io.git output")
+
+
+def optimize_images():
+    """ Resize photos to optimize for web."""
+    from PIL import Image
+    import glob
+
+    path = 'content/images/papers/*.png'
+    for file in glob.iglob(path):
+        # print(file)
+        img = Image.open(file)
+        bg = Image.new('RGB', img.size, (255, 255, 255))
+        # img = img.split()[0:3]
+        bg.paste(img, img)
+        newfile = file[0:-3]
+        newfile += '.jpg'
+        print("{} --> {}".format(file, newfile))
+        bg.save(newfile, 'JPEG', quality=90)
+    
+
+
+album_template = """
+Title: {title}
+Date: {year}-{month}-{day}
+gallery: {photo}{title}
+"""
+
+gallery_post_template = """
+Title: {title}
+Date: {year}-{month}-{day}
+
+![{caption}]({photo}/{gallery}/{filename})
+"""
+
+def generate_gallery_pages():
+    settings = read_settings('pelicanconf.py')
+    photo_lib_path = settings['PHOTO_LIBRARY']
+    # print(photo_lib_path)
+    import  glob 
+
+    # Cleanup..
+    galleries = 'content/art/auto_*.md'
+    art_pages = 'content/pages/auto_*.md'
+    for gal in glob.iglob(galleries):
+        print("Removing file,.. {}".format(gal))
+        os.remove(gal)
+
+    for art in glob.iglob(art_pages):
+        print("Removing file,... {}".format(art))
+        os.remove(art)
+
+    if(os.path.isdir(photo_lib_path)):
+        for gallery in sorted(os.listdir(photo_lib_path)):
+            # Generate Gallery article
+            galleryPath = os.path.join(photo_lib_path, gallery)
+
+
+            mtime = datetime.fromtimestamp(os.path.getmtime(galleryPath))            
+
+            gt = album_template.strip().format(title= gallery,
+                                          year = mtime.year,
+                                          month = mtime.month,
+                                          day = mtime.day,
+                                          photo='{photo}'
+            )
+
+            g_create = 'content/art/auto_{}_{:0>2}_{:0>2}_{}.md'.format(
+                mtime.year, mtime.month, mtime.day, gallery) 
+
+            with open(g_create, 'w') as w:
+                w.write(gt)
+            print("File created -> " + g_create)
+
+            for pic in sorted(os.listdir(galleryPath)):
+
+                picPath = os.path.join(galleryPath, pic)
+                pmtime = datetime.fromtimestamp(os.path.getmtime(picPath))
+
+                picName = pic.split('.')[0]
+
+                pt = gallery_post_template.strip().format(title=picName,
+                                                          year=pmtime.year,
+                                                          month=pmtime.month,
+                                                          day=pmtime.day,
+                                                          caption='ssdhgf',
+                                                          photo='{photo}',
+                                                          gallery=gallery,
+                                                          filename=pic)
+
+                p_create = 'content/pages/auto_{}_{:0>2}_{:0>2}_{}.md'.format(
+                    pmtime.year, pmtime.month, pmtime.day, picName)
+
+                with open(p_create, 'w') as w:
+                    w.write(pt)
+                print("File created -> " + p_create)
+            
+
