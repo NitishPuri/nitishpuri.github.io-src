@@ -184,6 +184,13 @@ album_template = """
 Title: {title}
 Date: {year}-{month}-{day}
 gallery: {photo}{title}
+tags: art
+"""
+
+gallery_page_template = """
+Title: Gallery
+date: 10-10-2017
+gallery: {gallery}
 """
 
 gallery_post_template = """
@@ -201,15 +208,22 @@ def generate_gallery_pages():
 
     # Cleanup..
     galleries = 'content/art/auto_*.md'
-    art_pages = 'content/pages/auto_*.md'
     for gal in glob.iglob(galleries):
         print("Removing file,.. {}".format(gal))
         os.remove(gal)
 
+    art_pages = 'content/pages/auto_*.md'
     for art in glob.iglob(art_pages):
         print("Removing file,... {}".format(art))
         os.remove(art)
 
+    gallery_page = 'content/pages/gallery.md'
+    if(os.path.isfile(gallery_page)):
+        os.remove(gallery_page)
+        print("Removing file,... {}".format(gallery_page))
+
+    gallery_str = ''
+    
     if(os.path.isdir(photo_lib_path)):
         for gallery in sorted(os.listdir(photo_lib_path)):
             # Generate Gallery article
@@ -224,6 +238,8 @@ def generate_gallery_pages():
                                           day = mtime.day,
                                           photo='{photo}'
             )
+
+            gallery_str += '{photo}' + gallery + '{' + gallery+'},'
 
             g_create = 'content/art/auto_{}_{:0>2}_{:0>2}_{}.md'.format(
                 mtime.year, mtime.month, mtime.day, gallery) 
@@ -255,4 +271,8 @@ def generate_gallery_pages():
                     w.write(pt)
                 print("File created -> " + p_create)
             
-
+    gallery_str = gallery_str[0:-1] # remove trailing comma
+    gallery_t = gallery_page_template.strip().format(gallery=gallery_str)
+    with open(gallery_page, 'w') as w:
+        w.write(gallery_t)
+    print("File created -> " + gallery_page)
