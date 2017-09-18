@@ -335,7 +335,8 @@ def detect_content(content):
                 photo_prefix = os.path.splitext(value)[0].lower()
 
                 if what == 'photo':
-                    photo_article = photo_prefix + 'a.jpg'
+                    # photo_article = photo_prefix + 'a.jpg'
+                    photo_article = photo_prefix + '.jpg'
                     enqueue_resize(
                         path,
                         os.path.join('photos', photo_article),
@@ -545,7 +546,8 @@ def process_image(generator, content, image):
         image = file_clipper(image)
 
     if os.path.isfile(path):
-        photo = os.path.splitext(image)[0].lower() + 'a.jpg'
+        # photo = os.path.splitext(image)[0].lower() + 'a.jpg'
+        photo = os.path.splitext(image)[0].lower() + '.jpg'
         thumb = os.path.splitext(image)[0].lower() + 't.jpg'
         content.photo_image = (
             os.path.basename(image).lower(),

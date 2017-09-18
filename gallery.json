@@ -1,0 +1,141 @@
+{
+    "root_path" : "D:\\Google Drive\\Art",
+    "galleries" : [
+        {
+            "name" : "sketch_2",
+            "tag" : "art, sketch",
+            "desc" : "Some recent sketches, Part 2",
+            "date" : "2017-8-5",
+            "files" : {
+                "Art/architecture_12~01.jpg" : "",
+                "Art/feline_1.jpg" : "",
+                "Art/feline_1_filtered.jpg" : "",
+                "Art/IronMan_filter_2~01.jpg" : "",
+                "Art/IronMan_filter~01.jpg" : "",
+                "Art/IronMan~01.jpg" : "" 
+            }
+        },
+        {
+            "name" : "sketch_1",
+            "tag" : "art, sketch",
+            "desc" : "Some recent sketches, Part 1",
+            "date" : "2017-3-5",
+            "files" : {
+                "Art/face03~01.jpg" : "",
+                "NotForYourEyes/portrait_angelina_edited.jpg" : "",
+                "Art/Portrait_Ash.jpg" : "",
+                "NotForYourEyes/portrait7_negative~01.jpg" : "",
+                "NotForYourEyes/portrait7~01.jpg" : "",
+                "NotForYourEyes/portrait11_filter~01.jpg" : "", 
+                "NotForYourEyes/portrait11~01.jpg" : "", 
+                "Art/Scarlett.jpg" : "", 
+                "Art/wonderWoman_2.jpg" : "", 
+                "Art/WonderWoman~01.jpg" : "", 
+                "Art/WonderWoman~01~01.jpg" : ""
+            }
+        },
+        {
+            "name" : "fractals_1",
+            "tag" : "art, generative",
+            "desc" : "Some fun with fractals",
+            "date" : "2017-4-5",
+            "files" : {
+                "RandomSessions/frac_01.jpg" : "",
+                "RandomSessions/frac_05.jpg" : "",
+                "RandomSessions/frac_08.jpg" : "",
+                "RandomSessions/frac_13.jpg" : ""
+            }
+        },
+        {
+            "name" : "monochrome",
+            "tag" : "art",
+            "desc" : "Some black and white stuff, with colors",
+            "date" : "2016-8-5",
+            "files" : {
+                "Art/69_filter~01.jpg" : "",
+                "Art/69~01.jpg" : "",
+                "Art/boy102.jpg" : "",
+                "Art/forest_electromagnetic~01.jpg" : "",
+                "Art/forest_negative~01.jpg" : "",
+                "Art/forest~01.jpg" : "", 
+                "Art/magazines.jpg" : "", 
+                "Art/nightClub.jpg" : "", 
+                "Art/silhouette3_electromagnetic~01.jpg" : "", 
+                "Art/silhouette3_negative~01.jpg" : "", 
+                "Art/Window_filtered~01.jpg" : "",
+                "Art/Window~01.jpg" : ""
+            }
+        },
+        {
+            "name" : "misc",
+            "tag" : "art",
+            "date" : "2016-10-5",
+            "desc" : "Some misc. cutouts and experiments.",
+            "files" : {
+                "Art/dragonsOnTheWall.jpg" : "",
+                "RandomSessions/mFace_03.jpg" : "",
+                "RandomSessions/mFace_09.jpg" : "",
+                "RandomSessions/mFace_16.jpg" : "",
+                "RandomSessions/mFace_17.jpg" : "",
+                "RandomSessions/mFace_25.jpg" : "", 
+                "RandomSessions/mFace_28.jpg" : "", 
+                "RandomSessions/mFace_32.jpg" : ""
+            }
+        },
+        {
+            "name" : "in_making_3",
+            "tag" : "art",
+            "desc" : "Some early creations, Part 3",
+            "date" : "2013-8-5",
+            "files" : {
+                "Art/Batman_filter~01.jpg" : "",
+                "Art/Batman~01.jpg" : "",
+                "Art/portrait1_2.jpg" : "",
+                "Art/portrait1_filter.jpg" : "",
+                "Art/splash_ufilter~01.jpg" : "",
+                "Art/splash~01.jpg" : "", 
+                "Art/thingFish.jpg" : "", 
+                "Art/Untitled1.jpg" : ""
+            }            
+        },
+        {
+            "name" : "in_making_2",
+            "tag" : "art",
+            "desc" : "Some early creations, Part 2",
+            "date" : "2012-8-5",
+            "files" : {
+                "Art/girl12_filter~01.jpg" : "",
+                "Art/girl12~01.jpg" : "",
+                "Art/Girl103_filtered~01.jpg" : "",
+                "Art/Girl103_filtered2~01.jpg" : "",
+                "Art/graffiti1.jpg" : "",
+                "Art/graffiti2~01.jpg" : "", 
+                "Art/graffiti3_filter~01.jpg" : "", 
+                "Art/graffiti3~01.jpg" : "", 
+                "Art/noFace1~01.jpg" : "",
+                "Art/PeterPan.jpg" : "",
+                "Art/woodpecker(2)~01.jpg" : ""
+            }            
+        },
+        {
+            "name" : "in_making_1",
+            "tag" : "art",
+            "desc" : "Some early creations, Part 1",
+            "date" : "2011-8-5",
+            "files" : {
+                "Art/animalComposition1~02.jpg" : "",
+                "Art/Boat1.jpg" : "",
+                "Art/composition_109~01.jpg" : "",
+                "Art/face01~01.jpg" : "",
+                "Art/fly.jpg" : "",
+                "Art/graffiti_mrDJ.jpg" : "", 
+                "Art/Graffiti_mrDJ_filter.jpg" : "", 
+                "Art/greekLovers~01.jpg" : "", 
+                "Art/JohnnyBravo.jpg" : "",
+                "Art/landscape12_electromagnetic~01.jpg" : "",
+                "Art/landscape12_ultraviolet~01.jpg" : "",
+                "Art/landscape12~01.jpg" : ""
+            }            
+        }
+    ]
+}
