@@ -33,8 +33,20 @@ DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 DELETE_OUTPUT_DIRECTORY = False
 OUTPUT_RETENTION = [".git"]
 
-ARTICLE_URL='{category}/{slug}.html'
-ARTICLE_SAVE_AS='{category}/{slug}.html'
+ARTICLE_URL='posts/{category}/{slug}/'
+ARTICLE_SAVE_AS='posts/{category}/{slug}/index.html'
+PAGE_URL='pages/{slug}/'
+PAGE_SAVE_AS='pages/{slug}/index.html'
+CATEGORY_URL='category/{slug}/'
+CATEGORY_SAVE_AS='category/{slug}/index.html'
+TAG_URL='tag/{slug}/'
+TAG_SAVE_AS='tag/{slug}/index.html'
+ARCHIVES_URL='archives/'
+ARCHIVES_SAVE_AS='archives/index.html'
+
+
+# Don't generat Authors page 
+AUTHOR_SAVE_AS=''
 
 # Blogroll
 LINKS = ( )
@@ -129,9 +141,9 @@ PHOTO_JSON = 'gallery.json'
 
 # OUTPUT_PATH = 
 
-MENUITEMS = [('Archives', '/archives.html'),
-             ('Bio', '/pages/bio.html'),
-             ('Gallery', '/pages/gallery.html')]
+MENUITEMS = [#('Archives', '/archives/'),
+             ('Bio', '/pages/bio/'),
+             ('Gallery', '/pages/gallery/')]
 
 MARKDOWN = {
    'EXTENSIONS' : (['toc'])
@@ -146,3 +158,8 @@ TOC = {
 MATH_JAX = {
     'align' : 'left'
 }
+
+# LOG_FILTER = []
+
+# Use while developing
+# WRITE_SELECTED = ['output/summary/research-notes-machine-learning.html']
