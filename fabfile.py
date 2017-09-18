@@ -182,9 +182,13 @@ def optimize_images():
 
 album_template = """
 Title: {title}
-Date: {year}-{month}-{day}
+Date: {date}
 gallery: {photo}{title}
-tags: art
+tags: {tag}
+summary: {desc}
+
+{desc}
+
 """
 
 gallery_page_template = """
@@ -197,16 +201,39 @@ gallery_post_template = """
 Title: {title}
 Date: {year}-{month}-{day}
 
+#### {desc}
 ![{caption}]({photo}/{gallery}/{filename})
 """
 
-def generate_gallery_pages():
+def get_proper_timestamp(path):
+    if os.path.isfile(path) == False:
+        return datetime.today()
+    
+    try:        
+        ts = os.path.getmtime(path)
+        return datetime.fromtimestamp(ts)
+    except:
+        ts = os.path.getctime(path)
+        return datetime.fromtimestamp(ts)
+
+
+def generate_gallery():
+    import json
+    # gallery_json = 'gallery.json'
     settings = read_settings('pelicanconf.py')
+
     photo_lib_path = settings['PHOTO_LIBRARY']
+    gallery_json = settings['PHOTO_JSON']
+
+    # photo_lib_path = "gallery"
+
+    with open(gallery_json) as data_file:
+        gallery_data = json.load(data_file)
+
     # print(photo_lib_path)
     import  glob 
 
-    # Cleanup..
+    # Delete previously auto generated pages.
     galleries = 'content/art/auto_*.md'
     for gal in glob.iglob(galleries):
         print("Removing file,.. {}".format(gal))
@@ -217,62 +244,114 @@ def generate_gallery_pages():
         print("Removing file,... {}".format(art))
         os.remove(art)
 
-    gallery_page = 'content/pages/gallery.md'
+    gallery_page = 'content/pages/auto_gallery.md'
     if(os.path.isfile(gallery_page)):
         os.remove(gallery_page)
         print("Removing file,... {}".format(gallery_page))
 
     gallery_str = ''
-    
-    if(os.path.isdir(photo_lib_path)):
-        for gallery in sorted(os.listdir(photo_lib_path)):
-            # Generate Gallery article
-            galleryPath = os.path.join(photo_lib_path, gallery)
 
+    # Cleanup Photos directory 
+    if os.path.isdir(photo_lib_path):
+        print("Cleaning up photos directory")
+        shutil.rmtree(photo_lib_path, ignore_errors=True)
 
-            mtime = datetime.fromtimestamp(os.path.getmtime(galleryPath))            
+    os.makedirs(photo_lib_path)
 
-            gt = album_template.strip().format(title= gallery,
-                                          year = mtime.year,
-                                          month = mtime.month,
-                                          day = mtime.day,
-                                          photo='{photo}'
-            )
+    gallery_root = gallery_data['root_path']
+    print("Gallery Root : {}".format(gallery_root))
 
-            gallery_str += '{photo}' + gallery + '{' + gallery+'},'
+    # Copy photos to photo directory
+    for gallery in gallery_data['galleries']:
+        galleryName = gallery['name']
 
-            g_create = 'content/art/auto_{}_{:0>2}_{:0>2}_{}.md'.format(
-                mtime.year, mtime.month, mtime.day, gallery) 
+        galleryPath = os.path.join(photo_lib_path, galleryName)
+        print("Creating dir,.. {}".format(galleryPath))
+        os.makedirs(galleryPath)
 
-            with open(g_create, 'w') as w:
-                w.write(gt)
-            print("File created -> " + g_create)
+        gt = album_template.strip().format(title=galleryName,
+                                           date=gallery['date'],
+                                           tag=gallery['tag'],
+                                           desc=gallery['desc'],
+                                           photo='{photo}')
 
-            for pic in sorted(os.listdir(galleryPath)):
+        gallery_str += '{photo}' + galleryName + '{' + galleryName+'},'
 
-                picPath = os.path.join(galleryPath, pic)
-                pmtime = datetime.fromtimestamp(os.path.getmtime(picPath))
+        g_create = 'content/art/auto_{}.md'.format(galleryName) 
+        with open(g_create, 'w') as w:
+            w.write(gt)
+        print("File created -> " + g_create)
 
-                picName = pic.split('.')[0]
+        for file in gallery['files']:            
+            fileSourcePath = os.path.join(gallery_root, file)
+            fileName = os.path.basename(fileSourcePath)
+            fileDestPath = os.path.join(galleryPath, fileName)
 
-                pt = gallery_post_template.strip().format(title=picName,
-                                                          year=pmtime.year,
-                                                          month=pmtime.month,
-                                                          day=pmtime.day,
-                                                          caption='ssdhgf',
-                                                          photo='{photo}',
-                                                          gallery=gallery,
-                                                          filename=pic)
+            file_desc = gallery['files'][file]
 
-                p_create = 'content/pages/auto_{}_{:0>2}_{:0>2}_{}.md'.format(
-                    pmtime.year, pmtime.month, pmtime.day, picName)
+            fileStrippedName = fileName.split('.')[0]
 
-                with open(p_create, 'w') as w:
-                    w.write(pt)
-                print("File created -> " + p_create)
+            pmtime = get_proper_timestamp(fileSourcePath)
+
+            if os.path.isfile(fileDestPath) == False:
+                print('Copying file to : {}'.format(fileDestPath))
+                shutil.copyfile(fileSourcePath, fileDestPath)
+            else:
+                print("File already exists at : {}".format(fileDestPath))
+
+            pt = gallery_post_template.strip().format(title=fileStrippedName,
+                                                     year = pmtime.year,
+                                                     month=pmtime.month,
+                                                     day=pmtime.day,
+                                                     caption=fileStrippedName,
+                                                     photo='{photo}',
+                                                     gallery=galleryName,
+                                                     filename=fileName,
+                                                     desc=file_desc)
+
+            p_create = 'content/pages/auto_{}_{:0>2}_{:0>2}_{}.md'.format(
+                pmtime.year, pmtime.month, pmtime.day, fileStrippedName)
+
+            with open(p_create, 'w') as w:
+                w.write(pt)
+            print("File created -> " + p_create)
+
             
     gallery_str = gallery_str[0:-1] # remove trailing comma
     gallery_t = gallery_page_template.strip().format(gallery=gallery_str)
     with open(gallery_page, 'w') as w:
         w.write(gallery_t)
     print("File created -> " + gallery_page)
+
+
+def test_json():
+    from pprint import pprint
+
+    settings = read_settings('pelicanconf.py')
+    photo_lib_path = settings['PHOTO_LIBRARY']
+
+    gallery_json = 'gallery/gallery.json'
+
+    with open(gallery_json) as data_file:
+        data = json.load(data_file)
+    
+    pprint(data['galleries'][0])
+
+
+
+def renameImages():
+    import glob
+    from PIL import Image
+    INPUT_IMAGES = 'D:\Google Drive\Art\RandomSessions\{file}.{format}'
+    for file in glob.iglob(INPUT_IMAGES.strip().format(file='*', format='png')):
+        fileName = os.path.basename(file).split('.')[0]
+        newName = INPUT_IMAGES.strip().format(file=fileName, format='jpg')
+        # while os.path.isfile(newName) :
+        #     index += 1
+        #     newName = '../test_data2/g/{}.jpg'.format(index)
+
+        print("{} --> {}".format(file, newName))        
+
+        im = Image.open(file)
+        rgb_im = im.convert('RGB')
+        rgb_im.save(newName)
