@@ -12,6 +12,33 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 
 ## Deep Learning
 
+### Image Recognition
+
+#### Very Deep Convolutional Networks For Large-Scale Image Recognition : *Apr 2015*   
+[*Source*](https://arxiv.org/pdf/1409.1556.pdf)
+
+* Introduces the *VGG network that won ImageNet in 2014*.
+* Deeper ConvNets. Takes input as (224 X 224) RGB and mean image subtracted as preprocessing. Two final FC hidden layers, followed by one FC layer with 1000 outputs. Number of total trainable parameters turn out to be 144 million for VGG-19. 
+* All the hidden layers use *ReLU* activations.
+* Deeper networks with small filters result in more regularization and less parameters.
+* Optimise multinomial logistic regression objective using mini-batch gradient descent with momentum.
+* At the end introduces ensemble models by averaging softmax predictions from multiple models.
+
+
+#### Deep Residual Learning for Image Recognition : *Dec 2015*
+[*Source*](https://arxiv.org/pdf/1512.03385v1.pdf)
+
+* Presents residual learning framework to ease the training of networks that are substantially deeper(152 layers!) than those used previously. *How to win ImageNet in 2015.*
+* Problem with deeper networks : *Vanishing Gradients* : Addressed by intermediate normalization.
+* Problem with deeper networks : *Degradation*, not caused by overfitting..
+![alt](/images/papers/resNet1.jpg)
+* Introduces residual learning framework by using shortcut connections that can perform identity mapping.
+* Using Identity mapping as precondition allows the network to easily learn the identity, if it is a desired mapping. This helps in *simplifying* networks.
+* *Plain Network* architecture, mainly based on VGG nets.
+* *Residual Network* architecture, insert shortcuts to the plain network.
+* The model shows *no optimization difficulty* even with > 1000 layers..!!
+* Finally discusses improvements for detection and localization tasks.
+
 ### Image Segmentation
 
 #### Image segmentation review   
@@ -25,7 +52,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * *Semantic Segmentation, Deep Learning, Scene Labeling, Object Segmentation*   
 * This paper provides a review on deep learning methods for semantic segmentation applied to various  application areas. This also describes the terminology used as well as some background concepts, then some existing models are reviewed(2017). At last a set of promising future works are discussed.
 * These techniques are not very mature as of yet, mainly because of a lack of unifying picture.
-* ![Evolution of object recognition](images/papers/deepSegment1.jpg)
+![Evolution of object recognition](/images/papers/deepSegment1.jpg)
 * CNN Architectures : AlexNet, VGG, GoogleNet, ResNet, etc..
 * 2D and 3D Datasets : [PascalVOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/),  [Microsoft COCO](6. http://mscoco.org/), and more,...   
 * Decoder Variants, Integrating Context Knowledge
@@ -52,15 +79,44 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Introducing Upsampling or Convolution Transpose.
 
 #### From Image-level to Pixel-level Labeling with Convolutional Networks : *Apr 2015*   
-[*Source*]((https://arxiv.org/abs/1411.6228))   
+[*Source*](https://arxiv.org/abs/1411.6228)   
 
 * Weakly supervised segmentation.
 * Put more weights to pixels with known class labels.
 * Uses part of model trained on ImageNet and trains for segmentation on PascalVOC.
-    
 
+
+### Neural Style
+
+#### A Neural Style Algorithm of Artistic Style : *Sep 2015*   
+[*Source*](https://arxiv.org/abs/1508.06576)   
+
+* In fine art, especially painting, humans have mastered the skill to create unique visual experiences through composing a complex interplay between the content and style of an image. Thus far the algorithmic basis of this process is unknown and there exists no artificial system with similar capabilities.
+* Then we came across Deep Neural Networks.
+![alt](/images/papers/styleTransfer1.jpg)
+* *Higher* layers in the network capture the high-level *content* in terms of objects and their arrangement in the input image. We represent these feature responses as *content representation*.
+$$\mathcal L_{content}(\vec p,\vec x,l) = \frac12\sum_{i,j}{(F^l_{ij} - P^l_{ij})^2}$$
+* For *style* we need to capture correlations(given by *Gram matrix* $G^l \in \mathcal R^{N_l \times N_l}$ where $G^l_{ij} = \sum_kF^l_{ik}F^l_{jk}$) between different filter responses. This representation captures the texture information of the input, but not the global arrangement. This multi-scale representation is called *style representation*.
+$$E_l = \frac1{4N^2_lM^2_l}\sum_{ij}(G^l_{ij}-A^l_{ij})^2$$
+$$\mathcal L_{style}(\vec a,\vec x) = \sum_{l=0}^Lw_lE_l$$
+* So, we can manipulate both *content* and *style* separately.
+* The images are synthesised by finding an image that simultaneously matches the content representation of the photograph and the style representation of the respective piece of art.
+$$\mathcal L_{total}(\vec p,\vec a,\vec x) = \alpha\mathcal L_{content}(\vec p,\vec x) + \beta\mathcal L_{style}(\vec a,\vec x)$$
+![alt](/images/papers/styleTransfer2.jpg)
+![alt](/images/papers/styleTransfer3.jpg)
+![alt](/images/papers/styleTransfer4.jpg)
+* *Gallleries*
+    * [Style Transfer Studies](http://kylemcdonald.net/stylestudies/)
+* *Implementations* 
+    * [Neural Style, JC Johnson, Lua](https://github.com/jcjohnson/neural-style)
+    * []
 
 #### To Read   
-* https://arxiv.org/abs/1508.06576
 * https://arxiv.org/abs/1311.2901
 * https://arxiv.org/pdf/1602.03616.pdf
+* https://arxiv.org/abs/1605.04603
+* https://arxiv.org/abs/1606.05897
+* https://arxiv.org/abs/1604.08610
+* https://arxiv.org/abs/1708.08288
+* http://cs.stanford.edu/people/jcjohns/eccv16/
+* https://arxiv.org/abs/1607.08022
