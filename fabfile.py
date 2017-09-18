@@ -195,11 +195,13 @@ gallery_page_template = """
 Title: Gallery
 date: 10-10-2017
 gallery: {gallery}
+comments: enabled
 """
 
 gallery_post_template = """
 Title: {title}
 Date: {year}-{month}-{day}
+comments: enabled
 
 #### {desc}
 ![{caption}]({photo}/{gallery}/{filename})
@@ -234,7 +236,7 @@ def generate_gallery():
     import  glob 
 
     # Delete previously auto generated pages.
-    galleries = 'content/art/auto_*.md'
+    galleries = 'content/gallery/auto_*.md'
     for gal in glob.iglob(galleries):
         print("Removing file,.. {}".format(gal))
         os.remove(gal)
@@ -277,7 +279,7 @@ def generate_gallery():
 
         gallery_str += '{photo}' + galleryName + '{' + galleryName+'},'
 
-        g_create = 'content/art/auto_{}.md'.format(galleryName) 
+        g_create = 'content/gallery/auto_{}.md'.format(galleryName) 
         with open(g_create, 'w') as w:
             w.write(gt)
         print("File created -> " + g_create)
