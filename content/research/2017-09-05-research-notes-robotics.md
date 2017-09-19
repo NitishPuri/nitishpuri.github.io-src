@@ -3,7 +3,7 @@ title: Research Notes - Robotics
 author: Nitish
 use_math: true
 tags: notes, robotics
-category: Reserch
+category: Research
 summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
 series: Research Notes
 ---
