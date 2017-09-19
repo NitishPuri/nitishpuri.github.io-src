@@ -76,7 +76,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Visualizing the multifaceted nature of hidden neurons
 ![alt](/images/papers/multiVis3.jpg)
 ![alt](/images/papers/multiVis4.jpg)
-
+* Discusses various optimization techniques to produce better images in detail : center biased regularization, mean image initialization.
  
 
 ### Image Segmentation
