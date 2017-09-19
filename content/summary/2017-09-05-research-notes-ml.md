@@ -39,12 +39,36 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * The model shows *no optimization difficulty* even with > 1000 layers..!!
 * Finally discusses improvements for detection and localization tasks.
 
+
+#### Visualizing and Understanding Convolutional Networks : *Nov 2013*
+[*Source*](https://arxiv.org/abs/1311.2901)
+
+* Understanding why CNNs perform well on Image Classification tasks.
+* Visualizing with a Deconvnet
+![alt](/images/papers/visnet1.jpg)
+* Feature Visualization
+![alt](/images/papers/visnet2.jpg)
+![alt](/images/papers/visnet3.jpg)
+![alt](/images/papers/visnet4.jpg)
+![alt](/images/papers/visnet5.jpg)
+* Feature Evolution during training
+![alt](/images/papers/visnet6.jpg)
+* Feature Invariance
+* Occlusion Sensitivity
+![alt](/images/papers/visnet7.jpg)
+![alt](/images/papers/visnet8.jpg)
+* Correspondence Analysis  
+
+
+
 ### Image Segmentation
 
 #### Image segmentation review   
 [*Source*](http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review)   
 
-* A review of segmentation at qure.ai
+* A review of segmentation at qure.ai  
+
+
 
 #### A Review of Deep Learning Techniques Applied to Semantic Segmentation : *Apr 2017*   
 [*Source*](https://arxiv.org/pdf/1704.06857)   
@@ -60,6 +84,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * RGB-D Data and 3D Data
 * Video Sequences   
 
+
+
 #### DeepLab : Semantic Image Segmentation with Deep Convolution Nets, Atrous Convolution, and Fully Connected CRFs : *May 2017*   
 [*Source*](https://arxiv.org/abs/1606.00915)   
 
@@ -67,16 +93,22 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Introduces upsampled filters(Altrous Convolution) as a tool in dense prediction tasks. Allows us to control the resolution at which feature responses are computed and also allows us to effectively enlarge the field of view of filters to incorporate larger context without increasing the number of parameters or the amount of computation.
 * ???? // *Read this again..*
 
+
+
 #### U-Net: Convolution Networks for Biomedical Image Segmentation : *May 2015*   
 [*Source*](https://arxiv.org/abs/1505.04597)   
 
 * Focuses on end-to-end training for segmentation tasks, relying heavily on data augmentation.
     
+
+
 #### Fully Convolutional Networks for Semantic Segmentation : *Mar 2015*   
 [*Source*](https://arxiv.org/abs/1411.4038)   
 
 * One of the first works to use Fully Connected layers to create pixel heatmap as output.
 * Introducing Upsampling or Convolution Transpose.
+
+
 
 #### From Image-level to Pixel-level Labeling with Convolutional Networks : *Apr 2015*   
 [*Source*](https://arxiv.org/abs/1411.6228)   
@@ -84,6 +116,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Weakly supervised segmentation.
 * Put more weights to pixels with known class labels.
 * Uses part of model trained on ImageNet and trains for segmentation on PascalVOC.
+
 
 
 ### Neural Style
@@ -111,8 +144,7 @@ $$\mathcal L_{total}(\vec p,\vec a,\vec x) = \alpha\mathcal L_{content}(\vec p,\
     * [Neural Style, JC Johnson, Lua](https://github.com/jcjohnson/neural-style)
     * []
 
-#### To Read   
-* https://arxiv.org/abs/1311.2901
+### To Read  
 * https://arxiv.org/pdf/1602.03616.pdf
 * https://arxiv.org/abs/1605.04603
 * https://arxiv.org/abs/1606.05897
