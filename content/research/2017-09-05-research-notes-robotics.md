@@ -3,18 +3,18 @@ title: Research Notes - Robotics
 author: Nitish
 use_math: true
 tags: notes, robotics
-category: Summary
+category: Reserch
 summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
 series: Research Notes
 ---
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.
 
-## Robotics
+## **Robotics**
 
-### Robot Grasping
+### **Robot Grasping**
 
-#### Robotic Grasping and Contact: A Review   
+#### **Robotic Grasping and Contact: A Review**   
 [*Source*](https://pdfs.semanticscholar.org/54f8/8557554d9a4e517f301cb170bd50cbe4cfc9.pdf)   
 
 * Survey of work done in last two decades.
@@ -32,8 +32,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Grasping and the kinematics of the hand
 * Dynamics
 
-### Mobile Robots
-#### Modular and Reconfigurable Mobile Robots   
+### **Mobile Robots**
+#### **Modular and Reconfigurable Mobile Robots**   
 [*Source*](http://128.173.188.245/publications/J13_Modular_Robots_JRAS.pdf)   
 
 * Classification
@@ -80,9 +80,10 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
             * SuperBot
                 * ![alt](/images/papers/modularBots17.jpg)
 
-### Bio Robots
+### **Bio Robots**
 
-#### OpenRatSLAM : on open source brain-based SLAM system : *Feb 2013*   
+#### **OpenRatSLAM : on open source brain-based SLAM system**   
+*Feb 2013*   
 [*Source*](http://static.springer.com/sgw/documents/1388513/application/pdf/10-3.pdf)    
 
 * *RatSLAM, OpenRatSLAM, SLAM, Navigation, Mapping, Brain-based, Appearance-based, ROS, Open-source, Hippocampus*
@@ -107,7 +108,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Future work
 * [Watch In Action](https://www.youtube.com/watch?v=-0XSUi69Yvs)
     
-#### Biologically Inspired App*roaches* to Robotics : *March 1997*   
+#### **Biologically Inspired App*roaches* to Robotics**   
+*March 1997*   
 [*Source*](http://pdfs.semanticscholar.org/501b/9eb3c085a66abe4bdd56043fc802c21d0526.pdf)   
 
 * Big gap between fantasy and reality in terms of Autonomous Robots.
@@ -124,7 +126,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
     * Use genetic algorithms to evolve the neural networks for controlling the locomotion.
 * Rough Terrain Locomotion
 
-#### The First Takeoff of a Biologically Inspired At-Scale Robotic Insect : *April 2008*   
+#### **The First Takeoff of a Biologically Inspired At-Scale Robotic Insect**   
+*April 2008*   
 [*Source*](http://www.micro.seas.harvard.edu/papers/TRO08_Wood.pdf)    
 
 * *Actuators, aerial robotics, biologically inspired robotics, microrobotics*
@@ -142,7 +145,8 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
     * Airfoils 
 * [Watch In Action](https://www.youtube.com/watch?v=olqaMw8bIb8)
 
-#### Towards Dynamic Trot Gait Locomotion—Design, Control, and Experiments with Cheetah-cub, a Compliant Quadruped Robot : *July 2013*   
+#### **Towards Dynamic Trot Gait Locomotion—Design, Control, and Experiments with Cheetah-cub, a Compliant Quadruped Robot**   
+*July 2013*   
 [*Source*](https://infoscience.epfl.ch/record/184991/files/Draft1sprowitz2013.pdf)    
 
 * [Watch In Action](https://www.youtube.com/watch?v=_luhn7TLfWU)
