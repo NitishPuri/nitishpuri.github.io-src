@@ -39,6 +39,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * The model shows *no optimization difficulty* even with > 1000 layers..!!
 * Finally discusses improvements for detection and localization tasks.
 
+### Deep Visualization
 
 #### Visualizing and Understanding Convolutional Networks : *Nov 2013*
 [*Source*](https://arxiv.org/abs/1311.2901)
@@ -60,6 +61,23 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Correspondence Analysis  
 
 
+#### Multifaceted Feature Visualization: Uncovering the Different Types of Features Learned By Each Neuron in Deep Neural Networks : *May 2016*   
+[*Source*](https://arxiv.org/pdf/1602.03616.pdf)   
+
+* Researchers have been using *activation maximization* techniques until now. This assumes that each neuron detects only one type of feature.
+* But, we know neurons can be *multifaceted*. Here *multifaceted feature visualization* (MFV) is introduced.
+    * Systematically visualize all facets of a neuron.
+    * Improve image quality of synthesized images with natural and globally consistent colors.
+![alt](/images/papers/multiVis1.jpg)
+* *Center biased regularization* is used so that the synthesized images dont have many repeated object fragments.
+    * This is done by first producing a blurry image, then updating the center pixels more than the edge ones, producing a final image that is sharp and has a centrally-located object.
+    * This image would have far fewer duplicated fragments.
+![alt](/images/papers/multiVis2.jpg)
+* Visualizing the multifaceted nature of hidden neurons
+![alt](/images/papers/multiVis3.jpg)
+![alt](/images/papers/multiVis4.jpg)
+
+ 
 
 ### Image Segmentation
 
