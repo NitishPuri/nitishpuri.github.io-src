@@ -1,5 +1,5 @@
 ---
-title: Research Notes - Machine Learning, Part 2
+title: Style Transfer, Part 1
 author: Nitish
 date: 2017-9-19 17:30
 use_math: true
@@ -118,12 +118,11 @@ $$\mathcal L_{total}(\vec p,\vec a,\vec x) = \alpha\mathcal L_{content}(\vec p,\
 ### To Read  
 * [Magenta](https://github.com/tensorflow/magenta)
 * [Single Shot](https://arxiv.org/abs/1512.02325)
-* https://medium.com/towards-data-science/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9
-* [F-RCN](https://arxiv.org/abs/1605.06409)
-* [Faster R-CNN](https://arxiv.org/abs/1506.01497)
-* https://arxiv.org/pdf/1411.1792.pdf
+* [How transferable are features in deep neural networks?](https://arxiv.org/pdf/1411.1792.pdf)
 * https://arxiv.org/abs/1708.08288
-* https://arxiv.org/abs/1512.00567
+* https://arxiv.org/abs/1603.04467
+* https://arxiv.org/abs/1702.00824
+* https://arxiv.org/abs/1709.02878
 * https://arxiv.org/abs/1610.02357
 * https://arxiv.org/pdf/1511.08630.pdf
 * https://arxiv.org/abs/1602.07261

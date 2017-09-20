@@ -1,5 +1,5 @@
 ---
-title: Research Notes - Machine Learning, Part 4
+title: Neural Network Architectures
 author: Nitish
 date: 2017-9-20 20:30
 use_math: true
@@ -60,5 +60,4 @@ $$\text{selu}(x) = \lambda\begin{cases}x, & \text{if } x \ge 0 \\
 * **Theorem 1.** *There exists a two-layer neural network with ReLU activations and $2n+d$ weights that can represent any function on a sample of size $n$ in $d$ dimensions.*   
 * **Implicit Regularization : An Appeal To Linear Models**
 * Arguments showing that it is not necessarily easy to understand the source of generalization for linear models either.
-* Do all global minima generalize equally well? Is there a way to determine when one global minimum will generalize whereas another will not? In case of a linear model, even the curvature of the loss function would be the same.
-* 
+* Do all global minima generalize equally well? Is there a way to determine when one global minimum will generalize whereas another will not? In case of a linear model, even the curvature of the loss function would be the same. 

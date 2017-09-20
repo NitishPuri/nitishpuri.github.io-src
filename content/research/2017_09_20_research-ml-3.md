@@ -1,5 +1,5 @@
 ---
-title: Research Notes - Machine Learning, Part 3
+title: Style Transfer, Part 2
 author: Nitish
 date: 2017-9-20 17:30
 use_math: true
