@@ -156,7 +156,8 @@ TOC = {
 }
 
 MATH_JAX = {
-    'align' : 'left'
+    'align' : 'left',
+    'linebreak_automatic' : True
 }
 
 # LOG_FILTER = []
