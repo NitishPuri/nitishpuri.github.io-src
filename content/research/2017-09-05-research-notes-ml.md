@@ -25,7 +25,6 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Optimise multinomial logistic regression objective using mini-batch gradient descent with momentum.
 * At the end introduces ensemble models by averaging softmax predictions from multiple models.
 
-
 #### **Deep Residual Learning for Image Recognition**   
 *Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun : Dec 2015*   
 [*Source*](https://arxiv.org/abs/1512.03385)

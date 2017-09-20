@@ -3,15 +3,15 @@ title: Research Notes - Machine Learning, Part 2
 author: Nitish
 date: 2017-9-19 17:30
 use_math: true
-tags: notes, deep-learning
+tags: notes, deep-learning, style-transfer
 category: Research
-summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
+summary: Minimal notes on neural style transfer related papers.
 series: Research Notes
 ---
 
 ## **Deep Learning**
 
-### **Neural Style**
+### **Style Transfer**
 
 #### **A Neural Style Algorithm of Artistic Style**   
 *Leon A. Gatys, Alexander S. Ecker, Matthias Bethge : Sep 2015*   
@@ -115,64 +115,44 @@ $$\mathcal L_{total}(\vec p,\vec a,\vec x) = \alpha\mathcal L_{content}(\vec p,\
 ![alt](/images/papers/colorTransfer10.jpg)   
 
 
-#### **Artistic style transfer for videos**   
-*Manuel Ruder, Alexey Dosovitskiy, Thomas Brox : Apr 2016*   
-[*Source*](https://arxiv.org/abs/1604.08610)   
-
-* The previously discussed techniques have been applied to videos on per frame basis.
-* However, processing each frame of the video independently leads to flickering and false discontinuities, since the solution of the style transfer task is not stable.
-* To regularize the transfer temporal constraints using optical flow are introduced.
-![alt](/images/papers/videoStyle1.jpg)   
-* Notation
-    * $\mathbf p^{(i)}$ is the $i^{th}$ frame of the original video.
-    * $\mathbf a$ is the style image.
-    * $\mathbf x^{(i)}$ are the stylized frames to be generated.
-    * $\mathbf {x'}^{(i)}$ is the initialization of the style optimization algorithmat frame $i$.
-* Short-term consistency by initialization
-    * Most basic way to yield temporal consistency is to initialize the optimization for the frame $i+1$ with the stylized frame $i$.
-    * Does not perform very well if there are moving objects in the scene, so we use optical flow.
-    * $\mathbf {x'}^{(i+1)}=\omega_i^{i+1}\mathbf x^{(i)}$. Here $\omega_i^{i+1}$ denotes the function tha warps a given image using the optical flow field that was estimated between $\mathbf p^{(i)}$ and $\mathbf p^{(i+1)}$.
-    * *DeepFlow* and *EpicFlow*, both based on *Deep Matching* are used for optical flow estimation.
-* Temporal consistency loss
-    * Let $\mathbf w = (u,v)$ be the optical flow in forward direction and $\mathbf {\hat w}=(\hat u, \hat v)$ the flow in backward direction.
-    * Then, $\mathbf {\tilde w}(x,y) = \mathbf{w}((x,y) + \mathbf{\hat{w}}(x,y))$ is the forward flow warped to the second image.
-    * In areas without disoclusion, this warped flow should be approximately the opposite of the backward flow.
-    * So, we can find the areas of disoclusions where $|\mathbf{\widetilde{w} + \hat{w}}|^2 > 0.01(|\mathbf{\widetilde{w}}|^2+|\mathbf{\hat{w}}|^2)+0.5$.
-    * and motion boundaries can be detected where $|\Delta\mathbf{\hat{u}}|^2+|\Delta\mathbf{\hat{v}}|^2>0.01|\mathbf{\hat{w}}|^2+0.002$.
-    * So, temporal consistency loss function penalizes deviations from the warped image in regions where the optical flow is consistent and estimated with high confidence.   
-    $$\mathcal{L}_{temporal}(\mathbf{x,\omega,c}) = \frac1D\sum_{k=1}^Dc_k\cdot(x_k-\omega_k)^2$$
-    * Here, $\mathbf{c}\in [0,1]^D$ is per-pixel weighing of the loss and $D=W\times{H}\times{C}$ is the dimensionality of the image.
-    * We define $\mathbf{c}^{(i-1,i)}$ between frames $i-1$ and $i$ as $0$ in disoccluded regions and the motion boundaries, and 1 everywhere else.
-    * So, overall loss takes the form,   
-    $$\mathcal L_{shortterm}(\mathbf{p}^{(i)},\mathbf{a},\mathbf{x}^{(i)}) = \alpha\mathcal{L}_{content}(\mathbf{p}^{(i)},\mathbf{x}^{(i)}) + \beta\mathcal{L}_{style}(\mathbf{a},\mathbf{x}^{(i)}) + \gamma\mathcal{L}_{temporal}(\mathbf{x}^{(i)}, \omega_{i-1}^i(\mathbf{x}^{(i-1)}), \mathbf{c}^{(i-1,i)})$$
-* Long-term consistency
-    * The short-term model has the following limitation: when some areas are occluded in some frame and disoccluded later, these areas will likely change their appearance in the stylized video.
-    * So, we need to use a penalization for deviations from more distant frames too.
-    * $J$ is the set of relative indices that each frame takes into account.
-    * So, the loss function is,
-    $$\mathcal L_{longterm}(\mathbf{p}^{(i)},\mathbf{a},\mathbf{x}^{(i)}) = \alpha\mathcal{L}_{content}(\mathbf{p}^{(i)},\mathbf{x}^{(i)}) + \beta\mathcal{L}_{style}(\mathbf{a},\mathbf{x}^{(i)}) + \gamma\sum_{j\in J:i-j\geq1}\mathcal{L}_{temporal}(\mathbf{x}^{(i)}, \omega_{i-j}^i(\mathbf{x}^{(i-j)}), \mathbf{c}_{long}^{(i-j,i)})$$
-    * where, $\mathbf{c}_{long}^{(i-j,i)}=\text{max}(\mathbf{c}^{(i-j,i)} - \sum_{k\in J:i-k>i-j}\mathbf{c}^{(i-k,i)}, \mathbf{0})$
-* Multi-pass algorithm
-    * The image boundaries tend to have less contrast and less diversity than other areas.
-    * This is not a problem for mostly static videos, but with large camera motion, these effects can creep in towards the center, which leads to lower quality images over time.
-    * So, we use a multi-pass algorithm which processes the whole sequence in multiple passes and alternating directions.
-    * Each pass consists of a lower number of iterations without full convergence. The sequence is run in alternating directions with each flow and blended for some number of iterations till some convergence.
-    * The multi-pass algorithm can be combined with temporal consistency loss described above.
-    * Achieve good results if temporal loss is disabled in several initial passes and enabled in later passes after the images had stabilized.
-* Long term motion estimate...
-* Artifacts at image boundaries,...
-* *Implementation* : https://github.com/manuelruder/artistic-videos
-* *Watch in action* : https://youtu.be/vQk_Sfl7kSc   
-
-
-
 ### To Read  
+* [Magenta](https://github.com/tensorflow/magenta)
+* [Single Shot](https://arxiv.org/abs/1512.02325)
+* https://medium.com/towards-data-science/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9
+* [F-RCN](https://arxiv.org/abs/1605.06409)
+* [Faster R-CNN](https://arxiv.org/abs/1506.01497)
+* https://arxiv.org/pdf/1411.1792.pdf
 * https://arxiv.org/abs/1708.08288
-* http://cs.stanford.edu/people/jcjohns/eccv16/
-* https://arxiv.org/abs/1607.08022
+* https://arxiv.org/abs/1512.00567
+* https://arxiv.org/abs/1610.02357
+* https://arxiv.org/pdf/1511.08630.pdf
+* https://arxiv.org/abs/1602.07261
+* https://arxiv.org/pdf/1704.04861.pdf
 * https://arxiv.org/abs/1603.01768
 * https://arxiv.org/abs/1505.07376
 * https://arxiv.org/abs/1601.04589
 * https://hal.inria.fr/hal-00873592
 * https://hal.inria.fr/hal-01142656
 * https://lmb.informatik.uni-freiburg.de/Publications/2010/Bro10e/
+* http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf
+* https://arxiv.org/abs/1503.02531
+* https://arxiv.org/abs/1512.05287
+* http://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf
+* https://arxiv.org/abs/1603.07285v1
+* [Deconvolutional Networks](http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf)
+* [Gradient Descent Ocerview](http://ruder.io/optimizing-gradient-descent/), https://arxiv.org/abs/1609.04747
+* (Deep Visualization Toolbox)(http://yosinski.com/deepvis)
+* [Neural Machine Translation](https://arxiv.org/abs/1409.1259)
+* https://arxiv.org/abs/1412.3555v1
+* http://www.bioinf.jku.at/publications/older/2604.pdf
+* http://www.mitpressjournals.org/doi/pdf/10.1162/089976600300015015
+* RNN Book, http://www.cs.toronto.edu/~graves/preprint.pdf
+* [Rectifier Nonlinearities Improve Neural Network Acoustic Models](https://web.stanford.edu/~awni/papers/relu_hybrid_icml2013_final.pdf)
+* [https://arxiv.org/abs/1502.01852](https://arxiv.org/abs/1502.01852)
+* https://arxiv.org/abs/1511.07289v1
+* https://arxiv.org/abs/1402.3337
+* https://arxiv.org/abs/1502.03167
+* http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf
+* https://arxiv.org/abs/1212.5701
+* https://arxiv.org/abs/1412.6980v8
+* 
