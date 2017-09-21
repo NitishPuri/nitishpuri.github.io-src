@@ -1,7 +1,7 @@
 ---
 title: Blogging like a hacker
 comments: true 
-category: Meta
+category: meta
 tags: jekyll, blogging
 ---
 
