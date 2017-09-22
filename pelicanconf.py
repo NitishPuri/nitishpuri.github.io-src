@@ -146,9 +146,14 @@ MENUITEMS = [#('Archives', '/archives/'),
              ('Bio', '/pages/bio/'),
              ('Gallery', '/pages/gallery/')]
 
-MARKDOWN = {
-   'EXTENSIONS' : (['toc'])
-}
+# MARKDOWN = {
+#    'EXTENSIONS' : (['toc', 'fenced_code','codehilite']),
+#    'extensions_configs': {
+#        'markdown.extensions.codehilite' : {'css_class': 'highlight'},
+#    }
+# }
+
+# MD_EXTENSIONS = ['fenced_code', 'toc', 'codehilite(css_class=highlight, linenums=True)', 'extra']
 
 TOC = {
     'TOC_HEADERS' : '^h[1-4]',
