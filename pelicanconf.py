@@ -33,11 +33,11 @@ DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 DELETE_OUTPUT_DIRECTORY = False
 OUTPUT_RETENTION = [".git"]
 
-PLUGIN_PATHS = ['./plugins', 'D:/tree/Portfolio/pelican/pelican-plugins']
+PLUGIN_PATHS = ['D:/tree/Portfolio/pelican/pelican-themes/pelican-bootstrap3/plugins']
 # PLUGIN_PATHS = ['D:/tree/Portfolio/pelican/pelican-plugins']
 PLUGINS = [ "render_math", "md-metayaml" , "pelican-toc", "series",
             "photos", "i18n_subsites", "tag_cloud", "tipue_search",
-            "liquid_tags.img", 'subcategory', 'category_meta']
+            "liquid_tags.img", 'subcategory']
 # '' , 'category_metadata', ' 
 
 
