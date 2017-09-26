@@ -34,7 +34,7 @@ def clean():
     import glob
     if os.path.isdir(DEPLOY_PATH):
         for folder in glob.iglob(DEPLOY_PATH + '/*'):
-            print(folder)
+            print("Deleting :: ", folder)
             if(os.path.isdir(folder)):
                 shutil.rmtree(folder)
             else:

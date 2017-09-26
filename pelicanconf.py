@@ -33,6 +33,14 @@ DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 DELETE_OUTPUT_DIRECTORY = False
 OUTPUT_RETENTION = [".git"]
 
+PLUGIN_PATHS = ['./plugins', 'D:/tree/Portfolio/pelican/pelican-plugins']
+# PLUGIN_PATHS = ['D:/tree/Portfolio/pelican/pelican-plugins']
+PLUGINS = [ "render_math", "md-metayaml" , "pelican-toc", "series",
+            "photos", "i18n_subsites", "tag_cloud", "tipue_search",
+            "liquid_tags.img", 'subcategory', 'category_meta']
+# '' , 'category_metadata', ' 
+
+
 ARTICLE_URL='posts/{category}/{slug}/'
 ARTICLE_SAVE_AS='posts/{category}/{slug}/index.html'
 PAGE_URL='pages/{slug}/'
@@ -43,7 +51,8 @@ TAG_URL='tag/{slug}/'
 TAG_SAVE_AS='tag/{slug}/index.html'
 ARCHIVES_URL='archives/'
 ARCHIVES_SAVE_AS='archives/index.html'
-
+SUBCATEGORY_SAVE_AS = 'category/{fullurl}/index.html'
+SUBCATEGORY_URL = 'category/{fullurl}/'
 
 # Don't generat Authors page 
 AUTHOR_SAVE_AS=''
@@ -68,12 +77,6 @@ THEME = 'D:/tree/Portfolio/pelican/pelican-themes/pelican-bootstrap3'
 # THEME = 'theme/fresh'
 # THEME = 'theme/photowall'
 
-PLUGIN_PATHS = ['./plugins']
-# PLUGIN_PATHS = ['D:/tree/Portfolio/pelican/pelican-plugins']
-PLUGINS = [ "render_math", "md_metayaml" , "pelican-toc", "series",
-            "photos", "i18n_subsites", "tag_cloud", "tipue_search",
-            "liquid_tags.img"]
-# '' , 'render_math'
 
 from functools import partial
 # from slugify import slugify
@@ -106,6 +109,7 @@ ADDTHIS_DATA_TRACK_ADDRESSBAR = False
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
+DISPLAY_ARTICLE_INFO_ON_INDEX = False
 
 SHOW_ARTICLE_AUTHOR = True
 SHOW_ARTICLE_CATEGORY = True
@@ -113,6 +117,12 @@ DISPLAY_SERIES_ON_SIDEBAR = True
 
 BOOTSTRAP_THEME = 'cosmo'
 # BOOTSTRAP_FLUID = True
+
+PYGMENTS_THEME = 'monokai'
+CUSTOM_CSS = 'static/custom.css'
+STATIC_PATHS=['images','static/custom.css']
+EXTRA_PATH_METADATA = {'static/custom.css': {'path': 'static/custom.css'}}
+PATH_METADATA = '(?P<subcategory_path>.*)/.*'
 
 # BOOTSTRAP_NAVBAR_INVERSE = True
 # BANNER = 'images/banner.jpg'
