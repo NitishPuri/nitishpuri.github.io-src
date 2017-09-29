@@ -336,8 +336,7 @@ Introduces a notion of *velocity*. Gradient affects the velocity and not the *po
 Introduces a kind of *friction* term, which tends to gradually reduce the velocity.   
 
 $$\begin{eqnarray} 
-  v & \rightarrow  & v' = \mu v - \eta \nabla C \tag{107}\\
-  
+  v & \rightarrow  & v' = \mu v - \eta \nabla C \tag{107}\\  
   w & \rightarrow & w' = w+v'.
 \tag{108}\end{eqnarray}$$
 
