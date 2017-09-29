@@ -1,5 +1,5 @@
 ---
-title: Using neural nets to recognize handwritten digits
+title: Neural Networks and Deep Learning
 author: Micheal Nelson
 tags: deep-learning, notes
 series: Neural Networks and Deep Learning

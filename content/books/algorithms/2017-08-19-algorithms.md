@@ -1,5 +1,5 @@
 ---
-title: Algorithms, Part 1
+title: Algorithms by DasGupta
 author: Sanjoy DasGupta
 use_math: true
 tags: algorithms, notes

@@ -1,6 +1,6 @@
 ---
 published: true
-title: Elements Of Statistical Learning, Part 1
+title: Elements Of Statistical Learning
 author: Trevor Hastie, Robert Tibshirani, Jerome Friedman 
 tags: data-science, notes
 series: Elements Of Statistical Learning
