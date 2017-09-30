@@ -2,6 +2,7 @@
 title: Inverse Kinematics on Kuka Arm using ROS and Python 
 category: robotics
 tags: udacity, robotics, projects
+date: 2017-09-28
 ---
 
 Picking and placing objects is something that we as humans take for granted. That's not the case for our mechanical(and electronic) friends. They have to    

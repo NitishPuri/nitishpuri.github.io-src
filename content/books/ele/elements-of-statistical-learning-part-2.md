@@ -4,6 +4,7 @@ author: Trevor Hastie, Robert Tibshirani, Jerome Friedman
 tags: data-science, notes
 series: Elements Of Statistical Learning
 summary: Chapter 7-13 of Elements Of Statistical Learning
+date: 2017-09-15
 ---
 
 ## Chapter 7: Model Assessment and Selection

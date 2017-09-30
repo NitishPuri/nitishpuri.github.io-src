@@ -326,21 +326,6 @@ def generate_gallery():
     print("File created -> " + gallery_page)
 
 
-def test_json():
-    from pprint import pprint
-
-    settings = read_settings('pelicanconf.py')
-    photo_lib_path = settings['PHOTO_LIBRARY']
-
-    gallery_json = 'gallery/gallery.json'
-
-    with open(gallery_json) as data_file:
-        data = json.load(data_file)
-    
-    pprint(data['galleries'][0])
-
-
-
 def renameImages():
     import glob
     from PIL import Image
@@ -357,3 +342,5 @@ def renameImages():
         im = Image.open(file)
         rgb_im = im.convert('RGB')
         rgb_im.save(newName)
+
+            

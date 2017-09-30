@@ -6,6 +6,7 @@ tags: notes, deep-learning
 category: machine-intelligence
 summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
 series: Deep Learning
+date: 2017-09-05
 ---
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.

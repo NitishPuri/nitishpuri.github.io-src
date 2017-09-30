@@ -26,3 +26,12 @@ InteractiveShell.ast_node_interactivity = "all"
 %config InlineBackend.figure_format='retina'
 %config IPCompleter.greedy=True
 ```
+
+## Capture screen
+```sh
+ffmpeg -list_devices true -f dshow -i dummy
+ffmpeg -f dshow -i video="screen-capture-recorder" output.flv
+ffmpeg -f dshow -i audio="virtual-audio-capturer":video="screen-capture-recorder" yo.mp4
+ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -c:v libx264 -qp 0 -preset ultrafast capture.mkv
+ffmpeg -f dshow -i video="screen-capture-recorder" -c:v libx264 -qp 0 output2.flv
+```

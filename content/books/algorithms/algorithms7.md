@@ -5,6 +5,7 @@ use_math: true
 tags: algorithms, notes
 series: Algorithms
 summary: Quantized Algorithms
+date: 2017-09-14
 ---
 
 ## Chapter 10: Quntized Algorithms

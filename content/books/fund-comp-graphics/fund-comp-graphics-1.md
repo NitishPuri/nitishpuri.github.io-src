@@ -1,10 +1,11 @@
 ---
-title: Fundamentals of Computer Graphics
+title: Fundamentals of Computer Graphics, Part 1
 author: Peter Shirley
 use_math: true
 tags: graphics, notes, programming
 series: Fundamentals of Computer Graphics
 summary: Index notes on Fundamentals of Computer Graphics
+date: 2017-08-18
 ---
 
 ## Chapter 1: Introduction

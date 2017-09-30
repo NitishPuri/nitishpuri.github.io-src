@@ -4,6 +4,7 @@ author: Trevor Hastie, Robert Tibshirani, Jerome Friedman
 tags: data-science, notes
 series: Elements Of Statistical Learning
 summary: Chapter 14-18 of Elements Of Statistical Learning
+date: 2017-09-18
 ---
 
 ## Chapter 14: Unsupervised Learning

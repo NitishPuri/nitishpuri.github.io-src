@@ -5,6 +5,7 @@ use_math: true
 tags: algorithms, notes
 series: Algorithms
 summary: Divide and Conquer
+date: 2017-08-19
 ---
 
 ## Chapter 2: Divide-and-Conquer Algorithms

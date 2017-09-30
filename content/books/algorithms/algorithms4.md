@@ -5,6 +5,7 @@ use_math: true
 tags: algorithms, notes
 series: Algorithms
 summary: Greedy Algorithms and Dynamic Programming
+date: 2017-08-29
 ---
 
 ## Chapter 5: Greedy Algorithms

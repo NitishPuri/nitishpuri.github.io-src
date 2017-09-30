@@ -1,10 +1,11 @@
 ---
-title: Algorithms by DasGupta
+title: Algorithms by DasGupta, Part1
 author: Sanjoy DasGupta
 use_math: true
 tags: algorithms, notes
 series: Algorithms
 summary: Introduction and Number Theory
+date: 2017-08-19
 ---
 
 ## Chapter 0: Prologue

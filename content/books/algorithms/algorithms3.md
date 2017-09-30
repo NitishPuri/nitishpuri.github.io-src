@@ -7,6 +7,7 @@ use_math: true
 tags: algorithms, notes
 series: Algorithms
 summary: Graphs and Trees
+date: 2017-08-29
 ---
 
 ## Chapter 3: Decomposition of Graphs

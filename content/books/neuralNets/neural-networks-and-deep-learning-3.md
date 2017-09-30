@@ -4,6 +4,7 @@ author: Micheal Nelson
 tags: deep-learning, notes
 series: Neural Networks and Deep Learning
 summary: Neural Networks and Deep Learning, Chapter 3
+date: 2017-09-23
 ---
 Notes for the [book](http://neuralnetworksanddeeplearning.com/index.html).   
 [Source code](https://github.com/mnielsen/neural-networks-and-deep-learning) for the book.

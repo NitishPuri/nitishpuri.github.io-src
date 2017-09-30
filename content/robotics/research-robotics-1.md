@@ -6,6 +6,7 @@ tags: notes, robotics
 category: robotics
 summary: Notes on papers on biologically inspired robots.
 series: Robotics
+date: 2017-09-05
 ---
 
 ### **Bio Robots**
@@ -92,6 +93,13 @@ series: Robotics
 ![alt](/images/papers/cheetah5.jpg)   
 ![alt](/images/papers/cheetah6.jpg)   
 
+#### Gait Pattern Generation and Stabilization for Humanoid Robot Based on Coupled Oscillators
+*Inyong Ha, Yusuke Tamura, and Hajime Asama : Sep 2011*   
+[*Source*](http://www.robot.t.u-tokyo.ac.jp/asamalab/publications/files/582.pdf)   
 
+
+* Achieve balanced walking for a **DarwIn-OP** by gait pattern generation and stabilization using coupled oscillators.
+![alt](/images/papers/darwin_1.jpg)
+ 
 
 

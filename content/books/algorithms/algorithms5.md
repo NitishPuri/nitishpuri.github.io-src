@@ -5,6 +5,7 @@ use_math: true
 tags: algorithms, notes
 series: Algorithms
 summary: Linear Programming
+date: 2017-09-09
 ---
 
 ## Chapter 7: Linear Programming and reductions

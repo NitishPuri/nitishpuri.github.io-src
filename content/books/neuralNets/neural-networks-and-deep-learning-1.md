@@ -1,9 +1,10 @@
 ---
-title: Neural Networks and Deep Learning
+title: Using neural nets to recognize handwritten digits
 author: Micheal Nelson
 tags: deep-learning, notes
 series: Neural Networks and Deep Learning
 summary: Neural Networks and Deep Learning, Chapter 1
+date: 2017-09-21
 ---
 Notes for the [book](http://neuralnetworksanddeeplearning.com/index.html).   
 [Source code](https://github.com/mnielsen/neural-networks-and-deep-learning) for the book.

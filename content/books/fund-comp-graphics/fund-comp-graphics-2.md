@@ -5,6 +5,7 @@ use_math: true
 tags: graphics, notes, programming
 series: Fundamentals of Computer Graphics
 summary: Index notes on Fundamentals of Computer Graphics
+date: 2017-08-19
 ---
 
 ## Chapter 5 : Linear Algebra

@@ -6,13 +6,14 @@ tags: notes, robotics
 category: robotics
 summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
 series: Robotics
+date: 2017-09-15
 ---
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.
 
 ## **Robotics**
 
-### **ROS**
+### **Kinematics**
 
 #### ***tf*: The Transform Library**   
 *Tully Foote*   
@@ -42,7 +43,18 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Support for velocity.
 * Transforming data in time.
 
+#### Solving Kinematics Problems of a 6-DOF Robot Manipulator
+*Computer Science Department, The University of Georgia : 2015*   
+[*Source*](https://www.google.com/url?q=https%3A%2F%2Fwww.researchgate.net%2Ffile.PostFileLoader.html%3Fid%3D57cd4b20615e274c742de265%26assetKey%3DAS%253A402906919522304%25401473071903479&sa=D&sntz=1&usg=AFQjCNF8-U-44kQLISfar99yrIFTYElU9w)   
 
+
+* An analytical approach for solving forward kinematics problem of a serial robot manipulator with six degrees of freedom and a specific combination of joints and links to formulate the position of gripper by a given set of joint angles.   
+![alt](/images/papers/kuka_1.jpg)   
+* The functional state of each joint related to its successive joint in the design of this robot is as follows:   
+$$ R_1 \bot R_2 \parallel R_3 \bot R_4 \bot R_5 \bot R_6 $$   
+in which $R$ indicates a revolute joint and the indices describe the position of the joint relative to the base of the robot.   
+* Uses D-H parameter convention for assigning coordinate frames.
+* D-H parameter analysis for Kuka KR60 can be found [here]({filename}kuka-kinematics.md)
 
 
 ### **Robot Grasping**

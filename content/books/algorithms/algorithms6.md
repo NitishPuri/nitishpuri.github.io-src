@@ -5,6 +5,7 @@ use_math: true
 tags: algorithms, notes
 series: Algorithms
 summary: NP-Complete problems
+date: 2017-09-11
 ---
 
 ## Chapter 8: NP-Complete problems
