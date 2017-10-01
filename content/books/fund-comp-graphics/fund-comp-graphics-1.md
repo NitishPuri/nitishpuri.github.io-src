@@ -211,9 +211,110 @@ lossless vs lossy formats.
 
 ## Chapter 4 : Ray Tracing
 
+**Rendering**   
+rendering is a process that takes as its input a set of objects and produces as its output an array of pixels.   
+
+Image-order vs Object-order rendering.   
+
+Ray tracing is an image-order algorithm.   
+
+### Basic ray tracing algorithm
+
+A basic ray tracer has three parts:   
+
+1. *ray generation,* which computes the origin and direction of each pixel’s viewing ray based on the camera geometry;
+2. *ray intersection,* which finds the closest object intersecting the viewing ray;
+3. *shading,* which computes the pixel color based on the results of ray intersection.
+
+$$\bbox { \mbox{for each pixel:}\\
+\quad  \mbox{compute viewing ray} \\
+\quad   \mbox{find first object hit by ray and its surface normal n} \\
+\mbox{set pixel color to value computed from hit point, light, and n} }
+$$
 
 
+### Perspective
 
+![alt](/images/fundcg/4_persp1.png)    
+![alt](/images/fundcg/4_persp2.png)    
+![alt](/images/fundcg/4_persp3.png)    
+
+### Computing Viewing Rays
+
+The Viewpoint and the image plane.   
+![alt](/images/fundcg/4_persp4.png)    
+
+### Ray Object Intersection
+
+Ray-Sphere intersection:   
+Ray-triangle intersections: Using barycentric coordinates.   
+![alt](/images/fundcg/4_persp5.png)    
+
+Ray-polygon intersection:   
+Ray-object intersection:   
+
+### Shading
+
+A shading model.   
+
+#### Lambertian Shading
+
+![alt](/images/fundcg/4_shading1.png)    
+
+#### Blinn-Phong shading
+Lambertian shading is view independent. It does not have specular reflections that many surfaces have.   
+
+![alt](/images/fundcg/4_shading2.png)    
+![alt](/images/fundcg/4_shading3.png)    
+
+$$ \begin{array}1 \mathbf{h} &=&  \frac{\mathbf{v} + \mathbf{l}}{||\mathbf{v} + \mathbf{l}||}, \\
+ L &=& k_dI\mbox{max}(0, \mathbf{n\cdot l}) + k_sI\mbox{max}(0, \mathbf{n\cdot h})^p\end{array},\\ \text{where},  \\ \, \\ \begin{array}2 h &=& \mbox{half vector.} \\ k_d &=& \mbox{diffuse coefficient, surface color} \\ k_s &=& \mbox{specular coefficient, or specular color} \\ I &=& \mbox{light intensity} \\ L &=& \mbox{pixel color} \\ p &=& \mbox{Phong exponent, (typical values, 10-eggshell, 100 - mildly shiny, 1000 - really glossy, 10000-nearly mirror like)} \end{array}$$   
+
+#### Ambient Shading
+
+$$ L = k_aI_a + k_d I \mbox{max}(0, \mathbf{n \cdot l}) + k_s I \mbox{max}(0, \mathbf{n \cdot h})^p,\\ \text{where}, \\ 
+k_a = \mbox{Ambient coefficient of the surface, or "ambient color"} \\ 
+I_a = \mbox{Ambient light intensity}$$   
+
+#### Multiple Point Lights
+
+*Superposition* - the effect caused by more than one light source is simply the sum of the effects of the light sources individually.   
+
+$$ L = k_aI_a + \sum_{i=1}^N[k_d I_i \mbox{max}(0, \mathbf{n \cdot l}_i) + k_s I_i \mbox{max}(0, \mathbf{n \cdot h}_i)^p ] $$
+
+
+### A Ray tracing program
+
+$$\bbox { \mbox{for each pixel:}\\
+\quad  \mbox{compute viewing ray} \\
+\quad   \mbox{if (ray hits an object with } t \in [0, \infty)) \text
+{ then} \\
+\quad \quad \mbox{ Compute}\, \mathbf{n} \\
+\quad \quad \mbox{ Evaluate shading model and set pixel to that color } \\
+\quad  \mbox{else} \\
+\quad \quad \mbox{set pixel color to background color} }
+$$   
+
+**Object oriented design for a Ray-tracing program**   
+Some discussion on Surface class, hit method, bounding box and Material class.   
+
+### Shadows
+
+![alt](/images/fundcg/4_shadows1.png)
+![alt](/images/fundcg/4_shadows2.png)    
+
+$$\bbox{ \mathbf{function} \;raycolor\;(\text{ray } \mathbf{e} + t\mathbf{d}, \text{real }t_0, \text{real } t_1)\\
+\text{hit-record}\; rec,\,srec\\ 
+\mathbf{if} (scene\rightarrow hit(\mathbf{e} + t\mathbf{d}, t_0, t_1, rec)) \mathbf{then} \\
+\quad  \mathbf{p} = \mathbf{e} + (rec.t)\mathbf{d}\\
+\quad \text{colot} c = rec.k_a\cdot I_a\\
+\quad \quad \mathbf{if} (not\; scene\rightarrow hit(\mathbf{p} + s\mathbf{l}, \infty, srec)) \mathbf{then} \\
+\quad \quad  \text{vector3 } \mathbf{h} = normalized(normalized(\mathbf{l}) + normalized(\mathbf{-d})) \\
+\quad \quad  c = c + rec.k_d I \text{max}(0 , rec.\mathbf{n\cdot l}) + (rec.k_s)I(rec.\mathbf{n\cdot h})_{rec.p}\\
+\quad \mathbf{return } \; c\\
+\mathbf{else} \\
+\quad \mathbf{return }\; \text{background-color} }
+$$   
 
 
 
