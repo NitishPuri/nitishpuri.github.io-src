@@ -4,7 +4,7 @@ author: Peter Shirley
 use_math: true
 tags: graphics, notes, programming
 series: Fundamentals of Computer Graphics
-summary: Index notes on Fundamentals of Computer Graphics
+summary: Introduction, Basic Maths, Raster Images and Introduction to Ray Tracing.
 date: 2017-08-18
 ---
 

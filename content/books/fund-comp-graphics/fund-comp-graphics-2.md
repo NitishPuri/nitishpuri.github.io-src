@@ -4,7 +4,7 @@ author: Peter Shirley
 use_math: true
 tags: graphics, notes, programming
 series: Fundamentals of Computer Graphics
-summary: Index notes on Fundamentals of Computer Graphics
+summary: Linear Algebra, Transformation Matrices and View Transformations
 date: 2017-08-19
 ---
 
@@ -248,6 +248,121 @@ $$ \mathbf{p } + u\mathbf{u} + v\mathbf{v} + w\mathbf{w}$$
 
 $$  \mathbf{p}_{xy} = \begin{bmatrix}\mathbf{u} & \mathbf{v} & \mathbf{e} \\ 0 & 0 & 1\end{bmatrix} \mathbf{p}_{uv}$$   
 
+## Chapter 7 : Viewing
+
+![alt](/images/fundcg/7_view1.png)    
+
+### Viewing Transformations
+
+* A *camera transformation* or *eye transformation*, which is a rigid body transformation that places the camera at the origin in a convenient orientation. It depends only on the position and orientation, or pose, of the camera.
+* A *projection transformation*, which projects points from camera space so that all visible points fall in the range −1 to 1 in x and y. It depends only on the type of projection desired.
+* A *viewport transformation* or *windowing transformation*, which maps this unit image rectangle to the desired rectangle in pixel coordinates. It depends only on the size and position of the output image.
+
+![alt](/images/fundcg/7_view2.png)    
+
+#### The Viewport Transformation
+
+$$ \mathbf{M}_{vp} = \begin{bmatrix}\frac{n_x}2 & 0 & 0 & \frac{n_x-1}2 \\ 0 & \frac{n_y}2 & 0 & \frac{n_y-1}2 \\ 0 & 0 & 1 
+ & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}$$
+
+#### The Orthographic Projection Transformation
+
+![alt](/images/fundcg/7_ortho1.png)    
+
+$$ \mathbf{M}_{ortho} = \begin{bmatrix} \frac2{r-l}  & 0 & 0 & -\frac{r+l}{r-l} \\ 0 & \frac{2}{t-b} & 0 & -\frac{t+b}{t-b} \\ 0 & 0 & \frac{2}{n-f} & -\frac{n+f}{n-f} \\ 0 & 0 & 0 &1\end{bmatrix} $$
 
 
+
+$$ \begin{bmatrix}  x_{pixel} \\ y_{pixel} \\ z_{canonical} \\ 1\end{bmatrix}  = (\mathbf{M}_{vp}\mathbf{M}_{ortho}) \begin{bmatrix} x \\ y \\ z \\ 1\end{bmatrix}$$
+
+
+#### The Camera Transformation
+
+![alt](/images/fundcg/7_camera.png)    
+
+* the eye position $\mathbf{e}$,
+* the gaze direction $\mathbf{g}$,
+* the view-up vector $\mathbf{t}$.   
+
+$$ \begin{array}1 \mathbf{w} &=& -\frac{\mathbf{g}}{||\mathbf{g}||} \\
+\mathbf{u} & = & \frac{\mathbf{t} \times \mathbf{w}}{|| \mathbf{t} \times \mathbf{w}||} \\ 
+\mathbf{v} & = & \mathbf{w} \times \mathbf{u} \end{array}$$
+
+
+$$ \begin{array}0 \mathbf{M}_{cam} &=& \begin{bmatrix} \mathbf{u} & \mathbf{v} & \mathbf{w} & \mathbf{e} \\ 0 & 0 & 0 & 1\end{bmatrix}^{-1} \\ &=& \begin{bmatrix} x_u & y_u & z_u & 0 \\ x_v & v_v & z_V & 0 \\ x_w & y_w & z_w & 0 \\ 0 & 0 & 0 &1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 & -x_e \\ 0 & 1 & 0 &-y_e \\ 0 & 0 & 1 & -z_e \\ 0 & 0 & 0 & 1\end{bmatrix}\end{array}$$   
+
+
+*The algorithm:*   
+
+$$ construct \;\mathbf{M}_{vp}\\
+construct\;\mathbf{M}_{ortho}\\
+construct\;\mathbf{M}_{cam} \\
+\mathbf{M} = \mathbf{M}_{vp}\mathbf{M}_{ortho}\mathbf{M}_{cam}\\
+\mathbf{for}\; each \;line \;segment (a_i, b_i) \;\mathbf{do}:\\
+\quad     \mathbf{p} = \mathbf{Ma}_i \\ 
+\quad     \mathbf{q} = \mathbf{Mb}_i \\ 
+\quad     drawline(x_p, y_p, x_q, y_q)$$
+
+### Projective Transformations
+
+$$ y_s = \frac{d}{z}y$$   
+
+![alt](/images/fundcg/7_project1.png)    
+
+$$ \begin{bmatrix} \bar x \\ \bar y \\ \bar z \\ \bar w\end{bmatrix}  = \begin{bmatrix} a_1 & b_1 & c_1 & d_1 \\ a_2 & b_2 & c_2 & d_2 \\a_3 & b_3 & c_3 & d_3 \\ e & f & g & h \\\end{bmatrix} \begin{bmatrix} z \\ y \\ z \\ 1\end{bmatrix}$$   
+
+$$ (x', y', z') = (\bar x/\bar w, \bar y/\bar w, \bar z/\bar w) $$   
+
+
+### Perspective Projection
+
+$$ \mathbf{P} = \begin{bmatrix}  n & 0 & 0 & 0 \\ 0 & n & 0 & 0\\ 0 & 0 & n+f & -fn \\0 & 0 & 1 & 0\end{bmatrix} $$   
+
+The first, second, and fourth rows simply implement the perspective equation. The third row, as in the orthographic and viewport matrices, is designed to bring the *z*-coordinate “along for the ride” so that we can use it later for hidden surface removal. In the perspective projection, though, the addition of a non-constant denominator prevents us from actually preserving the value of *z*—it’s actually impossible to keep *z* from changing while getting *x* and *y* to do what we need them to do. Instead we’ve opted to keep *z* unchanged for points on the near or far planes.   
+
+$$ \mathbf{P}\begin{bmatrix}  x \\ y \\ z \\ 1 \end{bmatrix}  =  \begin{bmatrix}  x \\ y \\ z\frac{n+f}{n} - f \\ \frac z n \end{bmatrix} \sim \begin{bmatrix}  \frac {nx}z \\ \frac{ny}z \\ n+f -\frac{fn}z \\ 1 \end{bmatrix}  $$
+
+![alt](/images/fundcg/7_persp1.png)    
+![alt](/images/fundcg/7_persp2.png)    
+
+As you can see, *x* and *y* are scaled and, more importantly, divided by *z*. Because both *n* and *z* (inside the view volume) are negative, there are no *“flips”* in *x* and *y*. Although it is not obvious (see the exercise at the end of the chapter), the transform also preserves the relative order of *z* values between $z = n$ and $z = f$, allowing us to do depth ordering after this matrix is applied. This will be important later when we do hidden surface elimination.   
+Sometimes we will want to take the inverse of $\mathbf{P}$, for example to bring a screen coordinate plus $z$ back to the original space, as we might want to do for picking. The inverse is   
+
+$$ \mathbf{P}^{-1} = \begin{bmatrix} \frac 1 n & 0 & 0 & 0 \\ 0 & \frac 1 n & 0 & 0  \\ 
+0 & 0 & 0 & 1 \\0 & 0 & -\frac 1 {fn} & \frac{n+f}{fn}\end{bmatrix}$$
+
+
+or,   
+
+$$ \mathbf{P}^{-1} = \begin{bmatrix} f & 0 & 0 & 0 \\ 0 & f & 0 & 0  \\ 
+0 & 0 & 0 & fn \\0 & 0 & -1  & n+f\end{bmatrix}$$   
+
+$$ \mathbf{M}_{per} = \mathbf{M}_{ortho}\mathbf{P} $$   
+
+So, the full set of matrices for perspective viewing is,   
+
+$$ \mathbf{M}  = \mathbf{M}_{vp}\mathbf{M}_{ortho}\mathbf{P}\mathbf{M}_{cam} $$   
+
+The resulting algorithm is,   
+
+$$ compute\;\mathbf{M}_{vp} \\
+compute\;\mathbf{M}_{per} \\ 
+compute\; \mathbf{M}_{cam} \\
+\mathbf{M} = \mathbf{M}_{vp}\mathbf{M}_{per}\mathbf{M}_{cam} \\
+\mathbf{for}\; each \;line \;segment \;(\mathbf{a}_i, \mathbf{b}_i) \mathbf{do}: \\
+\quad    \mathbf{p} = \mathbf{Ma}_i \\ 
+\quad     \mathbf{q} = \mathbf{Mb}_i \\
+\quad      drawline(x_p/w_p, y_p/w_p, x_q/w_q, y_q/w_q)$$   
+
+$$ \begin{array}0 \mathbf{M}_{per} &=& \begin{bmatrix} \frac{2n}{r-l}  & 0 & \frac{l+r}{l-r} & 0 \\ 0 & \frac{2n}{t-b} & \frac{b+t}{b-t} & 0 \\ 0 & 0 & \frac{f+n}{n-f} & \frac{2fn}{f-n} \\ 0 & 0 & 1 &0\end{bmatrix} \\ 
+\mathbf{M}_{OpenGL} &=& \begin{bmatrix} \frac{2|n|}{r-l}  & 0 & \frac{r+l}{r-l} & 0 \\ 0 & \frac{2|n|}{t-b} & \frac{t+b}{t-b} & 0 \\ 0 & 0 & \frac{|n|+|f|}{|n|-|f|} & \frac{2|f||n|}{|n|-|f|} \\ 0 & 0 & -1 &0\end{bmatrix}  \end{array}$$   
+
+
+### Some Properties of the Perspective Transform
+
+An important property of the perspective transform is that it takes lines to lines and planes to planes. In addition, it takes line segments in the view volume to line segments in the canonical volume.   
+
+### Field-of-View
+
+![alt](/images/fundcg/7_fov.png)    
 

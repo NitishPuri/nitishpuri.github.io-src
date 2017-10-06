@@ -2,7 +2,7 @@
 title: Notes On Opengl
 tags: graphics, opengl, notes
 use_math: true
-summary: Startter notes on OpenGL/Transformations
+summary: Starter notes on OpenGL/Transformations
 ---
 
 ## Transformations
