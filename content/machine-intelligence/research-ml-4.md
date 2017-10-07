@@ -9,11 +9,9 @@ summary: Minimal notes on general neural networks.
 series: Deep Learning
 ---
 
-## **Deep Learning**
+## **Deep Learning Architectures**
 
-### **Architectures**
-
-#### **Self-Normalizing Neural Networks**   
+### **Self-Normalizing Neural Networks**   
 *Günter Klambauer, Thomas Unterthiner, Andreas Mayr, Sepp Hochreiter : Sep 2017*   
 [*Source*](https://arxiv.org/abs/1706.02515)   
 
@@ -37,7 +35,7 @@ $$\text{selu}(x) = \lambda\begin{cases}x, & \text{if } x \ge 0 \\
 * Also proved that SNNs do not face vanishing and exploding gradients problem and therefore work well for architectures with many layers.
 * The best performaing SNNs are typically very deep in contrast to other FNNs.
 
-#### **Understanding deep learning requires rethinking generalization**   
+### **Understanding deep learning requires rethinking generalization**   
 *Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals : Feb 2017*   
 [*Source*](https://arxiv.org/abs/1611.03530)   
 
@@ -61,3 +59,4 @@ $$\text{selu}(x) = \lambda\begin{cases}x, & \text{if } x \ge 0 \\
 * **Implicit Regularization : An Appeal To Linear Models**
 * Arguments showing that it is not necessarily easy to understand the source of generalization for linear models either.
 * Do all global minima generalize equally well? Is there a way to determine when one global minimum will generalize whereas another will not? In case of a linear model, even the curvature of the loss function would be the same. 
+

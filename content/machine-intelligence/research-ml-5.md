@@ -9,16 +9,14 @@ summary: Notes on Image segmentation using Deep Learning.
 series: Deep Learning
 ---
 
-## **Deep Learning**
+## Image Segmentation
 
-### **Image Segmentation**
-
-#### **Image segmentation review**   
+### Image segmentation review
 [*Source*](http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review)   
 
 * A review of segmentation at qure.ai  
 
-#### **Rich feature hierarchies for accurate object detection and semantic segmentation**   
+### Rich feature hierarchies for accurate object detection and semantic segmentation   
 *Ross Girshick, Jeff Donahue, Trevor Darrell, Jitendra Malik : Oct 2014*   
 [*Source*](https://arxiv.org/abs/1311.2524)   
 
@@ -33,7 +31,7 @@ series: Deep Learning
 * Finally, R-CNN runs a simpler linear regression on the region proposal to generate tighter bounding box coordinates to get our final results.
 ![alt](/images/papers/rcnn2.jpg)
 
-#### **Fast R-CNN**
+### Fast R-CNN
 *Ross Girshick : Sep 2015*   
 [*Source*](https://arxiv.org/abs/1504.08083)   
 [*Implementation*](https://github.com/rbgirshick/fast-rcnn)
@@ -58,7 +56,7 @@ series: Deep Learning
     * SGD hyperparameters.
 
 
-#### **Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks**   
+### Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks   
 *Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun : Jan 2016*   
 *Microsoft Research*   
 [*Source*](https://arxiv.org/abs/1506.01497)   
@@ -71,7 +69,7 @@ series: Deep Learning
 * While training we alternate between the region proposal task and object detection task while keeping the proposals fixed.   
 ![alt](/images/papers/fasterRcnn3.jpg)   
 
-#### **Mask R-CNN**   
+### Mask R-CNN   
 *Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick : Apr 2017*   
 *Facebook AI Research*   
 [*Source*](https://arxiv.org/abs/1703.06870)   
@@ -92,7 +90,7 @@ series: Deep Learning
 ![alt](/images/papers/maskRcnn3.jpg)   
 ![alt](/images/papers/maskRcnn4.jpg)   
 
-#### **A Review of Deep Learning Techniques Applied to Semantic Segmentation**   
+### A Review of Deep Learning Techniques Applied to Semantic Segmentation   
 *Alberto Garcia-Garcia, Sergio Orts-Escolano, Sergiu Oprea, Victor Villena-Martinez, Jose Garcia-Rodriguez : Apr 2017*
 [*Source*](https://arxiv.org/abs/1704.06857)   
 
@@ -107,7 +105,7 @@ series: Deep Learning
 * RGB-D Data and 3D Data
 * Video Sequences   
 
-#### **DeepLab : Semantic Image Segmentation with Deep Convolution Nets, Atrous Convolution, and Fully Connected CRFs**   
+### DeepLab : Semantic Image Segmentation with Deep Convolution Nets, Atrous Convolution, and Fully Connected CRFs   
 *Liang-Chieh Chen, George Papandreou, Iasonas Kokkinos, Kevin Murphy, Alan L. Yuille : May 2017*   
 [*Source*](https://arxiv.org/abs/1606.00915)    
 
@@ -116,15 +114,14 @@ series: Deep Learning
 * ???? // *Read this again..*
 
 
-#### **U-Net: Convolution Networks for Biomedical Image Segmentation**   
+### U-Net: Convolution Networks for Biomedical Image Segmentation   
 *Olaf Ronneberger, Philipp Fischer, Thomas Brox : May 2015*
 [*Source*](https://arxiv.org/abs/1505.04597)   
 
 * Focuses on end-to-end training for segmentation tasks, relying heavily on data augmentation.
     
 
-
-#### **Fully Convolutional Networks for Semantic Segmentation**   
+### Fully Convolutional Networks for Semantic Segmentation   
 *Jonathan Long, Evan Shelhamer, Trevor Darrell : Mar 2015*   
 [*Source*](https://arxiv.org/abs/1411.4038)   
 
@@ -133,10 +130,11 @@ series: Deep Learning
 
 
 
-#### **From Image-level to Pixel-level Labeling with Convolutional Networks**   
+### From Image-level to Pixel-level Labeling with Convolutional Networks   
 *Pedro O. Pinheiro, Ronan Collobert : Apr 2015*   
 [*Source*](https://arxiv.org/abs/1411.6228)   
 
 * Weakly supervised segmentation.
 * Put more weights to pixels with known class labels.
 * Uses part of model trained on ImageNet and trains for segmentation on PascalVOC.
+

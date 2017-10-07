@@ -11,11 +11,9 @@ date: 2017-09-05
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.
 
-## **Deep Learning**
+## Image Recognition
 
-### **Image Recognition**
-
-#### **Very Deep Convolutional Networks For Large-Scale Image Recognition**   
+### Very Deep Convolutional Networks For Large-Scale Image Recognition
 *Karen Simonyan, Andrew Zisserman : Apr 2015*   
 [*Source*](https://arxiv.org/abs/1409.1556)   
 [*Implementation*](https://github.com/KaimingHe/resnet-1k-layers)   
@@ -27,7 +25,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Optimise multinomial logistic regression objective using mini-batch gradient descent with momentum.
 * At the end introduces ensemble models by averaging softmax predictions from multiple models.
 
-#### **Going Deeper with Convolutions**   
+### Going Deeper with Convolutions   
 *Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich : Sep 2014*   
 *Google DeepMind*   
 [*Source*](https://arxiv.org/abs/1409.4842)
@@ -42,7 +40,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * 22 trainable Layers(100 total layers), low memory footprint.
 * Auxillary classifiers are used to allow for efficient gradient propagation. These are used only at training time.
 
-#### **Deep Residual Learning for Image Recognition**   
+### Deep Residual Learning for Image Recognition   
 *Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun : Dec 2015*   
 *Microsoft Research*   
 [*Source*](https://arxiv.org/abs/1512.03385)
@@ -58,7 +56,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * The model shows *no optimization difficulty* even with > 1000 layers..!!
 * Finally discusses improvements for detection and localization tasks.
 
-#### **Rethinking the Inception Architecture for Computer Vision**   
+### Rethinking the Inception Architecture for Computer Vision   
 *Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna : Dec 2015*   
 *Google DeepMind*   
 [*Source*](https://arxiv.org/abs/1512.00567)   
@@ -78,7 +76,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 ![alt](/images/papers/reInception2.jpg)
 ![alt](/images/papers/reInception3.jpg)
 
-#### **Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning**   
+### Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning   
 *Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke, Alex Alemi : Aug 2016*   
 *Google DeepMind*   
 [*Source*](https://arxiv.org/abs/1602.07261)   
@@ -86,9 +84,9 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Combining **Residual networks with Inception architecture**.
 * Uniform Inception-v4 blocks are introduced for cleaner architecture. 
 
-### **Deep Visualization**
+## Deep Visualization
 
-#### **Visualizing and Understanding Convolutional Networks**  
+### Visualizing and Understanding Convolutional Networks  
 *Matthew D Zeiler, Rob Fergus L : Nov 2013*   
 [*Source*](https://arxiv.org/abs/1311.2901)   
 
@@ -109,7 +107,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Correspondence Analysis  
 
 
-#### **Multifaceted Feature Visualization: Uncovering the Different Types of Features Learned By Each Neuron in Deep Neural Networks**   
+### Multifaceted Feature Visualization: Uncovering the Different Types of Features Learned By Each Neuron in Deep Neural Networks   
 *Anh Nguyen, Jason Yosinski, Jeff Clune : May 2016*    
 [*Source*](https://arxiv.org/abs/1602.03616)   
 
@@ -127,5 +125,27 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 ![alt](/images/papers/multiVis4.jpg)
 * Discusses various optimization techniques to produce better images in detail : center biased regularization, mean image initialization.
  
+### How transferable are features in deep neural networks?
+*Jason Yosinski, Jeff Clune, Yoshua Bengio, Hod Lipson : Nov 2014*   
+[*Source*](https://arxiv.org/abs/1411.1792)
 
+* First-layer features always resembles either *Gabor filters* or color blobs.
+* We also often use the initial layers of a network to initialize other networks(for a  different task) in *transfer learning*. This raises a few questions,
+    *Can we quantify the degree to which a particular layer is general or specific?
+    * Does the transition occur suddenly at a single layer, or is it spread out over several layers?
+    * Where does this transition take place: near the first, middle, or last layer of the network?   
+![alt](/images/papers/transfer1.png)   
+Figure 1: Overview of the experimental treatments and controls. *Top two rows*: The base networks
+are trained using standard supervised backprop on only half of the ImageNet dataset (first row: A
+half, second row: B half). The labeled rectangles (e.g. $W_{A1}$) represent the weight vector learned for that layer, with the color indicating which dataset the layer was originally trained on. The vertical, ellipsoidal bars between weight vectors represent the activations of the network at each layer. *Third row*: In the *selffer* network control, the first $n$ weight layers of the network (in this example, $n = 3$) are copied from a base network (e.g. one trained on dataset B), the upper $8 − n$ layers are randomly initialized, and then the entire network is trained on that same dataset (in this example, dataset B).
+The first n layers are either locked during training (“frozen” selffer treatment $B3B$) or allowed to learn (“fine-tuned” selffer treatment $B3B^+$). This treatment reveals the occurrence of *fragile coadaptation*, when neurons on neighboring layers co-adapt during training in such a way that cannot be rediscovered when one layer is frozen. *Fourth row*: The *transfer* network experimental treatment is the same as the selffer treatment, except that the first n layers are copied from a network trained on one dataset (e.g. A) and then the entire network is trained on the other dataset (e.g. B). This treatment tests the extent to which the features on layer n are general or specific.
 
+![alt](/images/papers/transfer2.png)   
+![alt](/images/papers/transfer3.png)   
+Figure 2: The results from this paper’s main experiment. *Top*: Each marker in the figure represents the average accuracy over the validation set for a trained network. The white circles 
+above $n = 0$ represent the accuracy of baseB. There are eight points, because we tested on four separate random A/B splits. Each dark blue dot represents a BnB network. Light blue points 
+represent BnB+ networks, or fine-tuned versions of BnB. Dark red diamonds are AnB networks, and 
+light red diamonds are the fine-tuned AnB+ versions. Points are shifted slightly left or right 
+for visual clarity. *Bottom*: Lines connecting the means of each treatment. 
+
+* Conclusively, *transfer* learning can be very effective for lower layers for general dissimilar objectives, and for higher layers as well in case of similar objectives.
