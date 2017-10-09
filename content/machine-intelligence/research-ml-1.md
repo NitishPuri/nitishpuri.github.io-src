@@ -84,6 +84,16 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Combining **Residual networks with Inception architecture**.
 * Uniform Inception-v4 blocks are introduced for cleaner architecture. 
 
+### Xception: Deep Learning with Depthwise Separable Convolutions
+*François Chollet : Apr 2017*   
+[*Source*](https://arxiv.org/abs/1610.02357)   
+*Google Inc.*   
+
+* Building on top of the *inception* modules.
+* An attempt to make things efficient by decoupling operations for cross-channel correlations and spatial correlations.
+* This introduces the *Depthwise separable convolutions*.
+* The *Xception* architecture then takes these layers and builds a complete network for ImageNet task, with better reported performane than *Inception v3*.
+
 ## Deep Visualization
 
 ### Visualizing and Understanding Convolutional Networks  

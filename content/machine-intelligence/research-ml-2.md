@@ -11,7 +11,7 @@ series: Deep Learning
 
 ## **Style Transfer**
 
-### **A Neural Style Algorithm of Artistic Style**   
+### A Neural Style Algorithm of Artistic Style   
 *Leon A. Gatys, Alexander S. Ecker, Matthias Bethge : Sep 2015*   
 [*Source*](https://arxiv.org/abs/1508.06576)   
 
@@ -35,7 +35,7 @@ $$\mathcal L_{total}(\vec p,\vec a,\vec x) = \alpha\mathcal L_{content}(\vec p,\
     * [Neural Style, JC Johnson, Lua](https://github.com/jcjohnson/neural-style)
 
 
-### **Improving the Neural Algorithm of Artistic Style**
+### Improving the Neural Algorithm of Artistic Style
 *Roman Novak, Yalroslav Nikulin : May 2016*   
 [*Source*](https://arxiv.org/abs/1605.04603)   
 ![alt](/images/papers/improvedStyle1.jpg)   
@@ -75,7 +75,7 @@ $$\mathcal L_{total}(\vec p,\vec a,\vec x) = \alpha\mathcal L_{content}(\vec p,\
 ![alt](/images/papers/improvedStyle4.jpg)   
 ![alt](/images/papers/improvedStyle5.jpg)   
 
-### **Preserving Color in Neural Artistic Style Transfer**   
+### Preserving Color in Neural Artistic Style Transfer   
 *Leon A. Gatys, Matthias Bethge, Aaron Hertzmann, Eli Shechtman : Jun 2016*   
 [*Source*](https://arxiv.org/abs/1606.05897)   
 

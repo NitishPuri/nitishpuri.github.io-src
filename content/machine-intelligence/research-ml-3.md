@@ -11,7 +11,7 @@ series: Deep Learning
 
 ## **Style Transfer**
 
-### **Artistic style transfer for videos**   
+### Artistic style transfer for videos   
 *Manuel Ruder, Alexey Dosovitskiy, Thomas Brox : Apr 2016*   
 [*Source*](https://arxiv.org/abs/1604.08610)   
 
@@ -60,7 +60,7 @@ series: Deep Learning
 * *Implementation* : https://github.com/manuelruder/artistic-videos
 * *Watch in action* : https://youtu.be/vQk_Sfl7kSc   
 
-### **Instance Normalization: The Missing Ingredient for Fast Stylization**   
+### Instance Normalization: The Missing Ingredient for Fast Stylization   
 *Dmitry Ulyanov, Andrea Vedaldi, Victor Lempitsky : Sep 2016*   
 [*Source*](https://arxiv.org/abs/1607.08022)   
 
@@ -71,7 +71,7 @@ series: Deep Learning
 $$\text{min}_g\frac1n\sum_{t=1}n\mathcal{L}(x_0, x_t, g(x_t, z_t)), \text{where }z_t \sim\mathcal{N}(0,1)$$   
 ![alt](/images/papers/fastStyle3.jpg)   
 
-### **Perceptual Losses for Real-Time Style Transfer and Super Resolution**   
+### Perceptual Losses for Real-Time Style Transfer and Super Resolution   
 *Johnson, Justin and Alahi, Alexandre and Fei-Fei, Li : 2016*   
 [*Source*](http://cs.stanford.edu/people/jcjohns/eccv16/)   
 
@@ -88,7 +88,7 @@ $$W^*=\text{arg min}_W\mathbf{E}_{x,\{y_i\}}[\sum_{i=1}\lambda_i l_i(f_W(x), y_i
 ![alt](/images/papers/superStyle3.jpg)   
 ![alt](/images/papers/superStyle4.jpg)   
 
-### **Stylizing Face Images via Multiple Exemplars**   
+### Stylizing Face Images via Multiple Exemplars   
 *Yibing Song, Linchao Bao, Shengfeng He, Qingxiong Yang, Ming-Hsuan Yang : Aug 2017*   
 [*Source*](https://arxiv.org/abs/1708.08288)   
 

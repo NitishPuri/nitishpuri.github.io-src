@@ -129,7 +129,6 @@ series: Deep Learning
 * Introducing Upsampling or Convolution Transpose.
 
 
-
 ### From Image-level to Pixel-level Labeling with Convolutional Networks   
 *Pedro O. Pinheiro, Ronan Collobert : Apr 2015*   
 [*Source*](https://arxiv.org/abs/1411.6228)   
