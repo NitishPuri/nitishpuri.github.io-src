@@ -92,6 +92,6 @@ date: 2017-10-01
 #### [Computational Geometry]({filename}algorithms-design-manual7.md)
 #### [Set and String Problems]({filename}algorithms-design-manual8.md)
 
-### Algorithmic Resources
+
 
 
