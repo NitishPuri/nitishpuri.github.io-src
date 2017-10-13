@@ -57,7 +57,7 @@ $$\begin{array}0 incircle(a,b,c,d) &=& \begin{vmatrix}a_x & a_y & a_x^2+a_y^2&1\
     * Remove last point if they form a *concavity*, i.e. an angle greater than $180°$.
     * Total time, $O(n \lg n)$
 * **Implementations** : CGAL, LEDA, Qhull
-* *Related* : [Sorting](), [Vornoi diagrams]()   
+* *Related* : [Sorting]({filename}algorithms-design-manual4.md#sorting), [Vornoi diagrams](#vornoi-diagrams)   
 
 
 ### Triangulation
@@ -77,7 +77,7 @@ triangles.
     * *What constraints does the input have?* 
     * *Are you allowed to add extra points or move input vertces?*
 * **Implementations** : CGAL, LEDA, and more.
-* *Related* : [Vornoi diagrams](), [polygon partitioning]()
+* *Related* : [Vornoi diagrams](#vornoi-diagrams), [polygon partitioning](#polygon-partitioning)
 
 ### Vornoi Diagrams
 ![alt](/images/algdm/17_vornoi.png)   
@@ -137,7 +137,7 @@ all points in the region around $p_i$ are closer to $p_i$ than any other point i
     * *Is your point set static?* 
     * *Can I just count the number of points in a region, or do I have to identify them?* 
 * **Implementations** : CGAL, LEDA, ANN, Ranger
-* *Related* : [Kd-trees](), [point location](#point-location) 
+* *Related* : [Kd-trees]({filename}algorithms-design-manual2.md#kd-trees), [point location](#point-location) 
 
 ### Point Location
 ![alt](/images/algdm/17_ploc.png)   
@@ -194,7 +194,7 @@ all points in the region around $p_i$ are closer to $p_i$ than any other point i
 * Biggest objects first, turns out to be the best heuristics.
 * For non-rectangular shapes, bounding boxes can be used. 
 * More sophisticated algorithms are available.
-* *Related* : [Knapsack problem](), [set packing](), 
+* *Related* : [Knapsack problem]({filename}algorithms-design-manual6.md#knapsack-problem), [set packing]({filename}algorithms-design-manual8.md#set-packing), 
 
 ### Medial-Axis Transform
 ![alt](/images/algdm/17_matransform.png)   
@@ -227,7 +227,7 @@ all points in the region around $p_i$ are closer to $p_i$ than any other point i
     * *Am I allowed to add extra vertices?* Adding (steiner) vertices may result in smaller number of partitions(but with a more complicated algorithm).
 * *Hertel-Mehlhorn heuristic*, start with an arbitrary triangulation, and delete chords until it leaves only convex pieces. 
 * DP finds the absolute minimum partitions in $O(n^4)$.
-* *Related* : [Triangulation](#triangulation), [set cover]()
+* *Related* : [Triangulation](#triangulation), [set cover]({filename}algorithms-design-manual8.md#set-cover)
 
 ### Simplifying Polygons
 ![alt](/images/algdm/17_simpoly.png)   
@@ -243,7 +243,7 @@ all points in the region around $p_i$ are closer to $p_i$ than any other point i
     * *Am I allowed to insert or just delete points?* Local modifications to reduce the vertex count are done. Most robust heuristics *move* the vertices around to cover up the gaps created by deletions. 
     *Must the resulting polygon be intersection-free?* Simplicity(non-self intersection) can be difficult to achieve for some shapes. 
     * *Are you given an image to clean up instead of a polygon to simplify?* Conventionally, Fourier transform is used to clean up images.
-* *Related* : [Fourier transform](), [convex hull](#convex-hull)
+* *Related* : [Fourier transform]({filename}algorithms-design-manual3.md#discrete-fourier-transform), [convex hull](#convex-hull)
 
 ### Shape Similarity
 ![alt](/images/algdm/17_ssim.png)   
@@ -259,7 +259,7 @@ all points in the region around $p_i$ are closer to $p_i$ than any other point i
     * *Hausdorff distance*, identifies the maximum distance for two points on $P_1$ and $P_2$. 
     * *Comparing skeletons*, this problem then reduces to subgraph isomorphism.
     * *Support Vector Machines*, or other learning based approaches such as *neural networks*.
-* *Related* : [Graph isomorphism](), [thinning](#medial-axis-transform)
+* *Related* : [Graph isomorphism]({filename}algorithms-design-manual6.md#graph-isomorphism), [thinning](#medial-axis-transform)
 
 ### Motion Planning
 ![alt](/images/algdm/17_mplan.png)   
@@ -275,7 +275,7 @@ all points in the region around $p_i$ are closer to $p_i$ than any other point i
     * *Are motions limited to translation only?* 
     * *Are the obstacles known in advance?* 
 * **Implementations** : The *Motion Planning Toolkit**, CGAL
-* *Related* : [Shortest path](), [Minkowski sum](#minkowski-sum)
+* *Related* : [Shortest path]({filename}algorithms-design-manual5.md#shortest-path), [Minkowski sum](#minkowski-sum)
 
 ### Maintaining Line Alignments
 ![alt](/images/algdm/17_linearr.png)   

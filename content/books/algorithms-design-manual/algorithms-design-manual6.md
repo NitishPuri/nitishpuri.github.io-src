@@ -52,7 +52,7 @@ $(x, y) \in E$ contains at least one vertex of $S$?
 * Special case of *set cover* and relatively lightweight.
 * Closely related to *independent set* : if $S$ is the vertex cover, $V-S$ must be an independent set.
 * Simple heuristics perform well.
-* *Related* : [Independent set](#independent-set), [set cover]()
+* *Related* : [Independent set](#independent-set), [set cover]({filename}algorithms-design-manual8.md#set-cover)
 
 ### Travelling Salesman Problem
 ![alt](/images/algdm/16_tsp.png)   
@@ -75,7 +75,7 @@ exactly once.
     * Incremental insertion methods
     * K-optimal tours
 * **Implementations** : Concorde
-* *Related* : [Hamiltonian cycle](#hamiltonian-cycle), [minimum spanning tree](), [convex hull]()
+* *Related* : [Hamiltonian cycle](#hamiltonian-cycle), [minimum spanning tree]({filename}algorithms-design-manual5.md#minimum-spanning-tree), [convex hull]({filename}algorithms-design-manual7.md#convex-hull)
 
 ### Hamiltonian Cycle
 ![alt](/images/algdm/16_hamcyc.png)   
@@ -91,7 +91,7 @@ that each vertex is visited exactly once.
     * Is my graph dense? Sufficiently dense graphs almost always contain a Hamiltonian cycle.
     * Are you visiting all the vertices or all the edges?
 * Backtracking with pruning is the only possible *correct* solution.
-* *Related* : [Eulerian cycle](), [travelling salesman](#travelling-salesman-problem) 
+* *Related* : [Eulerian cycle]({filename}algorithms-design-manual5.md#eulerian-cycle-chinese-postman), [travelling salesman](#travelling-salesman-problem) 
 
 ### Graph Partition
 ![alt](/images/algdm/16_gpart.png)   
@@ -107,7 +107,7 @@ such that the total edge cost spanning the subsets is at most $k$.
     * Graph partition, equal sized pieces.
     * Maximum cut, (NP-complete)
 * Heuristics with randomization, particularly simulated annealing are almost certain to produce good results. Apply recursively for more than two partitions.
-* *Related* : [Edge/vertex connectivity](), [network flow]()
+* *Related* : [Edge/vertex connectivity]({filename}algorithms-design-manual5.md#edge-and-vertex-connectivity), [network flow]({filename}algorithms-design-manual5.md#network-flow)
 
 ### Vertex Coloring
 ![alt](/images/algdm/16_vcolor.png)   
@@ -137,7 +137,7 @@ of $G$ such that no two same-color edges share a common vertex?
 * The National Football League solves such an edge-coloring problem each season to make up its schedule.
 * The minimum number of colors needed to edge color a graph is called its 
 *edge-chromatic number* or *chromatic index*.
-* *Related* : [Vertex coloring](#vertex-coloring), [scheduling]()
+* *Related* : [Vertex coloring](#vertex-coloring), [scheduling]({filename}algorithms-design-manual4.md#job-scheduling)
 
 ### Graph Isomorphism
 ![alt](/images/algdm/16_giso.png)   
@@ -161,7 +161,7 @@ $(f(x),f(y))$ is an edge of $H$.
     * Shortest path matrix
     * Counting k-length paths
 * **Implementations** : Nauty (C), VFLib, GraphGrep, LEDA.
-* *Related* : [Shortest path](), [string matching]()
+* *Related* : [Shortest path]({filename}algorithms-design-manual5.md#shortest-path), [string matching]({filename}algorithms-design-manual8.md#string-matching)
 
 ### Steiner Tree
 ![alt](/images/algdm/16_steiner.png)   
@@ -180,7 +180,7 @@ points to reduce the cost of the tree.
     * How can I reconstruct Steiner tree vertices I never knew about?
 * Find an MST and improve it.
 * Alternatively, start with shortest path for two terminals, for the remaining terminals, find the shortest path to intermediate vertices on the path and add this path to the tree.
-* *Related* : [Minimum spanning trees](), [shortest path]()
+* *Related* : [Minimum spanning trees]({filename}algorithms-design-manual5.md#minimum-spanning-tree), [shortest path]({filename}algorithms-design-manual4.md#shortest-path)
 
 ### Feedback Edge/Vertex Set
 ![alt](/images/algdm/16_feedback.png)   
@@ -202,5 +202,5 @@ on directed acyclic graphs (DAGs) than general digraphs.
     * How can I get a good feedback vertex set?
     * What if I want to break all cycles in an undirected graph?
 * **Implementation** : GRASP, GOBLIN , Stanford GraphBase.
-* *Related* : [Bandwidth Reduction](), [topological sorting](), [scheduling]()
+* *Related* : [Bandwidth Reduction]({filename}algorithms-design-manual3.md#bandwidth-reduction), [topological sorting]({filename}algorithms-design-manual5.md#topological-sorting), [scheduling]({filename}algorithms-design-manual4.md#job-scheduling)
 

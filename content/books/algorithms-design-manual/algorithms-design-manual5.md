@@ -61,7 +61,7 @@ contradiction to linear order of tasks.
 * **Implementations** : 
     * C++ : Boost Graph Library, LEDA
     * Java : JDSL, JGraphT
-* *Related* : [Sorting](), [feedback edge/vertex set]()
+* *Related* : [Sorting]({filename}algorithms-design-manual4.md#sorting), [feedback edge/vertex set]({filename}algorithms-design-manual6.md#feedback-edge-vertex-set)
 
 ### Minimum Spanning Tree
 ![alt](/images/algdm/15_connected.png)   
@@ -103,7 +103,7 @@ give provably optimal solutions.
     NP-Complete, identical to Hamiltonian path problem. However efficient approximation
      algorithms exist.
 * **Implementations** : Boost, LEDA, and more.
-* *Related* : [Steiner tree](), [travelling salesman]()
+* *Related* : [Steiner tree]({filename}algorithms-design-manual6.md#steiner-tree), [travelling salesman]({filename}algorithms-design-manual6.md#travelling-salesman-problem)
 
 ### Shortest Path
 ![alt](/images/algdm/15_shortest.png)   
@@ -139,7 +139,7 @@ give provably optimal solutions.
     * *Diameter* of a graph is the maximum eccentricity of any vertex.
 * **Implementations** : 
     * C++ : MLB, Boost, LEDA and more.
-* *Related* : [Network flow](#network-flow), [motion planning]() 
+* *Related* : [Network flow](#network-flow), [motion planning]({filename}algorithms-design-manual7.md#motion-planning) 
 
 ### Transitive Closure and Reduction
 ![alt](/images/algdm/15_closure.png)   
@@ -204,7 +204,7 @@ vertex in $V$ is incident to at most one edge of $E'$.
     out-degrees, respectively.
 * This characterization of Eulerian graphs makes it easy to test and explicitly create a cycle.
 * The *chinese postman* problem minimizes the length of a cycle that traverses every edge at least once.
-* *Related* : [Matching](#matching), [Hamiltonian Cycle]() 
+* *Related* : [Matching](#matching), [Hamiltonian Cycle]({filename}algorithms-design-manual6.md#hamiltonian-cycle) 
 
 ### Edge and Vertex Connectivity
 ![alt](/images/algdm/15_evcon.png)   
@@ -302,5 +302,5 @@ If so, produce such a drawing.
 * Planar drawings(or *embeddings*) make clear the structure of a given graph by eliminating crossing edges.
 * However, not very much needed/encountered explicitly in applications.
 * More important, planarity testing.
-* *Related* : [Graph partition](), [drawing trees](#drawing-trees)
+* *Related* : [Graph partition]({filename}algorithms-design-manual6.md#graph-partition), [drawing trees](#drawing-trees)
 

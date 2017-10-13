@@ -41,7 +41,7 @@ Whats different?
     * Leave small subarrays for insertion sort
     * Do the smaller partition first. compiler optimizations using *tail recursion* might help.
 * **Implementations** : GNU sort, C++ STL `sort` and `stable_sort`, and many more.
-* *Related* : [Dictionaries](), [searching](#searching), [topological sorting]()
+* *Related* : [Dictionaries]({filename}algorithms-design-manual2.md#dictionries), [searching](#searching), [topological sorting]({filename}algorithms-design-manual5.md#topological-sorting)
 
 ### Searching
 ![alt](/images/algdm/14_searching.png)   
@@ -60,7 +60,7 @@ Whats different?
     * Is my data structure sitting on external memory? Use *B-trees*.
     * Can I guess where the key should be? *Interpolation search*
 * **Implementations** : C++ STL `find` and `binary_search`
-* *Related* : [Dictionaries](), [sorting](#sorting)
+* *Related* : [Dictionaries]({filename}algorithms-design-manual2.md#dictionaries), [sorting](#sorting)
 
 ### Median and Selection
 ![alt](/images/algdm/14_median.png)   
@@ -79,8 +79,7 @@ Whats different?
     * What if you only get to see each element once? Define approximate deciles, or do random sampling, or mix both strategies.
     * How fast can you find the mode?
 * **Implementations** : C++ STL `nth_element`
-* *Related* : [Priority queues](), [sorting](#sorting)
-
+* *Related* : [Priority queues]({filename}algorithms-design-manual2.md#priority-queues), [sorting](#sorting)
 
 ### Generating Permutations
 ![alt](/images/algdm/14_permute.png)   
@@ -98,7 +97,7 @@ Whats different?
 * Incremental change algorithms can be tricky, but concise.
 * We can also save time by avoiding identical permutations if there are duplicate elements.
 * **Implementations** : C++ STL `next_permutation` and `prev_permutation`.
-* *Related* : [Random-number generation](), [generating subsets](#generating-subsets), [generating partitions](#generating-partitions).
+* *Related* : [Random-number generation]({filename}algorithms-design-manual3.md#random-number-generation), [generating subsets](#generating-subsets), [generating partitions](#generating-partitions).
 
 ### Generating Subsets
 ![alt](/images/algdm/14_subsets.png)   
@@ -150,7 +149,7 @@ Whats different?
     * Trees
     * Fixed degree sequence graphs
 * **Implementations** : Stanford GraphBase, Combinatorica, and more resources.
-* *Related* : [Generating permutations](#generating-permutations), [graph isomorphism]()
+* *Related* : [Generating permutations](#generating-permutations), [graph isomorphism]({filename}algorithms-design-manual6.md#graph-isomorphism)
 
 ### Calendrical Calculations
 ![alt](/images/algdm/14_calcal.png)   
@@ -162,7 +161,7 @@ Whats different?
 * Complications arise with irregularity in years duration(leap years).
 * So it becomes pointless to implement them by hand.
 * **Implementations** : C++ Boost `datetime`.
-* *Related* : [Arbitrary precision arithmetic](), [generating permutations](#generating-permutations)
+* *Related* : [Arbitrary precision arithmetic]({filename}algorithms-design-manual3.md#arbitrary-precision-arithmetic), [generating permutations](#generating-permutations)
 
 
 ### Job Scheduling
@@ -188,7 +187,7 @@ Whats different?
     * Assign jobs to identical machines to minimize the the total elapsed time.
     * Tasks are provided with allowable start and required finish times.
 * **Implementations** : JOBSHOP (C), Tablix, LEKIN and more.
-* *Related* : [Topological sorting](), [matching](), [vertex coloring](), [edge coloring](), [bin packing]()   
+* *Related* : [Topological sorting]({filename}algorithms-design-manual5.md#topological-sorting), [matching]({filename}algorithms-design-manual5.md#matching), [vertex coloring]({filename}algorithms-design-manual6.md#vertex-coloring), [edge coloring]({filename}algorithms-design-manual6.md#edge-coloring), [bin packing]({filename}algorithms-design-manual7.md#bin-packing)   
 
 
 ### Satisfiability
@@ -204,5 +203,5 @@ Whats different?
     * Is your formula the `AND` of `OR`s (CNF) or the `OR` of `AND`s (DNF)? DNF can be solved easily, while CNF is NP-complete. We can use *De Morgan's laws* to convert CNF into DNF. However the translation itself could take exponential time.
     * How big are your clauses? 3-SAT and above are NP-complete.
     * Does it suffice to satisfy most of the clauses? This can make the problem *easier*.
-* *Related* : [Constrained optimization](), [travelling salesman problem]()
+* *Related* : [Constrained optimization]({filename}algorithms-design-manual3.md#constrained-and-unconstrained-optimization), [travelling salesman problem]({filename}algorithms-design-manual6.md#travelling-salesman-problem)   
 

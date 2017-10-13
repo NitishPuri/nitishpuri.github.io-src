@@ -26,7 +26,7 @@ the universal set—i.e. , $ \cup_{i=1}^{|T|} T_i = U$?
 * Simulated annealing is likely to produce somewhat better set covers.
 * Backtracking can be used to guarantee an optimal solution, but is computationally very expensive.
 * Alternative, integer programming formulation of set cover.
-* *Related* : [Matching](), [vertex cover](), [set packing](#set-packing)
+* *Related* : [Matching]({filename}algorithms-design-manual5.md#matching), [vertex cover]({filename}algorithms-design-manual6.md#vertex-cover), [set packing](#set-packing)
 
 ### Set Packing
 ![alt](/images/algdm/18_setpacking.png)   
@@ -39,7 +39,7 @@ the universal set—i.e. , $ \cup_{i=1}^{|T|} T_i = U$?
 * *Does each element have its own singleton set?* 
 * *What is the penalty for covering elements twice?*
 * The same heuristics as in set cover work here.
-* *Related* : [Independent set](), [set cover](#set-cover)
+* *Related* : [Independent set]({filename}algorithms-design-manual6.md#independent-set), [set cover](#set-cover)
 
 ### String Matching
 ![alt](/images/algdm/18_stringmatching.png)   
@@ -56,7 +56,7 @@ the universal set—i.e. , $ \cup_{i=1}^{|T|} T_i = U$?
     * *Will you search many texts using the same patterns?* Build finite automaton. Also useful when searching for regular expressions.
     * *What if our text or pattern contains a spelling error?* Use *Approximate string matching* algorithms.
 * **Implementations** : Strmat, grep and variants, Boost string algorithms.
-* *Related* : [Suffix trees](), [approximate string matching](#approximate-string-matching)
+* *Related* : [Suffix trees]({filename}algorithms-design-manual2.md#suffix-trees-and-arrays), [approximate string matching](#approximate-string-matching)
 
 ### Approximate String Matching
 ![alt](/images/algdm/18_appmatch.png)   
@@ -120,7 +120,7 @@ the universal set—i.e. , $ \cup_{i=1}^{|T|} T_i = U$?
     * *How can I prove that a file has not been changed?* Digital signatures.
     * *How can I restrict access to copyrighted material?* Stream ciphers are used, but are needed to be protected by the law.
 * **Implementations** : Nettle, Crypto++
-* *Related* : [Factoring and primality testing](), [text compression](#text-compression)
+* *Related* : [Factoring and primality testing]({filename}algorithms-design-manual3.md#factoring-and-primality-testing), [text compression](#text-compression)
 
 ### Finite State Machine Minimization
 ![alt](/images/algdm/18_fsm.png)   
@@ -134,7 +134,7 @@ the universal set—i.e. , $ \cup_{i=1}^{|T|} T_i = U$?
     * *Minimizing deterministic finite state machine*, be removing redundancy.
     * *Constructing deterministic machines from nondeterministic machines*, this can however be worse than NP-complete, as the number of states blow up exponentially.
     * *Constructing machines from regular expressions*, can construct either NFA or DFA.
-* *Related* : [Satisfiability](), [string matching](#string-matching)
+* *Related* : [Satisfiability]({filename}algorithms-design-manual4.md#satisfiability), [string matching](#string-matching)
 
 
 ### Longest Common Substring/Subsequence
@@ -164,4 +164,4 @@ a substring of $S'$.
 * Finding a super-sequence is not a problem, but finding the *shortest* super-sequence is NP-complete.
 * Easily reducible to asymmetric TSP problem.
 * A greedy heuristic: find the substrings with maximum overlap and merge them, repeat.
-* *Related* : [Suffix trees](), [text compression](#text-compression)
+* *Related* : [Suffix trees]({filename}algorithms-design-manual2.md#suffix-trees-and-arrays), [text compression](#text-compression)

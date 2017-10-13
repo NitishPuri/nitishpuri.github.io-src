@@ -60,7 +60,7 @@ $max(i,j) \in E |p(i) − p(j)|$?
 * **Implementations**
     * [Del Corso and Manzini’s code](http://www.mfn.unipmn.it/∼manzini/bandmin) for exact solutions to bandwidth problems.
     * More references in the book.
-* *Related* : [Solving linear equations](#solving-linear-equations), [topological sort]({filename}algorithms-design-manual1.md#topological-sort)
+* *Related* : [Solving linear equations](#solving-linear-equations), [topological sort]({filename}algorithms-design-manual5.md#topological-sort)
 
 ### Matrix Multiplication
 ![alt](/images/algdm/13_matmul.png)   
@@ -73,7 +73,7 @@ $max(i,j) \in E |p(i) − p(j)|$?
 * With bandwidth-$b$ matrices, a speedup of $O(xbz)$ can be achieved.
 * Strassen's algorithm using divide-and-conquer runs in $O(n^{2.81})$, but is only practically useful for $n > 100$.
 * For long chains on matrix multiplications, dynamic programming can be used to optimize the parenthesization to minimize the dimensions of intermediate results.
-* *Related* : [Solving linear equations](#solving-linear-equations), [shortest path]({filename}algorithm-design-manual1.md#shortest-path).
+* *Related* : [Solving linear equations](#solving-linear-equations), [shortest path]({filename}algorithm-design-manual5.md#shortest-path).
 
 ### Determinants and Permanents
 ![alt](/images/algdm/13_determinants.png)   
@@ -91,7 +91,7 @@ $$|M| = \sum_{i=1}^{n!}(-1)^{sign(\pi_i)} \prod_{j=1}^n M[j,\pi_j]$$
 * Closely related, *permanent*, counts the number of perfect matchings in $G$, represented by its adjacency matrix $M$.
 $$perm(M) = \sum_{i=1}^{n!} \prod_{j=1}^n M[j, \pi_j] $$
 However, calculating this is NP-hard.
-* *Related* : [Solving linear equations](#solving-linear-equations), [matching](), [geometric primitives]().
+* *Related* : [Solving linear equations](#solving-linear-equations), [matching]({filename}algorithms-design-manual5.md#matching), [geometric primitives]({filename}algorithms-design-manual7.md#robust-geometric-primitives).
 
 
 ### Constrained and Unconstrained Optimization
@@ -110,7 +110,7 @@ function $f$?
     * How many dimensions do we have? How many do we need?
     * How smooth is my function?
 * Variations of gradient descent and simulated annealing
-* *Related* : [Linear programming](#linear-programming), [satisfiability]()
+* *Related* : [Linear programming](#linear-programming), [satisfiability]({filename}algorithms-design-manual4.md#satisfiability)
 
 ### Linear Programming
 ![alt](/images/algdm/13_linearprog.png)   
@@ -136,7 +136,7 @@ and a linear optimization function $f(X) = \sum_{j=1}^m c_j \cdot x_j$.
 * **Implementations**
     * [COIN OR](https://projects.coin-or.org/Clp)
     * [GNU Linear Programming Kit: GLPK](https://www.gnu.org/software/glpk/)
-* *Related* : [Constrained and Unconstrained optimization](#constrained-and-unconstrained-optimization), [network flow]()
+* *Related* : [Constrained and Unconstrained optimization](#constrained-and-unconstrained-optimization), [network flow]({filename}algorithms-design-manual5.md#network-flow)
 
 ### Random Number Generation
 ![alt](/images/algdm/13_random.png)
@@ -166,7 +166,7 @@ and a linear optimization function $f(X) = \sum_{j=1}^m c_j \cdot x_j$.
 * Long suspected of being only of mathematical interest, these problems have surprisingly many applications.
 * The RSA, has tables, games.
 * Several algorithms and implementations exist for generating and testing prime numbers and factoring(exponential).
-* *Related* : [Cryptography](), [high precision arithmetic](#arbitrary-precision-arithmetic)
+* *Related* : [Cryptography]({filename}algorithms-design-manual8.md#cryptography), [high precision arithmetic](#arbitrary-precision-arithmetic)
 
 ### Arbitrary Precision Arithmetic
 ![alt](/images/algdm/13_arbitprec.png)
@@ -186,7 +186,7 @@ and a linear optimization function $f(X) = \sum_{j=1}^m c_j \cdot x_j$.
     * Multiplication
     * Division
     * Exponentiation
-* *Related* : [Factoring Integers](#factoring-and-primality-testing), [cryptography]()
+* *Related* : [Factoring Integers](#factoring-and-primality-testing), [cryptography]({filename}algorithms-design-manual8.md#cryptographhy)
 
 ### Knapsack Problem
 ![alt](/images/algdm/13_knapsack.png)   
@@ -224,4 +224,4 @@ and a linear optimization function $f(X) = \sum_{j=1}^m c_j \cdot x_j$.
 * Naive implementation works in $O(n^2)$. 
 * The fast Fourier transform(FFT) computes discrete fourier transform in $O(n \log n)$.
 * Often implemented in hardware for real time performance.
-* *Related* : [Data compression](), [high-precision arithmetic]()
+* *Related* : [Data compression]({filename}algorithms-design-manual8.md#text-compression), [high-precision arithmetic](#arbitrary-precision-arithmetic)

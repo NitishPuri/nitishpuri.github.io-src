@@ -49,7 +49,7 @@ date: 2017-10-02
     * LEDA
         * hashing, perfect hashing, B-trees, red-black trees, random search trees, skip lists.
     * Java Collections and Data Structures Library in Java
-* *Related :* Sorting, searching
+* *Related :* [Sorting]({filename}algorithms-design-manual4.md#sorting), [searching]({filename}algorithms-design-manual4.md#searching)
 
 ### Priority Queues
 ![alt](/images/algdm/12_pqueue1.png)   
@@ -79,7 +79,7 @@ date: 2017-10-02
     * LEDA
         * Binary heaps, Fibonacci heaps, pairing heaps, Emde-Boas trees and bounded height priority queues
     * Java Collections : `java.util.PriorityQueue`
-* *Related :* [Dictionaries](#dictionaries), sorting, shortest path.
+* *Related :* [Dictionaries](#dictionaries), [sorting]({filename}algorithms-design-manual4.md#sorting), [shortest path]({filename}algorithms-design-manual5.md#shortest-path).
 
 ### Suffix Trees and Arrays
 ![alt](/images/algdm/12_suffix1.png)
@@ -100,7 +100,8 @@ date: 2017-10-02
     * Many C/C++ implementations in [*Pizza&Chili* corpus](http://pizzachili.di.unipi.it/)
     * Java
         * `BioJava::SuffixTree`
-* *Related :* String Matching, Text Compression, Longest Common Substring
+* *Related :* [String Matching]({filename}algorithms-design-manual8.md#string-matching)
+, [Text Compression]({filename}algorithms-design-manual8.md#text-compression), [Longest Common Substring]({filename}algorithms-design-manual8.md#longest-common-substring-subsequence)
 
 ### Graph Data Structures
 ![alt](/images/algdm/12_graph1.png)   
@@ -121,7 +122,7 @@ date: 2017-10-02
     * C++ : LEDA, Boost
     * Java : JUNG, Data Structures Library(JDSL), JGraphT
     * Stanford Graphbase
-* *Related :* [Set data structures](#set-data-structures), graph partition
+* *Related :* [Set data structures](#set-data-structures), [graph partition]({filename}algorithms-design-manual6.md#graph-partition)
 
 ### Set data structures
 ![alt](/images/algdm/12_set1.png)
@@ -147,7 +148,7 @@ date: 2017-10-02
 * **Implementations**
     * C++ STL `set` and `multiset`. LEDA.
     * Java Collections `HashSet` and `TreeSet`
-* *Related :* Generating subsets, generating partitions, set cover, minimum spanning tree.
+* *Related :* [Generating subsets]({filename}algorithms-design-manual4.md#generating-subsets), [generating partitions]({filename}algorithms-design-manual4.md#generating-partitions), [set cover]({filename}algorithms-design-manual8.md#set-cover), [minimum spanning tree]({filename}algorithms-design-manual5.md#minimum-spanning-tree).
 
 ### Kd-Trees
 ![alt](/images/algdm/12_kdtree1.png)   
@@ -171,7 +172,7 @@ date: 2017-10-02
 * **Implementations**
     * [KDTREE2 : C++ and Fortran](https://arxiv.org/abs/physics/0408067) 
     * [Terralib : C++](http://www.terralib.org/)
-* *Related :* Nearest-neighbor search, point location, range search.
+* *Related :* [Nearest-neighbor search]({filename}algorithms-design-manual7.md#nearest-neighbor-search), [point location]({filename}algorithms-design-manual7.md#point-location), [range search]({filename}algorithms-design-manual7.md#range-search).
 
 
 
