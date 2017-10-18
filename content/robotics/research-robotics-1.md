@@ -9,9 +9,9 @@ series: Robotics
 date: 2017-09-05
 ---
 
-### **Bio Robots**
+## Bio Robots
 
-#### **OpenRatSLAM : an open source brain-based SLAM system**   
+### <a name="openratslam"> </a> OpenRatSLAM : an open source brain-based SLAM system   
 *Feb 2013*   
 [*Source*](http://static.springer.com/sgw/documents/1388513/application/pdf/10-3.pdf)    
 
@@ -37,7 +37,7 @@ date: 2017-09-05
 * Future work
 * [Watch In Action](https://www.youtube.com/watch?v=-0XSUi69Yvs)
     
-#### **Biologically Inspired App*roaches* to Robotics**   
+### <a name="roaches"> </a> Biologically Inspired App*roaches* to Robotics   
 *March 1997*   
 [*Source*](http://pdfs.semanticscholar.org/501b/9eb3c085a66abe4bdd56043fc802c21d0526.pdf)   
 
@@ -55,7 +55,7 @@ date: 2017-09-05
     * Use genetic algorithms to evolve the neural networks for controlling the locomotion.
 * Rough Terrain Locomotion
 
-#### **The First Takeoff of a Biologically Inspired At-Scale Robotic Insect**   
+### <a name="insect"> </a> The First Takeoff of a Biologically Inspired At-Scale Robotic Insect   
 *April 2008*   
 [*Source*](http://www.micro.seas.harvard.edu/papers/TRO08_Wood.pdf)    
 
@@ -74,7 +74,7 @@ date: 2017-09-05
     * Airfoils 
 * [Watch In Action](https://www.youtube.com/watch?v=olqaMw8bIb8)
 
-#### **Towards Dynamic Trot Gait Locomotion—Design, Control, and Experiments with Cheetah-cub, a Compliant Quadruped Robot**   
+### <a head="gait"> </a> Towards Dynamic Trot Gait Locomotion—Design, Control, and Experiments with Cheetah-cub, a Compliant Quadruped Robot   
 *Alexander Spröwitz , Alexandre Tuleu, Massimo Vespignani, Mostafa Ajallooeian, Emilie Badri, Auke Jan Ijspeert :July 2013*   
 [*Source*](https://infoscience.epfl.ch/record/184991/files/Draft1sprowitz2013.pdf)    
 
@@ -93,7 +93,7 @@ date: 2017-09-05
 ![alt](/images/papers/cheetah5.jpg)   
 ![alt](/images/papers/cheetah6.jpg)   
 
-#### Gait Pattern Generation and Stabilization for Humanoid Robot Based on Coupled Oscillators
+### <a name="gait2"> </a> Gait Pattern Generation and Stabilization for Humanoid Robot Based on Coupled Oscillators
 *Inyong Ha, Yusuke Tamura, and Hajime Asama : Sep 2011*   
 [*Source*](http://www.robot.t.u-tokyo.ac.jp/asamalab/publications/files/582.pdf)   
 

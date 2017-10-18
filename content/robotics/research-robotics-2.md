@@ -11,11 +11,9 @@ date: 2017-09-15
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.
 
-## **Robotics**
+## Kinematics
 
-### **Kinematics**
-
-#### ***tf*: The Transform Library**   
+### <a name="tf"> </a> *tf*: The Transform Library   
 *Tully Foote*   
 *Open Source Robotics Foundation*   
 
@@ -43,7 +41,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Support for velocity.
 * Transforming data in time.
 
-#### Solving Kinematics Problems of a 6-DOF Robot Manipulator
+### <a name="6dof"> </a> Solving Kinematics Problems of a 6-DOF Robot Manipulator
 *Computer Science Department, The University of Georgia : 2015*   
 [*Source*](https://www.google.com/url?q=https%3A%2F%2Fwww.researchgate.net%2Ffile.PostFileLoader.html%3Fid%3D57cd4b20615e274c742de265%26assetKey%3DAS%253A402906919522304%25401473071903479&sa=D&sntz=1&usg=AFQjCNF8-U-44kQLISfar99yrIFTYElU9w)   
 
@@ -57,9 +55,9 @@ in which $R$ indicates a revolute joint and the indices describe the position of
 * D-H parameter analysis for Kuka KR60 can be found [here]({filename}kuka-kinematics.md)
 
 
-### **Robot Grasping**
+## Robot Grasping
 
-#### **Robotic Grasping and Contact: A Review**   
+### <a name="grasping1"> </a> Robotic Grasping and Contact: A Review     
 [*Source*](https://pdfs.semanticscholar.org/54f8/8557554d9a4e517f301cb170bd50cbe4cfc9.pdf)   
 
 * Survey of work done in last two decades.
@@ -77,8 +75,8 @@ in which $R$ indicates a revolute joint and the indices describe the position of
 * Grasping and the kinematics of the hand
 * Dynamics
 
-### **Mobile Robots**
-#### **Modular and Reconfigurable Mobile Robots**   
+## Mobile Robots
+### <a name="mobile1"> </a> Modular and Reconfigurable Mobile Robots   
 [*Source*](http://128.173.188.245/publications/J13_Modular_Robots_JRAS.pdf)   
 
 * Classification
