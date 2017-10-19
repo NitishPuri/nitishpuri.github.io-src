@@ -13,7 +13,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 
 ## Image Recognition
 
-### Very Deep Convolutional Networks For Large-Scale Image Recognition
+### <a name="vgg1"> </a> Very Deep Convolutional Networks For Large-Scale Image Recognition
 *Karen Simonyan, Andrew Zisserman : Apr 2015*   
 [*Source*](https://arxiv.org/abs/1409.1556)   
 [*Implementation*](https://github.com/KaimingHe/resnet-1k-layers)   
@@ -25,7 +25,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Optimise multinomial logistic regression objective using mini-batch gradient descent with momentum.
 * At the end introduces ensemble models by averaging softmax predictions from multiple models.
 
-### Going Deeper with Convolutions   
+### <a name="inception1"> </a> Going Deeper with Convolutions   
 *Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich : Sep 2014*   
 *Google DeepMind*   
 [*Source*](https://arxiv.org/abs/1409.4842)
@@ -40,7 +40,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * 22 trainable Layers(100 total layers), low memory footprint.
 * Auxillary classifiers are used to allow for efficient gradient propagation. These are used only at training time.
 
-### Deep Residual Learning for Image Recognition   
+### <a name="resnet1"> </a> Deep Residual Learning for Image Recognition   
 *Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun : Dec 2015*   
 *Microsoft Research*   
 [*Source*](https://arxiv.org/abs/1512.03385)
@@ -56,7 +56,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * The model shows *no optimization difficulty* even with > 1000 layers..!!
 * Finally discusses improvements for detection and localization tasks.
 
-### Rethinking the Inception Architecture for Computer Vision   
+### <a name="inception2"> </a> Rethinking the Inception Architecture for Computer Vision   
 *Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna : Dec 2015*   
 *Google DeepMind*   
 [*Source*](https://arxiv.org/abs/1512.00567)   
@@ -76,7 +76,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 ![alt](/images/papers/reInception2.jpg)
 ![alt](/images/papers/reInception3.jpg)
 
-### Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning   
+### <a name="inception4"> </a> Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning   
 *Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke, Alex Alemi : Aug 2016*   
 *Google DeepMind*   
 [*Source*](https://arxiv.org/abs/1602.07261)   
@@ -84,7 +84,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Combining **Residual networks with Inception architecture**.
 * Uniform Inception-v4 blocks are introduced for cleaner architecture. 
 
-### Xception: Deep Learning with Depthwise Separable Convolutions
+### <a name="xception"> </a> Xception: Deep Learning with Depthwise Separable Convolutions
 *François Chollet : Apr 2017*   
 [*Source*](https://arxiv.org/abs/1610.02357)   
 *Google Inc.*   
@@ -96,7 +96,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 
 ## Deep Visualization
 
-### Visualizing and Understanding Convolutional Networks  
+### <a name="vis1"> </a> Visualizing and Understanding Convolutional Networks  
 *Matthew D Zeiler, Rob Fergus L : Nov 2013*   
 [*Source*](https://arxiv.org/abs/1311.2901)   
 
@@ -117,7 +117,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 * Correspondence Analysis  
 
 
-### Multifaceted Feature Visualization: Uncovering the Different Types of Features Learned By Each Neuron in Deep Neural Networks   
+### <a name="vis2"> </a> Multifaceted Feature Visualization: Uncovering the Different Types of Features Learned By Each Neuron in Deep Neural Networks   
 *Anh Nguyen, Jason Yosinski, Jeff Clune : May 2016*    
 [*Source*](https://arxiv.org/abs/1602.03616)   
 
@@ -135,7 +135,7 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 ![alt](/images/papers/multiVis4.jpg)
 * Discusses various optimization techniques to produce better images in detail : center biased regularization, mean image initialization.
  
-### How transferable are features in deep neural networks?
+### <a name="transfer1"> </a> How transferable are features in deep neural networks?
 *Jason Yosinski, Jeff Clune, Yoshua Bengio, Hod Lipson : Nov 2014*   
 [*Source*](https://arxiv.org/abs/1411.1792)
 

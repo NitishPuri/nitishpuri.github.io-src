@@ -11,7 +11,7 @@ series: Deep Learning
 
 ## Image Segmentation
 
-### SSD: Single Shot MultiBox Detector
+### <a name="ssd1"> </a> SSD: Single Shot MultiBox Detector
 *Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Cheng-Yang Fu, Alexander C. Berg : Dec 2016*   
 [*Source*](https://arxiv.org/abs/1512.02325)   
 [*Code*](https://github.com/weiliu89/caffe/tree/ssd)   
@@ -47,8 +47,6 @@ YOLO counterpart in accuracy on VOC2007 test while also improving the speed.
 * Data augmentation is crucial.
 * More default box shapes is better.
 * Multiple output layers at different resolutions is better.
-
-### 
 
 
 
