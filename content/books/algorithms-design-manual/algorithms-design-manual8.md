@@ -66,9 +66,9 @@ the universal set—i.e. , $ \cup_{i=1}^{|T|} T_i = U$?
 
 * A fundamental problem because we live in an error-prone world.
 * Dynamic programming provides the basic approach. $D[i,j]$ = cost of editing $i$ characters of string $p$ into first $j$ characters of text $t$. The recurrence selected the minimum of,
-    * if $p_i = t_j$ then $D[i-1, j-1]$ else $D[i-1, j-1] + $ substitution cost.
-    * $D[i-1, j] + $ deletion cost of $p_j$.
-    * $D[i, j+1] + $ deletion cost of $t_j$.
+    * if $p_i = t_j$ then $D[i-1, j-1]$ else $D[i-1, j-1] +$ substitution cost.
+    * $D[i-1, j] +$ deletion cost of $p_j$.
+    * $D[i, j+1] +$ deletion cost of $t_j$.
 * Several issues remain however,
     * *Do I match the pattern against the full text, or against a substring?* 
     * *How should I select the substitution and insertion/deletion costs?* 
