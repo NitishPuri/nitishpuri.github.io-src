@@ -17,7 +17,7 @@ date: 2017-09-04
     * [Towards Dynamic Trot Gait Locomotion—Design, Control, and Experiments with Cheetah-cub, a Compliant Quadruped Robot]({filename}research-robotics-1.md#gait)
     * [Gait Pattern Generation and Stabilization for Humanoid Robot Based on Coupled Oscillators]({filename}research-robotics-1.md#gait2)
 
-#### [Mobile Robots]({filename}research-robotics-2.md)
+#### [Mobile Robots and Swarm Robotics]({filename}research-robotics-2.md)
 * Kinematics
     * [*tf*: The Transform Library]({filename}research-robotics-2.md#tf)
     * [Solving Kinematics Problems of a 6-DOF Robot Manipulator]({filename}research-robotics-2.md#6dof)
@@ -25,12 +25,17 @@ date: 2017-09-04
     * [Robotic Grasping and Contact: A Review]({filename}research-robotics-2.md#grasping1)
 * Mobile Robots
     * [Modular and Reconfigurable Mobile Robots]({filename}research-robotics-2.md#mobile1)    
+* Swarm Robots
+    * [Swarm Intelligence and Its Applications in Swarm Robotics]({filename}research-robotics-2.md#swarm1)
 
-#### [Soft Robotics]({filename}research-robotics-3.md)
+#### [Soft Robotics & HRI]({filename}research-robotics-3.md)
 * Soft Robots
     * [Soft Robotics: A Perspective—Current Trends and Prospects for the Future]({filename}research-robotics-3.md#soft1)
-* Swarm Robots
-    * [Swarm Intelligence and Its Applications in Swarm Robotics]({filename}research-robotics-3.md#swarm1)
+    * [A Resilient, Untethered Soft Robot]({filename}research-robotics-3.md#soft2)
+    * [Design, fabrication and control of soft robots]({filename}research-robotics-3.md#soft3)
+    * [A Hybrid Combining Hard and Soft Robots]({filename}research-robotics-3.md#soft4)
+    * [An Untethered Miniature Origami Robot that Self-folds, Walks, Swims, and Degrades]({filename}research-robotics-3.md#origami1)
+    * [A Brief History Of Oribotics]({filename}research-robotics-3.md#origami2)
 * Cloud Robots
     * [A Survey of Research on Cloud Robotics and Automation]({filename}research-robotics-3.md#cloud1)
 * Human Robot Interaction
@@ -38,3 +43,5 @@ date: 2017-09-04
     * [The Uncanny Valley]({filename}research-robotics-3.md#uncanny)
     * [All  robots are not created equal: The design and perception of humanoid robot heads]({filename}research-robotics-3.md#robot-heads)
     * [Social LSTM: Human Trajectory Prediction in Crowded Spaces]({filename}research-robotics-3.md#social-lstm)
+    * [What Should We Want From a Robot Ethic?]({filename}research-robotics-3.md#etihcs1)
+    * [Robot ethics: a view from the philosophy of science]({filename}research-robotics-3.md#etihcs2)    

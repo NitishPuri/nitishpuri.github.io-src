@@ -35,39 +35,154 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
     * Strechable microelectronics.   
 ![alt](/images/papers/soft_3.jpg)   
 
-## Swarm Intelligence
+### <a name="soft2"> </a> A Resilient, Untethered Soft Robot
+*Michael T. Tolley et. al*   
+[*Source*](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=FAC76B025D8BB3D946644D559576DCA3?doi=10.1.1.650.8035&rep=rep1&type=pdf)    
 
-### <a name="swarm1"> </a> Swarm Intelligence and Its Applications in Swarm Robotics
-*ALEKSANDAR JEVTIC, DIEGO ANDINA : Dec 2007*   
-[*Source*](http://www.wseas.us/e-library/conferences/2007tenerife/papers/572-074.pdf)    
+![alt](/images/papers/soft_4.png)   
+Pneumatic actuation of untethered quadrupedal soft robot.   
+(a) Schematic representation of the components of the mini air compressor (MAC)-driven, battery powered soft robot. Layer 1 consisting of six Pneu-Nets (PN) is sealed onto layer 2.   
+(b) Schematic representation of a cross-section of Pneu-Net 1 as its internal pneumatic network is pressurized.   
+(c) Photographs of Pneu-Net 1 at rest (left) and pressurized to 16 psi (middle). Photograph of electronic components (mini air compressors, battery pack, relays, and circuit boards) between Pneu-Nets 3 and 4 (right) that drive the robot.   
 
-* An overview of swarm intelligence.   
-![alt](/images/papers/swarm1.png)   
-* Self-organizing mechanisms
-    * Positive feedback
-    * Negative feedback
-    * Amplification of fluctuations
-    * Multiple Interactions
-* A *critical* number of individuals are required for *intelligence* to arise.
-* **Particle Swarm Optimization**
-    * Inspired by the flocking behavior of birds.
-    * Composed of *simple* agents moving through multi-dimensional space, governed by a pull towards best known position to it and its neighbors.
-* **Ant Colony Optimization**
-    * Uses the *trail-laying-trail-following* behavior to communicate.
-* Applications os SI,
-    * Every problem, application, that in its base has some kind of optimization can be tackled 
-    with SI techniques.
-* **Swarm Robotics** : Inspired but not limited to SI.
-* Criteria
-    * *Autonomy* : autonomous units.
-    * *Large number* : large homogeneous groups
-    * *Limited capabilities* : incapable or inefficient on their own.
-    * *Scalability and Robustness* : Loosing some units should not cause a failure.
-    * *Distributed coordination* : Local and limited sensing and communication.
-* Applications of SR
-    * *Foraging* : includes collective exploration, path finding, efficient task allocation and collective transport. Examples, Search-and-rescue and terrain sample collection.
-    * *Dangerous tasks* : Ex. demining.
-    * *Exploration and mapping* : Collective exploration in space, extra-terrestrial planets and human veins and arteries. 
+* Experimental design as a starting point for further research.
+* Research for selection of materials, more description in the original paper.
+* Uses electrically operated air compressors to provide pneumatic actuation.
+![alt](/images/papers/soft_5.png)   
+![alt](/images/papers/soft_6.png)   
+Untethered operation of the quadrupedal soft robot.   
+(a–d) Untethered soft robot conducting indoor surveillance with the view of the onboard camera overlaid. The robot starts moving forward with a straight ambulatory gait (a).   
+The robot switches to a turning gait to explore a passageway on the left (b, c). The robot uses its onboard camera to image a hidden laptop (d).   
+(e–h) Untethered soft robot operating outdoors before and after being run over by a car (e). The robot depressurizes its actuators in preparation for impact (f). The car running over the elastomeric legs of the soft robot (g). The soft robot actuating and standing up after being ran over by the car (h). Green dots on the figures in the upper-right corner of each frame indicate which PNs are currently actuated (pressurized); red dots indicate unactuated PNs.   
+
+* Discusses gait patterns and control parameters in detail.
+* Resilient to harsh environments like fire, snow and water.
+* Final cost of a single assembly, *$1111*.
+
+### <a name="soft3"> </a> Design, fabrication and control of soft robots
+*Daniela Rus and Michael T. Tolley*   
+[*Source*](https://dspace.mit.edu/openaccess-disseminate/1721.1/100772)    
+
+* Biological inspirations for soft robots.
+    * Move with the ability to bend and twist with high curvatures and thus can be used in confined spaces.
+    * Deform their bodies in a continuous way and thus achieve motions that emulate biology.
+    * Adapt their shape to the environment employing compliant motion and thus manipulate objects or move on rough terrain and exhibit resilience.
+    * Execute rapid, agile maneuvers, such as the escape maneuver in fish.
+![alt](/images/papers/soft_7.jpg)   
+Mobile soft robotic systems inspired by a range of biological systems, demonstrating    
+a) caterpillar-inspired locomotion,   
+b) a multi-gait quadruped,   
+c) active camouflage,   
+d) walking in hazardous environments,    
+e) worm-inspired locomotion,    
+f) particle jamming-based actuation,    
+g) rolling powered by a pneumatic battery,    
+h) a hybrid hard/soft robot,    
+i) snake inspired locomotion,    
+j) jumping powered by internal combustion,    
+k) manta-ray inspired locomotion, and    
+l) an autonomous fish.    
+
+
+**Design and Fabrication**    
+![alt](/images/papers/soft_8.jpg)   
+Grasping and manipulation, canonical challenges in robotics, can be greatly simplified
+with soft robotics. Examples of experimental soft robotic manipulations systems demonstrating    
+a) microactuation,    
+b) soft continuum manipulation,    
+c) grasping with particle jamming,    
+d) simple gripper fabrication by soft lithography,    
+e) underactuated dextrous grasping,    
+f) octopus inspired manipulation,    
+g) inflatable robotic manipulators,    
+h) feedback control of a multisegmented arm,    
+i) a soft glove for rehabilitation.    
+
+
+*Actuation*    
+![alt](/images/papers/soft_9.jpg)   
+Common approaches to actuation of soft robot bodies in resting (left) and actuated
+(right) states.    
+a) Longitudinal tensile actuators (e.g. tension cables or shape memory alloy
+actuators which contract when heated) along a soft robot arm cause bending when activated.    
+b) Transverse tensile actuators cause a soft robot arm to extend when contracted (a muscle
+arrangement also seen in the octopus).    
+c) Pneumatic artificial muscles composed of an elastomeric tube in a woven fiber shell. A 
+pressure applied internally causes the tube and shell to expand radially, causing longitudinal contraction.   
+d) Fluidic elastic actuator or Pneu-Net design consisting of a pneumatic network of channels in an elastomer that expand when filled with a pressurized fluid, causing the soft body to bend toward a 
+strain limited layer (e.g. a stiffer rubber or elastomer embedded with paper or other tensile fibers).   
+
+
+* Commonly uses one of the two approaches
+    * Variable length tendons (robotic octopus arm)
+    * Pneumatic actuation 
+*  Regardless of the actuation method, soft actuators are frequently arranged in a biologically inspired agonist-antagonist arrangement (like muscles) to allow bi-directional actuation.
+* Another benefit of this arrangement is that co-contraction of muscle pairs leads to adaptable compliance.
+* Another focus has been electroactive polymers(EAPs).    
+
+**Stretchable Electronics**   
+
+* *Sensing* 
+* Flexible-bending sensors based on piezoelectric polymers, but these are not stretchable. Proprioceptive sensors uses curved layered structures filled with a liquid conductor.
+* *Power Sources* 
+* A big challenge. 
+* *Design*
+* Traditional CAD is not designed with layered freeform structures in mind.
+* Custom FEA softwares like VoxCAD are used.
+* *Fabrication*
+* Multimaterial 3D printing, shape deposition manufacturing and soft lithography.   
+
+**Computation and Control**   
+
+* Controlling soft robots requires new approaches to modeling, control, dynamics, and high-level planning.
+* Taking inspiration from biological systems.
+* *Modeling and Kinematics*   
+* Requires continuous mathematics, instead of rigid-link based system analysis.
+* Various different models are used based on simplifying assumptions using piecewise constant curvature models for forward kinematics.
+* IK is more challenging.
+* Exact solutions are not available.
+* *Control*
+* The problem is as challenging as IK, however, due to compliant nature of soft robots, they can execute operations without precise control and positioning.   
+
+**Systems and Applications**   
+![alt](/images/papers/soft_10.jpg)   
+(Top) Soft robotic fish physical prototype and design schematic.    
+(Bottom) Images from a high speed video of the fish executing a c-turn escape maneuver, with elapsed time indicated.   
+
+* *Locomotion*
+* One approach to achieving mobile systems is to tether a soft robot to a mobile rigid robot with a greater carrying capacity.
+* *Manipulation*
+* Soft systems have a natural advantage over rigid robots in grasping and manipulating unknown objects due to compliance.   
+* *Medical/Wearable Applications*
+* Soft robots are the most natural option for medical applications.
+* Examples, orthopedic rehabilitaation, wearable input devices, soft orthodics, soft system for simulation of cardiac actuation.
+* *Soft Cyborgs*   
+
+**Future Directions**   
+* Soft robots are the way to home automation, where they can work more close to humans.
+* Ex. physiotherapy, babysitting etc.
+* How do we get there,?? We need, 
+    * rapid design tools and fabrication recipes for low cost soft robots.
+    * novel algorithmic approaches to the control of soft robots that account for their material properties.
+    * tools for developing device-specific programming environments that allow non-experts to use the soft machines.
+    * creative individuals to design new solutions
+    * early adopters of the technology.
+* Augmentation (using rigid skeletons) is going to be very crucial.
+
+
+### <a name="soft4"> </a> A Hybrid Combining Hard and Soft Robots
+*Adam A. Stokes*   
+[*Source*](https://gmwgroup.harvard.edu/pubs/pdf/1180.pdf)   
+
+### <a name="origami1"> </a> An Untethered Miniature Origami Robot that Self-folds, Walks, Swims, and Degrades
+*Daniela Rus et. al*   
+[*Source*](http://shu21th.sakura.ne.jp/file/ICRA2015v26Final.pdf)
+
+### <a name="origami2"> </a> A Brief History Of Oribotics
+*Matthew Gardiner*   
+[*Source*](http://matthewgardiner.net/data/media/pdf/4OSME-ABriefHistoryofOribotics-Email.pdf)   
+
+
 
 ## Cloud Robotics
 
@@ -178,3 +293,42 @@ shows the S-pooling for one person in the scene. The hidden-states of all LSTMs 
 * More implementation details in the paper.
 * Explains the architecture, different cost functions and comparison with previous state-of-the-art models.
 
+
+### <a name="ethics1"> </a> What Should We Want From a Robot Ethic?
+*Peter M. Asaro*   
+[*Source*](http://www.peterasaro.org/writing/Asaro%20IRIE.pdf)   
+
+* Humans need to deal with ethics all the time. 
+* In case of robots with ethics, we have at least three distinct ways of thinking about it,
+    * How humans act ethically, through or with robots?
+    * How to design robots that act ethically?
+    * Should robots have ethics(or rights)?
+* Robots(and humans) can have varying degree of *morality*.
+    * *Amoral* robots, controlled by *moral* humans.
+    * Robots with *moral significance*, performing actions irrespective of their moral weights.
+    * Robots with *moral intelligence* built in by moral humans.
+    * Robots with *dynamic moral intelligence* that can evolve their own ethical systems.
+    * *Consciousness, self-awareness, fear of pain and death, reflexive deliberation and self evaluation of ethical systems and moral judgments*.
+* By the last degree of morality, the robots might even *demand* their rights.
+* **Responsibility and Agency in Socio-Technical Systems**
+* Contrast a robot with a *corporation* instead of a *human* in terms of legal treatment.
+* Most important decisions to be made belong to the battle ground.
+
+### <a name="ethics2"> </a> Robot ethics: a view from the philosophy of science
+*Guglielmo Tamburrini*   
+[*Source*](https://www.researchgate.net/publication/228959347_Robot_ethics_a_view_from_the_philosophy_of_science)   
+
+* **Robot ethics and models of robot-environment interactions**
+* Whether and how to isolate environmental factors affecting robotic behaviors is crucial.
+* How to properly identify, specify and maintain *normal operating conditions*.
+* **Robot Soldiers: Task Requirements and Ethics**
+* Have already been deployed in Iraq and Afghanistan.
+* Are remote controlled systems classified as robots?
+* It has been widely established that completely *autonomous* robots would be more ethical on the battlefield, however they don't have the capability to do so yet.
+* In fact, such an *autonomous* system would be sufficiently advanced to solve any other problem that artificial intelligence and cognitive robotics will ever be confronted with.
+* This is an *AI-complete problem*, and state-of-art is hardly close to it.
+* **Autonomy and Responsibility Issues For Learning Robots**
+* Learning agents must have some kind of *background knowledge* about how to generalize, and must operate in some sufficiently pre-determined, stochastic environment characterized by some fixed statistical distribution.
+* The information processing abilities of learning robotic systems, whose behavioral effects are not fully predictable by their users, suggest juridical and ethical analogies between learning robots and learning biological systems that are capable of perceiving, planning and acting.
+* **Robotic myths, ethics, and scientific method**
+* Great expectations.

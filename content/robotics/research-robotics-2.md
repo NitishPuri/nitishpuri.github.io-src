@@ -123,4 +123,37 @@ in which $R$ indicates a revolute joint and the indices describe the position of
             * SuperBot
                 * ![alt](/images/papers/modularBots17.jpg)
 
+## Swarm Intelligence
+
+### <a name="swarm1"> </a> Swarm Intelligence and Its Applications in Swarm Robotics
+*ALEKSANDAR JEVTIC, DIEGO ANDINA : Dec 2007*   
+[*Source*](http://www.wseas.us/e-library/conferences/2007tenerife/papers/572-074.pdf)    
+
+* An overview of swarm intelligence.   
+![alt](/images/papers/swarm1.png)   
+* Self-organizing mechanisms
+    * Positive feedback
+    * Negative feedback
+    * Amplification of fluctuations
+    * Multiple Interactions
+* A *critical* number of individuals are required for *intelligence* to arise.
+* **Particle Swarm Optimization**
+    * Inspired by the flocking behavior of birds.
+    * Composed of *simple* agents moving through multi-dimensional space, governed by a pull towards best known position to it and its neighbors.
+* **Ant Colony Optimization**
+    * Uses the *trail-laying-trail-following* behavior to communicate.
+* Applications os SI,
+    * Every problem, application, that in its base has some kind of optimization can be tackled 
+    with SI techniques.
+* **Swarm Robotics** : Inspired but not limited to SI.
+* Criteria
+    * *Autonomy* : autonomous units.
+    * *Large number* : large homogeneous groups
+    * *Limited capabilities* : incapable or inefficient on their own.
+    * *Scalability and Robustness* : Loosing some units should not cause a failure.
+    * *Distributed coordination* : Local and limited sensing and communication.
+* Applications of SR
+    * *Foraging* : includes collective exploration, path finding, efficient task allocation and collective transport. Examples, Search-and-rescue and terrain sample collection.
+    * *Dangerous tasks* : Ex. demining.
+    * *Exploration and mapping* : Collective exploration in space, extra-terrestrial planets and human veins and arteries. 
 
