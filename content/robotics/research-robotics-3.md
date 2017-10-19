@@ -171,12 +171,36 @@ strain limited layer (e.g. a stiffer rubber or elastomer embedded with paper or 
 
 
 ### <a name="soft4"> </a> A Hybrid Combining Hard and Soft Robots
-*Adam A. Stokes*   
+*Adam A. Stokes : 2013*   
 [*Source*](https://gmwgroup.harvard.edu/pubs/pdf/1180.pdf)   
+
+* One feature that distinguishes hard and soft robots is mechanical compliance.
+* The paper discusses,
+    * Design of the hard robotic subsystem
+    * Design of the electropneumatic control subsystem
+    * Design of the soft robotic subsystem.
+    * Design of the hybrid subsystem.
+    * Design of the communication system.
+* Results and Discussion    
+![alt](/images/papers/soft_11.jpg)   
+(a) A plan-view schematic of the design of the pneu-net-based quadrupedal soft robot. Each of the four legs contains two independently actuated pneu-nets. A full technical drawing is provided by Supplementary Figure S2.     
+(b) A system diagram showing the pneumatic and electrical control system.    
+(c) A photograph showing the soft robot, pneumatic tether, microcontroller, and pneumatic control system.    
+![alt](/images/papers/soft_12.jpg)   
+A photograph of the hybrid robotic platform showing the wheeled hard robot (iRobot Create) and the
+legged soft robot. The hard robot carried, in marsupial fashion, the legged soft robot, the electropneumatic control system, and the wireless communications system. This figure
+does not show the wireless camera that was mounted on the hard robot.   
+![alt](/images/papers/soft_13.jpg)   
+A series of still frames from Supplementary Video S1 show the hybrid robotic system retrieving an object (iPod Nano) from the center of a room (a–f ).    
+The hard robot carries the soft robot to the object (b).    
+The soft robot first acts as a walker (c–d) and then as a gripper (e).    
+When the hard robot is driven away (f ), the soft robot inverts and protects the iPod as it is pulled to a new location.    
+
 
 ### <a name="origami1"> </a> An Untethered Miniature Origami Robot that Self-folds, Walks, Swims, and Degrades
 *Daniela Rus et. al*   
 [*Source*](http://shu21th.sakura.ne.jp/file/ICRA2015v26Final.pdf)
+
 
 ### <a name="origami2"> </a> A Brief History Of Oribotics
 *Matthew Gardiner*   
