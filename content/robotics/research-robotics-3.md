@@ -201,12 +201,36 @@ When the hard robot is driven away (f ), the soft robot inverts and protects the
 *Daniela Rus et. al*   
 [*Source*](http://shu21th.sakura.ne.jp/file/ICRA2015v26Final.pdf)
 
+![alt](/images/papers/origami_1.jpg)   
+The developed origami robot.    
+(a) (From left to right) water-degradable model whose outer layer dissolves in water;
+conductive model (aluminum coated polyester); acetone-degradable
+model whose entire body (except magnet) dissolves in acetone.    
+(b) Self-folded robot (controlled by a magnetic field) walking on a palm.   
+
+* In this paper,
+    * Performing on-site origami sheet self-folding followed by untethered actuation.
+    * Developing the robot's control method for walking and swimming using a newly developed electromagnetic system.
+    * Testing the robot's ability to perform basic tasks and behaviors.
+    * Demonstrating the robot's ability to degrade, as a proof of convept.
+![alt](/images/papers/origami_2.jpg)   
+The designed mobile robot and the actuation methods.    
+(a) The outlook.    
+(b) The crease pattern.    
+(c) Walking mode by torquebased control.    
+(d) Swimming mode by force-based control.    
+
+[**Watch in Action**](https://youtu.be/jS2eW6FBpG4)   
+
 
 ### <a name="origami2"> </a> A Brief History Of Oribotics
 *Matthew Gardiner*   
 [*Source*](http://matthewgardiner.net/data/media/pdf/4OSME-ABriefHistoryofOribotics-Email.pdf)   
 
+**Oribotics is origami that is controlled by robot technology; it is paper or foldable material that will fold and unfold on command.**   
 
+* Oribotics has its roots in generative animation code *Root 2* and *Orimmatic*.
+* A hybrid of science and art, the paper discusses various iterations of the bot along with its inspirations.
 
 ## Cloud Robotics
 

@@ -75,6 +75,24 @@ in which $R$ indicates a revolute joint and the indices describe the position of
 * Grasping and the kinematics of the hand
 * Dynamics
 
+### <a name="grasping2"> </a> Universal robotic gripper based on the jamming of granular material
+*Eric Brown et. al*   
+[*Source*](http://www.pnas.org/content/107/44/18809.full.pdf)   
+
+* Multifindered hand in animals(or robots) require a central processor for multitude of decisions.
+![alt](/images/papers/gripper_1.jpg)   
+Jamming-based grippers for picking up a wide range of objects without the need for active feedback.   
+(A) Attached to a fixed-base robot arm.   
+(B) Picking up a shock absorber coil.    
+(C) View from the underside.    
+(D) Schematic of operation.    
+(E) Holding force Fh for several three-dimensional-printed test shapes (the diameter of the sphere shown on the very left, 2R ¼ 25.4 mm, can be used for size comparison). The thin disk could not be picked up at all.   
+
+### <a name="grasping3"> </a> Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics
+*Jeffrey Mahler et. al*   
+[*Source*](https://arxiv.org/abs/1703.09312)
+
+
 ## Mobile Robots
 ### <a name="mobile1"> </a> Modular and Reconfigurable Mobile Robots   
 [*Source*](http://128.173.188.245/publications/J13_Modular_Robots_JRAS.pdf)   
