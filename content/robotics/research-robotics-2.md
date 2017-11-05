@@ -71,9 +71,8 @@ in which $R$ indicates a revolute joint and the indices describe the position of
 * Contact model
     * Kinematics of contact
     * Contact compliance
-* Measures of grasp performance
+* Measures of grasp performance.
 * Grasping and the kinematics of the hand
-* Dynamics
 
 ### <a name="grasping2"> </a> Universal robotic gripper based on the jamming of granular material
 *Eric Brown et. al*   
@@ -90,7 +89,33 @@ Jamming-based grippers for picking up a wide range of objects without the need f
 
 ### <a name="grasping3"> </a> Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics
 *Jeffrey Mahler et. al*   
+*Berkley*   
 [*Source*](https://arxiv.org/abs/1703.09312)
+[*Implementation and documentation*](http://berkeleyautomation.github.io/dex-net/)   
+
+* Using physics based analyses to compute grasp configurations can be slow and error prone because of precision issues.
+* Here we use a CNN on depth images and rendered point cloud data to estimate robust claw grasping configurations.
+* Previous related work related to Grasp Planning is discussed.    
+![alt](/images/papers/dexnet_1.png)   
+*Dex-Net 2.0 Architecture. (Center) The Grasp Quality Convolutional Neural Network (GQ-CNN) is trained offline to predict the robustness candidate grasps from depth images using a dataset of 6.7 million synthetic point clouds, grasps, and associated robust grasp metrics computed with DexNet 1.0. (Left) When an object is presented to the robot, a depth camera returns a 3D point cloud, where pairs of antipodal points identify a set of several hundred grasp candidates. (Right) The GQ-CNN rapidly determines the most robust grasp candidate, which is executed with the ABB YuMi robot.*   
+
+
+![alt](/images/papers/dexnet_2.png)   
+*Graphical model for robust parallel-jaw grasping of objects on a table surface based on point clouds. Blue nodes are variables included in the state representation. Object shapes $\mathcal{O}$ are uniformly distributed over a discrete set of object models and object poses $\mathcal T_o$ are distributed over the object’s stable poses and a bounded region of a planar surface. Grasps $\mathbf{u} = (\mathbf{p}, \psi)$ are sampled uniformly from the object surface using antipodality constraints. Given the coefficient of friction $\gamma$ we evaluate an analytic success metric $S$ for a grasp on an object. A synthetic 2.5D point cloud $\mathbf y$ is generated from 3D meshes based on the camera pose $\mathcal T_c$, object shape, and pose and corrupted with multiplicative and Gaussian Process noise.*    
+
+![alt](/images/papers/dexnet_3.png)   
+*Dex-Net 2.0 pipeline for training dataset generation. (Left) The database contains 1,500 3D object mesh models. (Top) For each object, we sample hundreds of parallel-jaw grasps to cover the surface and evaluate robust analytic grasp metrics using sampling. For each stable pose of the object we associate a set of grasps that are perpendicular to the table and collision-free for a given gripper model. (Bottom) We also render point clouds of each object in each stable pose, with the planar object pose and camera pose sampled uniformly at random. Every grasp for a given stable pose is associated with a pixel location and orientation in the rendered image. (Right) Each image is rotated, translated, cropped, and scaled to align the grasp pixel location with the image center and the grasp axis with the middle row of the image, creating a 32 × 32 grasp image. The full dataset contains over 6.7 million grasp images*
+
+
+* The performance of the network is compared with other machine learning models based on random forests and SVM along with previous DL based approaches.
+* Some failure modes are identified as being unable to identify thin geometries and some problems with finding collision-free grasps in narrow parts of the object geometry, suggesting that performance can be improved with better depth sensing.
+
+### <a name ='grasping4'> Learning Hand-eye Coordination for Robotic Grasping with Deep Learning and Large-scale Data Collection
+[*Source*](https://people.eecs.berkeley.edu/~svlevine/papers/grasp_iser.pdf)   
+*Sergey Levine, Peter Pastor, Alex Krizhevsky, and Deirdre Quillen*   
+*Google*    
+
+
 
 
 ## Mobile Robots
