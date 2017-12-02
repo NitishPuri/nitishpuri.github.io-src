@@ -6,7 +6,7 @@ tags: notes, robotics
 category: robotics
 summary: Minimal notes on some papers or articles that I recently read. Mainly for logging.
 series: Robotics
-date: 2017-09-15
+date: 2017-11-17
 ---
 
 Very minimal notes on some papers or articles that I recently read. Mainly for logging purposes.
@@ -115,8 +115,12 @@ Jamming-based grippers for picking up a wide range of objects without the need f
 *Sergey Levine, Peter Pastor, Alex Krizhevsky, and Deirdre Quillen*   
 *Google*    
 
+* Hand-eye coordination for robot grasping using monocular images.
+* Consists of two components, first is a CNN to determine if a given motion would produce a successful grasp.   
+![alt](/images/papers/grasp_1.jpg)   
+*The architecture of our CNN grasp predictor. The input image $\mathbf{I}_t$, as well as the pregrasp image $\mathbf{I}_0$, are fed into a $6 \times 6$ convolution with stride 2, followed by $3 \times 3$ max-pooling and 6 $5 \times 5$ convolutions. This is followed by a $3 \times 3$ max-pooling layer. The motor command $v_t$ is processed by one fully connected layer, which is then pointwise added to each point in the response map of pool2 by tiling the output over the special dimensions. The result is then processed by 6 $3 \times 3$ convolutions, $2 \times 2$ max-pooling, 3 more $3 \times 3$ convolutions, and two fully connected layers with 64 units, after which the network outputs the probability of a successful grasp through a sigmoid. Each convolution is followed by batch normalization.*   
 
-
+* Second is a continuous servoing mechanism that uses CNN to continuously update the robot's motor channels.
 
 ## Mobile Robots
 ### <a name="mobile1"> </a> Modular and Reconfigurable Mobile Robots   
@@ -197,6 +201,6 @@ Jamming-based grippers for picking up a wide range of objects without the need f
     * *Distributed coordination* : Local and limited sensing and communication.
 * Applications of SR
     * *Foraging* : includes collective exploration, path finding, efficient task allocation and collective transport. Examples, Search-and-rescue and terrain sample collection.
-    * *Dangerous tasks* : Ex. demining.
+    * *Dangerous tasks* : Ex. mining.
     * *Exploration and mapping* : Collective exploration in space, extra-terrestrial planets and human veins and arteries. 
 

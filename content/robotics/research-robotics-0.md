@@ -17,7 +17,7 @@ date: 2017-09-04
     * [Towards Dynamic Trot Gait Locomotion—Design, Control, and Experiments with Cheetah-cub, a Compliant Quadruped Robot]({filename}research-robotics-1.md#gait)
     * [Gait Pattern Generation and Stabilization for Humanoid Robot Based on Coupled Oscillators]({filename}research-robotics-1.md#gait2)
 
-#### [Mobile Robots and Swarm Robotics]({filename}research-robotics-2.md)
+#### [Mobile Robots, Robot Grasping and Swarm Robotics]({filename}research-robotics-2.md)
 * Kinematics
     * [*tf*: The Transform Library]({filename}research-robotics-2.md#tf)
     * [Solving Kinematics Problems of a 6-DOF Robot Manipulator]({filename}research-robotics-2.md#6dof)
@@ -26,7 +26,6 @@ date: 2017-09-04
     * [Universal Robotic Gripper Based on the Jamming of Granular Material]({filename}research-robotics-2.md#grasping2)
     * [Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics]({filename}research-robotics-2.md#grasping3)
     * [Learning Hand-eye Coordination for Robotic Grasping with Deep Learning and Large-scale Data Collection]({filename}research-robotics-2.md#grasping4)
-    * [A Slip Detection and Correction Strategy for Precision Robot Grasping]({filename}research-robotics-2.md#grasping5)
 * Mobile Robots
     * [Modular and Reconfigurable Mobile Robots]({filename}research-robotics-2.md#mobile1)    
 * Swarm Robots
