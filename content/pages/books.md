@@ -19,6 +19,9 @@ date: 10-10-2017
 }
 </style>
 
+<script src="https://www.goodreads.com/review/grid_widget/36249039.Currently%20Reading?cover_size=medium&hide_link=&hide_title=&num_books=20&order=d&shelf=currently-reading&sort=date_added&widget_id=1512228826" type="text/javascript" charset="utf-8"></script>
+
+
 <script src="https://www.goodreads.com/review/grid_widget/36249039.2017?cover_size=medium&hide_link=&hide_title=&num_books=20&order=a&shelf=2017&sort=date_read&widget_id=1512223303" type="text/javascript" charset="utf-8"></script>
 
 <script src="https://www.goodreads.com/review/grid_widget/36249039.2016?cover_size=medium&hide_link=&hide_title=&num_books=30&order=a&shelf=2016&sort=date_read&widget_id=1512213196" type="text/javascript" charset="utf-8"></script>   
