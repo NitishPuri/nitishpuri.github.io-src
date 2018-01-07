@@ -154,7 +154,9 @@ PHOTO_JSON = 'gallery.json'
 
 MENUITEMS = [#('Archives', '/archives/'),
              ('Bio', '/pages/bio/'),
-             ('Gallery', '/pages/gallery/')]
+             ('Gallery', '/pages/gallery/'),
+             ('Books', '/pages/books/'),
+             ('Demos', 'https://nitishpuri.github.io/ProcessingExperiments/')]
 
 # MARKDOWN = {
 #    'EXTENSIONS' : (['toc', 'fenced_code','codehilite']),
