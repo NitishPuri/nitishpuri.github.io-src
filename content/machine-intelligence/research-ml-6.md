@@ -48,5 +48,13 @@ YOLO counterpart in accuracy on VOC2007 test while also improving the speed.
 * More default box shapes is better.
 * Multiple output layers at different resolutions is better.
 
+### <a name="overfeat"> </a> OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks
+*Feb 2014*   
+[*Source*](https://arxiv.org/abs/1312.6229)   
+
+* An integrated approach to simultaneously classify, locate and detect objects.
+* 
+
+
 
 

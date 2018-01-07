@@ -58,3 +58,4 @@ Very minimal notes on some papers or articles that I recently read. Mainly for l
 #### [Object Detection and Image Segmentation, Part 2]({filename}research-ml-6.md)
 * Image Segmentation
     * [SSD: Single Shot MultiBox Detector]({filename}research-ml-6.md#ssd1)
+    * [OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks]({filename}research-ml-6.md#overfeat)
