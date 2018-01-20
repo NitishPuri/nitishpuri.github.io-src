@@ -356,7 +356,96 @@ $$\begin{align}I_{sharp} &= (1+\alpha)I - \alpha(f_{g, \sigma}\star I)\\
 &=((1+\alpha)d - \alpha f_{g, \sigma})\star I\\
 &=f_{sharp}(\sigma, \alpha) \star I\end{align}$$    
 
-**Antialiasing in Image Sampling**
+**Antialiasing in Image Sampling**   
+![alt](/images/fundcg/9_aliasing1.png)     
+
+**Reconstruction and Resampling**   
+![alt](/images/fundcg/9_aliasing2.png)     
+![alt](/images/fundcg/9_aliasing3.png)     
+
+$$\mathbf{function}\quad resample(\text{sequence}\;a, \text{float}\;x_0, \text{float}\;\Delta x,
+\text{int}\;n, \text{filter}\;f) \\
+\text{create sequence } b \text{ of length } n \\
+\mathbf{for}\quad i = 0 \text{ to }\; n-1\; \mathbf{do} \\
+\quad b[i] = reconstruct(a, f, x_0, + i\Delta x) \\
+\mathbf{return} \; b\\ $$   
+
+![alt](/images/fundcg/9_aliasing4.png)     
+
+$$\mathbf{function}\quad resample(\text{sequence}\;a, \text{float}\;x_l,\text{float}\;x_h,
+\text{int}\;n, \text{filter}\;f) \\
+\text{create sequence } b \text{ of length } n \\
+r = f.radius \\
+x_0 = x_l + \Delta x/ 2 \\
+\mathbf{for}\quad i = 0 \text{ to }\; n-1\; \mathbf{do} \\
+\quad s = 0 \\ \quad x = x_0 + i \Delta x \\
+\quad \mathbf{for}\quad j = x - r \text{ to }\; x+r\; \mathbf{do} \\
+\quad \quad s = s + a[j]f(x-j) \\
+\quad b[i] = s
+\mathbf{return} \; b\\ $$   
+
+![alt](/images/fundcg/9_aliasing5.png)     
+
+### Sampling Theory
+
+![alt](/images/fundcg/9_sample1.png)     
+
+$$\begin{align}\sum_{n = 1, 3, 5, ...}^ \inf \frac4{\pi n} sin\,2\pi nx\end{align}$$   
+
+![alt](/images/fundcg/9_sample2.png)     
+
+$$\begin{align}\frac{sin\,\pi u}{\pi u}cos\,2\pi ux\,du\end{align}$$   
+
+When a function $f$ is expressed in this way, this weight, which is a function of the frequency $u$, is called the **Fourier transform** of $f$, denoted $\hat f$.
+
+![alt](/images/fundcg/9_sample3.png)     
+![alt](/images/fundcg/9_sample4.png)     
+
+#### **Convolution and the Fourier Transform**
+![alt](/images/fundcg/9_sample5.png)     
+
+$$\hat f \star \hat g = \mathcal{F}\{fg\}.$$   
+
+#### **A Gallery of Fourier Transforms**
+![alt](/images/fundcg/9_sample6.png)     
+
+#### **Sampling and Aliasing**   
+![alt](/images/fundcg/9_sample7.png)     
+
+**Preventing Aliasing in Sampling**   
+![alt](/images/fundcg/9_sample8.png)     
+![alt](/images/fundcg/9_sample9.png)     
+![alt](/images/fundcg/9_sample10.png)     
+![alt](/images/fundcg/9_sample11.png)     
+![alt](/images/fundcg/9_sample12.png)     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
