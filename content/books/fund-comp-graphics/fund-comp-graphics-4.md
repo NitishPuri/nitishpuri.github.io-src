@@ -75,7 +75,7 @@ draw crease if $(\mathbf{n}_0 · \mathbf{n}_1) \leq \text{threshold}$
 $$\begin{align}k_w &= \frac{1 + \mathbf{n.l}}{2}.\\
 c &= k_wc_w + (1 - k_w)c_c \end{align}$$   
 
-
+## Chapter 11 : Texture Mapping
 
 
 

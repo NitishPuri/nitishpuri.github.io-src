@@ -14,6 +14,11 @@ date: 2017-08-17
     Linear Algebra, Transformation Matrices and View Transformations   
 * [Fundamentals of Computer Graphics : Chapter 8 - 9]({filename}fund-comp-graphics-3.md)   
     The Graphics Pipeline and Signal Processing
-* [Fundamentals of Computer Graphics : Chapter 10 - 11]({filename}fund-comp-graphics-4.md)   
+* [Fundamentals of Computer Graphics : Chapter 10 - 12]({filename}fund-comp-graphics-4.md)   
+    Surface shading and Texture Mapping
+* [Fundamentals of Computer Graphics : Illustrations]({filename}fund-comp-graphics-5.md)       
+* [Fundamentals of Computer Graphics : Chapter 10 - 11]({filename}fund-comp-graphics-6.md)   
+    Surface shading and Texture Mapping
+* [Fundamentals of Computer Graphics : Chapter 10 - 11]({filename}fund-comp-graphics-7.md)   
     Surface shading and Texture Mapping
     
