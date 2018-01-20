@@ -341,15 +341,128 @@ F_y(y) & = n^2(N_x/n)(y/n) + (y \mod n)n
 We tabulate $F_x$ and $F_y$, and use $x$ and $y$ to find the index into the data array. These tables will consist of $N_x$ and $N_y$ elements, respectively. The total size of the tables will fit in the primary data cache of the processor, even for very large data set sizes.   
 
 
+## Chapter 13 : More Ray Tracing
+*If you start with a bruteforce ray intersection loop, you’ll have ample time to implement an acceleration structure while you wait for images to render.*   
+
+### Transparency and Refraction
+*Snell's Law,*   
+
+$$n\sin\theta = n_t\sin\phi$$   
+
+![alt](/images/fundcg/13_ray1.png)     
+
+$$\begin{align}\mathbf t = \sin\phi \mathbf b - \cos\phi \mathbf n\end{align}$$   
+
+Since we can describe $\mathbf d$ in the same basis, and $\mathbf d$ is known, we can 
+solve for $\mathbf b$:   
+$$\begin{align}
+\mathbf d &= \sin\theta \mathbf b - \cos\theta\mathbf n \\
+\mathbf b &= \frac{\mathbf d + \mathbf n\cos\theta }{\sin\theta } \\
+\end {align}$$   
+
+This means we can solve for $\mathbf t$ with known variables,   
+$$\begin{align}
+\mathbf t &= \frac{n(\mathbf d + \mathbf n\cos\theta) }{n_t} - \mathbf n\cos\phi \\
+&=\frac{n(\mathbf d - \mathbf n(\mathbf d \cdot \mathbf n)) }{n_t} - \mathbf n \sqrt{1 - \frac{n^2(1-(\mathbf d \cdot \mathbf n)^2)}{n_t^2}}
+\end {align}$$   
+
+![alt](/images/fundcg/13_ray2.png)     
 
 
+**Shilck approximations for Fresnel equations,**   
 
+$$\begin{align}
+R(\theta) = R_0 + (1+R_0)(1-\cos\theta)^5,
+\end {align}$$   
 
+where $R_0$ is the reflactance at normal incidence:   
+$$\begin{align}
+R_0 = \left(\frac{n_t-1}{n_t+1}\right)^2
+\end {align}$$   
 
+![alt](/images/fundcg/13_ray3.png)     
 
+$$
+\mathbf{if}\; (\mathbf p is on a dielectric)\;\mathbf{then}\\
+\quad \mathbf r = reflect(\mathbf d, \mathbf n ) \\
+\quad \mathbf {if}\; (\mathbf d \cdot \mathbf n < 0)\; \mathbf {then} \\
+\quad \quad refract(\mathbf d, \mathbf n, \mathcal n, \mathbf t) \\
+\quad \quad c = −\mathbf d \cdot \mathbf n \\
+\quad \quad k_r = k_g = k_b = 1 \\
+\mathbf else \\
+\quad k_r = exp(−a_rt) \\
+\quad k_g = exp(−a_gt) \\
+\quad k_b = exp(−a_bt) \\
+\quad \mathbf {if}\; refract(\mathbf d, −\mathbf n, 1/\mathcal n, \mathbf t)\;\mathbf {then} \\
+\quad \quad c = \mathbf t \cdot \mathbf n \\
+\quad \mathbf {else} \\
+\quad \quad \mathbf {return}\; k ∗ color(\mathbf p + t\mathbf r) \\
+R_0 = (\mathcal n − 1)^2/(\mathcal n + 1)^2
+R = R_0 + (1 − R_0)(1 − c)^5 \\
+\mathbf {return}\; k(R\,color(\mathbf p + t\mathbf r) + (1 − R) color(\mathbf p + t\mathbf t))
+$$
 
+### Instancing
 
+![alt](/images/fundcg/13_ray4.png)     
+![alt](/images/fundcg/13_ray5.png)     
 
+### Constructive Solid Geometry 
+
+![alt](/images/fundcg/13_ray6.png) 
+![alt](/images/fundcg/13_ray7.png)     
+
+### Distribution Ray Tracing
+
+#### **Antialiasing**
+
+For a code hat samples $n \times n$ samples across each pixel:
+$$
+\mathbf{for\,each}\;\text{pixel}\;(i,j)\;\mathbf{do} \\
+\quad c = 0 \\
+\quad \mathbf{for}\; p = 0 \text{ to } n − 1 \mathbf{do} \\
+\quad \quad \mathbf {for} q = 0 \text{ to } n − 1 \mathbf{do} \\
+\quad \quad \quad c = c + \text{ray-color}(i + (p + 0.5)/n, j + (q + 0.5)/n)\\
+c_{ij} = c/n^2
+$$   
+This is called *regular sampling*.   
+
+One potential problem with taking samples in a regular pattern within a pixel is that regular artifacts such as moir´e patterns can arise.   
+
+![alt](/images/fundcg/13_ray8.png)     
+
+#### **Soft Shadows** 
+
+![alt](/images/fundcg/13_ray10.png) 
+![alt](/images/fundcg/13_ray9.png)     
+
+$$
+\mathbf{for\,each}\;  \text{pixel}(i, j)\;\mathbf{do} \\
+\quad c = 0 \\
+\quad \text{generate}\, N = n^2 \text{jittered 2D points and store in array} r[ ] \\
+\quad \text{generate}\, N = n^2 \text{jittered 2D points and store in array} s[ ] \\
+\quad \text{shuffle the points in array}\, s[ ] \\
+\quad \mathbf{for} p = 0 \text{ to } N − 1\;\mathbf{do} \\
+\quad \quad c = c + \text{ray-color}(i + r[p].x(), j + r[p].y(), s[p]) \\
+\quad c_ij = c/N
+$$
+
+**A Shuffle routine,**   
+$$
+\mathbf {for}\; i = N − 1 \text{ downto } 1 \,\mathbf{do} \\
+\quad \text{choose random integer $j$ between $0$ and $i$ inclusive} \\
+\quad \text{swap array elements $i$ and $j$}
+$$
+
+#### **Depth of Field**
+
+![alt](/images/fundcg/13_ray11.png)    
+![alt](/images/fundcg/13_ray12.png)    
+![alt](/images/fundcg/13_ray13.png)    
+
+#### **Motion Blur** 
+
+![alt](/images/fundcg/13_ray14.png)    
 
 
 
