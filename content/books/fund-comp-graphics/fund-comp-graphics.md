@@ -17,8 +17,8 @@ date: 2017-08-17
 * [Fundamentals of Computer Graphics : Chapter 10 - 12]({filename}fund-comp-graphics-4.md)   
     Surface shading and Texture Mapping
 * [Fundamentals of Computer Graphics : Illustrations]({filename}fund-comp-graphics-5.md)       
-* [Fundamentals of Computer Graphics : Chapter 12 - 11]({filename}fund-comp-graphics-6.md)   
-    Data Structures for Graphics
-* [Fundamentals of Computer Graphics : Chapter 10 - 11]({filename}fund-comp-graphics-7.md)   
+* [Fundamentals of Computer Graphics : Chapter 12 - 13]({filename}fund-comp-graphics-6.md)   
+    Data Structures for Graphics and More Ray Tracing
+* [Fundamentals of Computer Graphics : Chapter 14 - 11]({filename}fund-comp-graphics-7.md)   
     Surface shading and Texture Mapping
     
