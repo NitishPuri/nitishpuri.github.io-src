@@ -190,6 +190,23 @@ weighted output from our hidden layer of neurons is $\sigma^{-1} \circ f(x)$:
 Using the technique described earlier, we would use hidden neurons to produce a sequence of bumps like this :   
 ![alt](/images/nnfordl/4_fun27.png)    
 
+Now, suppose we build another set of hidden neurons to compute the approximation of $\sigma^{-1} \circ f(x)$, but with the bases of the bumps *shifted* by half the width of the bump:
+![alt](/images/nnfordl/4_fun28.png)    
+
+Now, if we combine the two approximations, the overall approximation will still have windows of failure, but these windows would be still smaller. Further, the approximation will be 2 times better in those windows.   
+
+We can do even better by combining a large number of overlapping approximations.   
+
+### Conclusion
+
+The above discussion and proof of universality is certainly very crude, however it provides a good intuition.    
+
+So, this takes off the table the question of whether any particular function is computable using a neural network. 
+The answer is always *yes*. The right question to ask is, what's a *good* way to compute the function.   
+
+
+
+
 
 
 

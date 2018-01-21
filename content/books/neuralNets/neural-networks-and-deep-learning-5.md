@@ -10,4 +10,6 @@ Notes for the [book](http://neuralnetworksanddeeplearning.com/index.html).
 [Source code](https://github.com/mnielsen/neural-networks-and-deep-learning) for the book.
 
 
-## **Chapter 5: Why are deep neural networks hard to train?**
+## Chapter 5: Why are deep neural networks hard to train?
+
+
