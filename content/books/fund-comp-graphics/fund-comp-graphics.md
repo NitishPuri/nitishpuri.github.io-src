@@ -21,6 +21,8 @@ date: 2017-08-17
     Data Structures for Graphics and More Ray Tracing
 * [Fundamentals of Computer Graphics : Chapter 14 - 17]({filename}fund-comp-graphics-7.md)   
     Sampling, Curves and Computer Animation
-* [Fundamentals of Computer Graphics : Chapter 18 - 21]({filename}fund-comp-graphics-8.md)   
-    Graphics Hardware, Interactive Applications, Light and Color
+* [Fundamentals of Computer Graphics : Chapter 18 - 22]({filename}fund-comp-graphics-8.md)   
+    Graphics Hardware, Interactive Applications, Light and Color, Visual Perception
+* [Fundamentals of Computer Graphics : Chapter 23 - 28]({filename}fund-comp-graphics-8.md)   
+    Tone Reproduction, Global Illumination, Reflection Models, Games, Visualization and Spatial Field Visualization
     
