@@ -39,7 +39,7 @@ We want to add a fuzzy “spot” the same color as the light source in the righ
 
 $$\begin{align}c = c_l\text{max}(0, \mathbf{e.r})^p.\end{align}$$   
 $p$ is the **Phong Exponent**.   
-![alt](/images/fundcg/10_phong3.png)     
+![alt](/images/fundcg/10_phong3.jpg)     
 
 
 
@@ -70,7 +70,7 @@ draw silhouette if $f_0(\mathbf{e})f_1(\mathbf{e}) \leq 0$.
 draw crease if $(\mathbf{n}_0 · \mathbf{n}_1) \leq \text{threshold}$   
 
 #### **Cool-to-Warm Shading**
-![alt](/images/fundcg/10_art1.png)     
+![alt](/images/fundcg/10_art1.jpg)     
 
 $$\begin{align}k_w &= \frac{1 + \mathbf{n.l}}{2}.\\
 c &= k_wc_w + (1 - k_w)c_c \end{align}$$   
@@ -96,12 +96,12 @@ $$RGB\;stripe(\;point\;\mathbf{p} )\\
 ![alt](/images/fundcg/11_texture1.png)     
 
 #### Texture Arrays
-![alt](/images/fundcg/11_texture2.png)     
+![alt](/images/fundcg/11_texture2.jpg)     
 ![alt](/images/fundcg/11_texture3.png)     
 
 #### Solid Noise
 **Perlin noise.**   
-![alt](/images/fundcg/11_texture4.png)     
+![alt](/images/fundcg/11_texture4.jpg)     
 
 Getting a noisy appearance by calling a random number for every point would not be appropriate, because it would just be like `white noise` in TV static. We would like to make it smoother without losing the random quality. One 
 possibility is to blur white noise, but there is no practical implementation of this. Another possibility is to make a large lattice with a random number at every lattice point, and then interpolate these random points for new points 
@@ -137,11 +137,11 @@ $$\begin{align}
 n_t(\mathbf{x}) = \sum_i \frac{|n(2^i\mathbf{x})|}{2^i}
 \end{align}$$   
 
-![alt](/images/fundcg/11_texture5.png)     
-![alt](/images/fundcg/11_texture6.png)     
+![alt](/images/fundcg/11_texture5.jpg)     
+![alt](/images/fundcg/11_texture6.jpg)     
 
 ### 2D Texture Mapping
-![alt](/images/fundcg/11_texture7.png)     
+![alt](/images/fundcg/11_texture7.jpg)     
 
 ### Texture Mapping for Rasterized Triangles
 ![alt](/images/fundcg/11_texture8.png)     

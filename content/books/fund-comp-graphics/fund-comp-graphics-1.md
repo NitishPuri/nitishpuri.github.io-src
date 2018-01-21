@@ -264,7 +264,7 @@ A shading model.
 #### Blinn-Phong shading
 Lambertian shading is view independent. It does not have specular reflections that many surfaces have.   
 
-![alt](/images/fundcg/4_shading2.png)    
+![alt](/images/fundcg/4_shading2.jpg)    
 ![alt](/images/fundcg/4_shading3.png)    
 
 $$ \begin{array}1 \mathbf{h} &=&  \frac{\mathbf{v} + \mathbf{l}}{||\mathbf{v} + \mathbf{l}||}, \\

@@ -349,15 +349,15 @@ r = f.radius \\ x = I.width \\ y = I.height \\
 
 **Image Filtering Using Discrete Filters**   
 
-![alt](/images/fundcg/9_filter7.png)     
-![alt](/images/fundcg/9_filter8.png)     
+![alt](/images/fundcg/9_filter7.jpg)     
+![alt](/images/fundcg/9_filter8.jpg)     
 
 $$\begin{align}I_{sharp} &= (1+\alpha)I - \alpha(f_{g, \sigma}\star I)\\
 &=((1+\alpha)d - \alpha f_{g, \sigma})\star I\\
 &=f_{sharp}(\sigma, \alpha) \star I\end{align}$$    
 
 **Antialiasing in Image Sampling**   
-![alt](/images/fundcg/9_aliasing1.png)     
+![alt](/images/fundcg/9_aliasing1.jpg)     
 
 **Reconstruction and Resampling**   
 ![alt](/images/fundcg/9_aliasing2.png)     
@@ -384,7 +384,7 @@ x_0 = x_l + \Delta x/ 2 \\
 \quad b[i] = s
 \mathbf{return} \; b\\ $$   
 
-![alt](/images/fundcg/9_aliasing5.png)     
+![alt](/images/fundcg/9_aliasing5.jpg)     
 
 ### Sampling Theory
 
@@ -410,13 +410,13 @@ $$\hat f \star \hat g = \mathcal{F}\{fg\}.$$
 ![alt](/images/fundcg/9_sample6.png)     
 
 #### **Sampling and Aliasing**   
-![alt](/images/fundcg/9_sample7.png)     
+![alt](/images/fundcg/9_sample7.jpg)     
 
 **Preventing Aliasing in Sampling**   
-![alt](/images/fundcg/9_sample8.png)     
+![alt](/images/fundcg/9_sample8.jpg)     
 ![alt](/images/fundcg/9_sample9.png)     
-![alt](/images/fundcg/9_sample10.png)     
-![alt](/images/fundcg/9_sample11.png)     
+![alt](/images/fundcg/9_sample10.jpg)     
+![alt](/images/fundcg/9_sample11.jpg)     
 ![alt](/images/fundcg/9_sample12.png)     
 
 

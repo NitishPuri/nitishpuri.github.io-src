@@ -380,7 +380,7 @@ $$\begin{align}
 R_0 = \left(\frac{n_t-1}{n_t+1}\right)^2
 \end {align}$$   
 
-![alt](/images/fundcg/13_ray3.png)     
+![alt](/images/fundcg/13_ray3.jpg)     
 
 $$
 \mathbf{if}\; (\mathbf p is on a dielectric)\;\mathbf{then}\\
@@ -457,12 +457,12 @@ $$
 #### **Depth of Field**
 
 ![alt](/images/fundcg/13_ray11.png)    
-![alt](/images/fundcg/13_ray12.png)    
+![alt](/images/fundcg/13_ray12.jpg)    
 ![alt](/images/fundcg/13_ray13.png)    
 
 #### **Motion Blur** 
 
-![alt](/images/fundcg/13_ray14.png)    
+![alt](/images/fundcg/13_ray14.jpg)    
 
 
 
