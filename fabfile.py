@@ -29,6 +29,7 @@ env.github_pages_branch = "master"
 # Port for `serve`
 PORT = 8000
 
+
 def clean():
     """Remove generated files"""
     import glob
@@ -43,17 +44,21 @@ def clean():
         # shutil.rmtree(DEPLOY_PATH)
         # os.makedirs(DEPLOY_PATH)
 
+
 def build():
     """Build local version of site"""
     local('pelican -s pelicanconf.py')
+
 
 def rebuild():
     """`build` with the delete switch"""
     local('pelican -d -s pelicanconf.py')
 
+
 def regenerate():
     """Automatically regenerate site upon file modification"""
     local('pelican -r -s pelicanconf.py')
+
 
 def serve():
     """Serve site at http://localhost:8000/"""
@@ -67,15 +72,18 @@ def serve():
     sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
     server.serve_forever()
 
+
 def reserve():
     """`build`, then `serve`"""
     build()
     serve()
 
+
 def livereload():
     """ build and then serve using livereload server"""
     build()
     local("python pelican-livereload.py")
+
 
 def preview():
     """Build production version of site"""
@@ -104,6 +112,8 @@ Status: draft
 """
 
 # TEMPLATE is declared before hand, and all the necessary imports made
+
+
 def make_entry(title):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
@@ -120,6 +130,7 @@ def make_entry(title):
     with open(f_create, 'w') as w:
         w.write(t)
     print("File created -> " + f_create)
+
 
 @hosts(production)
 def publish():
@@ -138,14 +149,12 @@ def publish():
 #     rebuild()
 #     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
 
-def testTask(testVar="nothing"):
-    print("You passed {} as argument.".format(testVar))
 
-def gh_push(commitMsg = "Update"):
+def gh_push(commitMsg="Update"):
     """Push to Github Pages"""
     rebuild()
 
-    # Push the blog 
+    # Push the blog
     local("cd output")
     local("git add --all")
     local("git commit -m '{}'".format(commitMsg))
@@ -156,6 +165,7 @@ def gh_push(commitMsg = "Update"):
     local("git add .")
     local("git commit -m '{}'".format(commitMsg))
     local("git push -u origin master")
+
 
 def clone_output():
     local("git clone https://github.com/nitishpuri/nitishpuri.github.io.git output")
@@ -177,7 +187,6 @@ def optimize_images():
         newfile += '.jpg'
         print("{} --> {}".format(file, newfile))
         bg.save(newfile, 'JPEG', quality=90)
-    
 
 
 album_template = """
@@ -207,11 +216,12 @@ comments: enabled
 ![{caption}]({photo}/{gallery}/{filename})
 """
 
+
 def get_proper_timestamp(path):
     if os.path.isfile(path) == False:
         return datetime.today()
-    
-    try:        
+
+    try:
         ts = os.path.getmtime(path)
         return datetime.fromtimestamp(ts)
     except:
@@ -233,7 +243,7 @@ def generate_gallery():
         gallery_data = json.load(data_file)
 
     # print(photo_lib_path)
-    import  glob 
+    import glob
 
     # Delete previously auto generated pages.
     galleries = 'content/gallery/auto_*.md'
@@ -253,7 +263,7 @@ def generate_gallery():
 
     gallery_str = ''
 
-    # Cleanup Photos directory 
+    # Cleanup Photos directory
     if os.path.isdir(photo_lib_path):
         print("Cleaning up photos directory")
         shutil.rmtree(photo_lib_path, ignore_errors=True)
@@ -267,6 +277,8 @@ def generate_gallery():
     for gallery in gallery_data['galleries']:
         galleryName = gallery['name']
 
+        temp_root = gallery.get('root_path', gallery_root)
+
         galleryPath = os.path.join(photo_lib_path, galleryName)
         print("Creating dir,.. {}".format(galleryPath))
         os.makedirs(galleryPath)
@@ -279,13 +291,13 @@ def generate_gallery():
 
         gallery_str += '{photo}' + galleryName + '{' + galleryName+'},'
 
-        g_create = 'content/gallery/auto_{}.md'.format(galleryName) 
+        g_create = 'content/gallery/auto_{}.md'.format(galleryName)
         with open(g_create, 'w') as w:
             w.write(gt)
         print("File created -> " + g_create)
 
-        for file in gallery['files']:            
-            fileSourcePath = os.path.join(gallery_root, file)
+        for file in gallery['files']:
+            fileSourcePath = os.path.join(temp_root, file)
             fileName = os.path.basename(fileSourcePath)
             fileDestPath = os.path.join(galleryPath, fileName)
 
@@ -302,14 +314,14 @@ def generate_gallery():
                 print("File already exists at : {}".format(fileDestPath))
 
             pt = gallery_post_template.strip().format(title=fileStrippedName,
-                                                     year = pmtime.year,
-                                                     month=pmtime.month,
-                                                     day=pmtime.day,
-                                                     caption=fileStrippedName,
-                                                     photo='{photo}',
-                                                     gallery=galleryName,
-                                                     filename=fileName,
-                                                     desc=file_desc)
+                                                      year=pmtime.year,
+                                                      month=pmtime.month,
+                                                      day=pmtime.day,
+                                                      caption=fileStrippedName,
+                                                      photo='{photo}',
+                                                      gallery=galleryName,
+                                                      filename=fileName,
+                                                      desc=file_desc)
 
             p_create = 'content/pages/auto_{}_{:0>2}_{:0>2}_{}.md'.format(
                 pmtime.year, pmtime.month, pmtime.day, fileStrippedName)
@@ -318,8 +330,7 @@ def generate_gallery():
                 w.write(pt)
             print("File created -> " + p_create)
 
-            
-    gallery_str = gallery_str[0:-1] # remove trailing comma
+    gallery_str = gallery_str[0:-1]  # remove trailing comma
     gallery_t = gallery_page_template.strip().format(gallery=gallery_str)
     with open(gallery_page, 'w') as w:
         w.write(gallery_t)
@@ -337,10 +348,8 @@ def renameImages():
         #     index += 1
         #     newName = '../test_data2/g/{}.jpg'.format(index)
 
-        print("{} --> {}".format(file, newName))        
+        print("{} --> {}".format(file, newName))
 
         im = Image.open(file)
         rgb_im = im.convert('RGB')
         rgb_im.save(newName)
-
-            
