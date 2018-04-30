@@ -122,22 +122,6 @@
       }
     },
     {
-      "name": "misc",
-      "tag": "gallery",
-      "date": "2016-10-5",
-      "desc": "Some misc. cutouts and experiments.",
-      "files": {
-        "Art/dragonsOnTheWall.jpg": "",
-        "RandomSessions/mFace_03.jpg": "",
-        "RandomSessions/mFace_09.jpg": "",
-        "RandomSessions/mFace_16.jpg": "",
-        "RandomSessions/mFace_17.jpg": "",
-        "RandomSessions/mFace_25.jpg": "",
-        "RandomSessions/mFace_28.jpg": "",
-        "RandomSessions/mFace_32.jpg": ""
-      }
-    },
-    {
       "name": "in_making_3",
       "tag": "gallery",
       "desc": "Some early creations, Part 3",

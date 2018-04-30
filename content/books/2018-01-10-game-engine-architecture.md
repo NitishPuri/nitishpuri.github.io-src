@@ -242,8 +242,74 @@ public:
     * Fork and Join
     * One Thread per Subsystem
     * Jobs
-    * 
+* Networked Multiplayer Game Loop
+    * Client-Server 
+    * Peer to Peer
+    * Case Study : Quake II
+
+### Human Interface Devices (HID)
+* Types of Human Interface Devices
+* Interfacing with HID
+    * Polling
+    * Interrupts
+    * Wireless Devices
+* Types of Inputs
+    * Digital Buttons
+    * Analog Axes and Buttons
+    * Relative Axes
+    * Accelerometers
+    * 3D Orientation with the Wiimote or DialShock
+    * Cameras
+* Types of Outputs
+    * Rumble
+    * Force-Feedback
+    * Audio
+    * Other Inputs and Outputs
+* Game Engine HID Systems
+    * Typical Requirements
+    * Dead Zone
+    * Analog Singnal Filtering
+    * Detecting Input Events
+        * Button Up and Button Down
+        * Chords
+        * Sequences and Gesture Detection
+    * Managing Multiple HIDs for Multiple Players
+    * Cross-Platform HID Systems
+    * Input Remapping
+    * Context-Sensitive Controls
+    * Disabling Inputs
+* Human Interface Devices in Practice
+    
+### Tools for Debugging and Development
+* Logging and Tracing
+    * Formatted Output with `OutputDebugString()`
+    * Verbosity
+    * Channels
+    * Mirroring Output to a File
+    * Crash Reports
+* Debug Drawing Facilities
+    * Debug Drawing API
+        * Should be simple, provide functionality to draw various primitives and control there properties.
+        * Should allow primitives to be drawn from anywhere and in any coordinate space.
+* In-Game Menus
+* In-Game Console
+* Debug Cameras and Pausing the Game
+* Cheats
+* Screenshots and Movie Capture
+* In-Game Profiling 
+    * Hierarchical Profiling
+        * Measuring Execution times Hierarchically
+    * Exporting to Excel
+* In-Game Memory Stats and Leak Detection
 
 
+## Graphics, Motion and Sound
+
+### The Rendering Engine
+* Foundations of Depth Buffered Triangle Rasterization
+    * Describing a Scene : Using surfaces
+        * Representations Used by High-End Rendering Packages
+            * Parametric surface equations, pathces
+            * 
 
 
