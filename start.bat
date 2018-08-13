@@ -1,0 +1,2 @@
+activate pyblog
+fab livereload

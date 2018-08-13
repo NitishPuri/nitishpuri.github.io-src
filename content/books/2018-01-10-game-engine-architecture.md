@@ -151,7 +151,7 @@ while(!quit) {
     * Many interacting subsystems.
     * Each subsystem may work at a different refresh rate and synchronize with each other.
     * A Simple Example : *Pong*
-```C++
+```c
 void main() // Pong 
 {
     initGame();
@@ -178,6 +178,7 @@ void main() // Pong
 ```
 * Game Loop Architectural Styles
     * Windows Message Pumps
+    * Event Based Updating
     * Callback-Driven Frameworks
 ```C++      
 // The Framework!!
@@ -212,8 +213,8 @@ public:
         // etc.
     }
 }
-```
-    * Event Based Updating
+```   
+
 * Abstract Timelines
     * Real Time
     * Game Time
@@ -309,7 +310,85 @@ public:
 * Foundations of Depth Buffered Triangle Rasterization
     * Describing a Scene : Using surfaces
         * Representations Used by High-End Rendering Packages
-            * Parametric surface equations, pathces
-            * 
+            * Parametric surface equations, patches
+            * Triangle Meshes
+                * Tesselation, LODs, dynamic tesselation, progressive meshes.
+                * Triangle lists, index lists, strips and fans.
+            * Model Space.
+            * World space and Mesh instancing.
+    * Describing the Visual Properties of a Surface. 
+        * Introduction to Light and Color
+        * Vertex Attributes
+            * position, normal, tangent and bitangent, diffuse color, specular color, texture coordinates, skinning weights.
+        * Vertex Formats
+        * Attribute Interpolation
+        * Textures
+        * Materials
+    * Lighting Basics
+        * Local and Global illumination
+        * The Phong Lighting Model
+        * Modeling Light Sources
+    * The Virtual Camera
+        * View Space
+        * Projections
+        * The View Volume and the Frustum
+        * Projection and Homogeneous Clip Space
+        * Screen Space and Aspect Ratios
+        * The Frame Buffer
+        * Triangle Rasterization and Fragments
+        * Occlusion and the Depth Buffer
+* The Rendering Pipeline
+    * Overview of the Rendeing Pipeline
+        * How the Rendering Pipeline Transforms Data
+        * Implementation of the Pipeline
+    * The Tools Stage(*offline*)
+        * Geometry and Material creation tools
+    * The Asset Conditioning Stage(*offline*)
+        * Load the data generated through DCC applications into engine ready format.
+        * Index the data into scene-graphs or BSP tree to make it ready for the application.
+    * A Brief History og the GPU
+        * Software rendering
+        * Fixed-function pipeline
+    * The GPU Pipeline(*gpu*)
+        * **Vertex Shader** - Transform and light  individual vertices from modelspace to clip space. Now has access to texture data as well.
+        * **Geometry Shader** - Optional stage that can add/remove/modify primitives.
+        * **Stream Output** - Permits to stream data at this point back into the pipeline for effects like hair simulation.
+        * **Clipping** - Fixed function stage that chops the primitives to the frustum. User defined clip planes can be added.
+        * **Screen Mapping** - Fixed stage that shifts and scales the vertices fromhomogeneous clip space into screen space.
+        * **Triangle Set-Up** - Fixed initialization stage for rasterization hardware.
+        * **Triangle Traversal** - Rasterize triangles and interpolate vertex attributes to generate per-fragment attributes. Fixed stage.
+        * **Early z-Test** - Early z-test to avoid potentially expensive shading operating for occluded pixels. 
+        * **Pixel Shader** - Programmable fragment shader. Gets per-fragment attributes and can access texture maps. Outputs a single color.
+        * **Merging / Raster Operations Stage** - Non-Programmable, highly configurable *blending stage*, also known as *raster operations*. Alpha test, stencil test, alpha blending for translucent objects, decals?.
+    * Programmable Shaders
+        * Accessing Memory
+        * Introduction to High-Level Shader Language Syntax
+        * Effects
+    * Antialiasing
+        * Full Screen Antialiasing(FSAA)
+        * Multi Sample Antialiasing(MSAA)
+        * Coverage Sample Antialiasing(CSAA)
+        * Morphological Antialiasing(MLAA)
+    * The Application Stage
+        * Visibility Determination
+            * Frustum Culling, Occlusion and Potentially Visible Sets
+            * Portals and Occlusion Volume(Anti-Portals)
+        * Primitive Submission
+        * Geometry Sorting
+        * Scene Graphs
+            * Quadtrees, Octrees and BSP trees      
+        * Choosing a Scene Graph
+* Advanced Lighting and Global Illumination
+    * Image-Based Lighting
+        * Normal Mapping
+        * Heightmaps: Bump, Parallax and Displacement Mapping
+        *  Specular/Gloss Maps
+        * Environment Mapping
+        * Three-Dimensional Textures
+    * High Dynamic Range Lighting
+    * 
+
+
+        
 
 
